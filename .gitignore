@@ -4,6 +4,6 @@
 
 
 # Env Template
-.env.template
+.env
 
 */__pycache__/
