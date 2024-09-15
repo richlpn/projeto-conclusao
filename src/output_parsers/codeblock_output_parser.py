@@ -1,4 +1,5 @@
-from langchain_core.output_parsers import OutputParserException, BaseOutputParser
+from langchain_core.output_parsers import BaseOutputParser
+from langchain_core.exceptions import OutputParserException
 
 class PythonCodeParser(BaseOutputParser):
     def parse(self, text: str):
