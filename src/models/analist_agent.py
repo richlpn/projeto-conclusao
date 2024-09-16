@@ -4,10 +4,9 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.language_models import BaseChatModel
 from langchain_core.runnables import Runnable
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.messages import BaseMessage
-
+from langchain_core.messages import BaseMessage, HumanMessage
 from models.extractor_schema import ExtractorSchema
-from models.graph import GraphState
+from models.graph import END_CALL_LOOP, GraphState
 
 documentation = """Agência Nacional de Telecomunicações – Anatel
 
@@ -32,21 +31,32 @@ DescCodEstacaoDebito: descritivo da estação de telecomunicações e suas carac
 Persistencia: A base deve ser persistida em uma tabela no banco postgresql://user:pass@localhost/mydatabase
 """
 
+
 class Analist(Runnable):
     role_prompt:tuple[str,str] = (
     "system",
     """Você é um especialista em analise de dados e na gestão de fontes de dados.
-    Seu trabalho é apoiar o engenheiro de dados, utilizando as seguintes ferramentas.
-    caso você tenha finalizado a sua tarefa ou não for possivel realizar qualquer ação, envie uma mensagem dizendo apenas 'PIPELINE FINALIZADA!'.
-    {output_parser}""")
+    Seu trabalho é extrair informações sobre as fontes de dados e envia-las para o engenheiro de dados.
+    Quando um erro ocorrer ou quando você cumprir o requisitado, responda apenas {end_call}.
+    As seguintes ferramentas estão disponiveis:
+    {tools}
+""")
+    
+    name: str = 'Analista de dados'
 
     parser = PydanticOutputParser(pydantic_object=ExtractorSchema)
 
-
-    @tool
-    def extrair_dados_documentacao(self, caminho_arquivo: str, tipo_arquivo: str) -> str:
+    def create_docs_extraction_tool(self, model:BaseChatModel) -> Runnable:
+        prompt = ChatPromptTemplate.from_messages([
+                ('system',"""Você deve extrar as informações necessárias para o engenheiro de dados construir a pipeline de extração.
+                 {output_parser}"""),
+                MessagesPlaceholder(variable_name='doc')
+            ]).partial(output_parser=self.parser.get_format_instructions())
+        
+        @tool
+        def extrair_dados_documentacao(caminho_arquivo: str, tipo_arquivo: str) -> str:
             """Faz a extração de informações relevantes da documentação de fonte de dados.
-            o parâmetro self não deve ser informado.
+
             Args:
                 caminho_arquivo (str): caminho do arquivo da documentação.
                 tipo_arquivo (str): Um dos tipos de arquivo pré definidos (CSV, PDF, TXT).
@@ -54,34 +64,29 @@ class Analist(Runnable):
             
             # Load document
             if tipo_arquivo == 'PDF': raise ToolException(f'A ferramenta não suporta o tipo {tipo_arquivo}')
-            with open (caminho_arquivo, 'r') as file:
-                  documentation = ''.join(file.readlines())
-            chain = self.chain | self.parser
-            extract_schema = chain.invoke(
-                   {'ordem': f'Você deve extrar as informações necessárias para o engenheiro de dados construir a pipeline de extração da seguinte fonte: {documentation}'})
+            # with open (caminho_arquivo, 'r') as file:
+            #     documentation = ''.join(file.readlines())
             
-
-            return extract_schema.model_dump_json()
+            chain = prompt | model | self.parser
+           
+            extract_schema = chain.invoke({'doc': [HumanMessage(documentation)]})
+            msg = f"Envie esse json ao engenheiro de dados, nenhuma modificação deve ser feita!\n{extract_schema.model_dump_json()}"
+            return msg
+        return extrair_dados_documentacao # type: ignore   
     
     def __init__(self, model: BaseChatModel, *args, **kargs) -> None:
             super().__init__(*args, **kargs)
-            self.tools = [self.extrair_dados_documentacao]
-            self.prompt = (ChatPromptTemplate([
-                   self.role_prompt,
-                   MessagesPlaceholder(variable_name='ordem')])
-                   .partial(output_parser=self.parser.get_format_instructions())
-                   .partial(tools='.'.join([tool.name for tool in self.tools]))
-                   )
-            self.agent = model.bind_tools(self.tools)
+            self.tools = [self.create_docs_extraction_tool(model)]
+            self.prompt = (
+                 ChatPromptTemplate([self.role_prompt,MessagesPlaceholder('messages')])
+                 .partial(tools='.'.join([tool.name for tool in self.tools if tool]))  # type: ignore
+                 .partial(end_call=END_CALL_LOOP)
+                )
+            self.agent = model.bind_tools(self.tools, tool_choice='any') # type: ignore
             self.chain = self.prompt | self.agent
     
     def invoke(self, state: GraphState, **kargs) -> BaseMessage:
-        output = self.chain.invoke({'ordem': state['messages']})
+        output = self.chain.invoke(state) # type: ignore
         return output
 
-    
-    def __call__(self, query: str) -> Any:
-           self._response = self.chain.invoke({'ordem': query})
-           
-           return self._response
     

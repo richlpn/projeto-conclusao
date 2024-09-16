@@ -1,8 +1,8 @@
 # Imports
 #%%
-from tests.workflow_integration_test import workflow, graph, HumanMessage
+from tests.workflow_integration_test import workflow, graph
 
 # %%
-data = {'messages': [HumanMessage('Nova documentação de fonte de dados em ./data/docs/taxa_estacoes.csv')]}
+data = {'messages': [('human','Extrai as informações para o engenheiro de dados da fonte de dados em ./data/docs/taxa_estacoes.csv')]}
 p = graph.invoke(data, debug=True)
 # %%
