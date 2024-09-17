@@ -1,3 +1,4 @@
+import functools
 import operator
 
 from typing import Annotated, Callable, Literal, Sequence, TypedDict
@@ -14,7 +15,7 @@ class GraphState(TypedDict):
 
 class GraphNeighbor(TypedDict):
     origin: Runnable
-    neighbors: list[Runnable]
+    neighbor: Runnable
 
 
 def agent_node(state:GraphState, agent: Runnable, config: RunnableConfig, name: str):
@@ -37,31 +38,20 @@ def router(state: GraphState) -> str:
         return "__end__"
     return "continue"
 
-def registry_tools(agents: list[GraphNeighbor], workflow:StateGraph):
-    TOOLS_REGISTRY = {}
+def registry_tools(agent: Runnable, workflow: StateGraph, tool_registry:dict[str,Runnable]):
     
-    for node in agents:
-        agent_tools = {}
-        agent = node['origin']
-        neighbors = {agent.name: n.name for n in node['neighbors']}
+    for tool in agent.tools: # type: ignore
+        tool_registry[tool.name] = tool
+        workflow.add_node(tool.name, tool)
+        workflow.add_edge(agent.name, tool.name) # type: ignore
+    return tool_registry
 
-        for tool in agent.tools: # type: ignore
-            TOOLS_REGISTRY[tool.name] = tool
-            workflow.add_node(tool.name, tool)
-            agent_tools[tool.name] = agent.name
-            agent_tools[agent.name] = tool.name 
 
-        workflow.add_conditional_edges(
-            agent.name, # type: ignore
-            router,
-            {"continue": agents[i+1].name, "__end__": END, **neighbors}, # type: ignore
-        )
-    return TOOLS_REGISTRY
+def create_use_tools(registered_tools:dict) -> Callable:
 
-def create_use_tools(agents: list[Runnable], registered_tools:dict) -> Callable:
-    
     def use_tools(state:GraphState) -> dict[str, list[AgentAction]]:
         tool_call = state['messages'][-1].tool_calls # type: ignore
+        print(f"{tool_call['name']}.invoke(input={tool_call['args']})")
         tool = registered_tools[tool_call['name']]
         out = tool.invoke(input=tool_call['args'])
         
@@ -69,3 +59,18 @@ def create_use_tools(agents: list[Runnable], registered_tools:dict) -> Callable:
         return {"messages": [action]}
     
     return use_tools
+
+def create_workflow(agents_graph: list[GraphNeighbor], ):
+    TOOLS_REGISTRY = {}
+    workflow = StateGraph(GraphState)
+    for node in agents_graph:
+        agent = node['origin']
+        ag_node = functools.partial(agent_node, agent=agent, name=agent.name) # type: ignore
+        workflow.add_node(agent.name, ag_node) # type: ignore
+        registry_tools(agent, workflow, TOOLS_REGISTRY)
+        # Cria uma conexão entre o agente e o router
+
+        workflow.add_conditional_edges(
+            agent.name, # type: ignore
+            router) # type: ignore
+    return create_use_tools(TOOLS_REGISTRY), workflow
