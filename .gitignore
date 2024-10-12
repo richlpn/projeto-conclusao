@@ -1,0 +1,8 @@
+# VENV
+.venv
+.vscode
+.env
+# DATA
+data/dataset
+
+*/*/__pycache__/
