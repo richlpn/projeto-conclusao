@@ -1,4 +1,5 @@
 """"""
+
 from pydantic import BaseModel, Field
 
 
@@ -9,7 +10,13 @@ class ColumnSchema(BaseModel):
 
 
 class TableSchema(BaseModel):
-    name: str = Field(description="Table Name")
+
+    type: str = Field(
+        description="Any type of structured or semi-structure data source (CSV, SQL, XLSX, JSON, etc...)"
+    )
+    name: str = Field(
+        description="Name of the table used for extraction and database connections."
+    )
     columns: list[ColumnSchema] = Field(
         default_factory=list, description="Columns used or referenced on the table."
     )
