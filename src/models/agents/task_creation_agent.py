@@ -1,15 +1,11 @@
-from langchain.output_parsers import PydanticOutputParser
-
 from src.models.agents.agent import Agent
 from src.models.requirement_model import Requirement
+from src.output_parsers.tasks_output_parser import TaskOutputParser
 
 
-class TaskCreationAgent(Agent):
-
+class TaskCreationAgent(Agent[Requirement]):
     name = "task_creation_agent"
-    parser: PydanticOutputParser[Requirement] = PydanticOutputParser(
-        pydantic_object=Requirement
-    )
+    parser = TaskOutputParser()
 
 
 TASK_CREATION_AGENT = TaskCreationAgent()

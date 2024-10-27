@@ -1,5 +1,5 @@
 import os
-from typing import Generic, TypeVar
+from typing import Generic, Type, TypeVar
 
 import msgspec
 import os
