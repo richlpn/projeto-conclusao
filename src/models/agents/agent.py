@@ -1,9 +1,10 @@
 import os
-from typing import Generic, Type, TypeVar
+from typing import Any, Generic, TypeVar
 
 import msgspec
-import os
 from langchain.prompts import ChatPromptTemplate
+from langchain_anthropic import ChatAnthropic
+from langchain_core.language_models.base import BaseLanguageModel
 from langchain_core.messages import BaseMessage
 from langchain_core.output_parsers.base import BaseOutputParser
 from langchain_core.runnables import Runnable
@@ -38,7 +39,7 @@ class Agent(Runnable, Generic[P]):
 
         self.name = yml["name"]
         self.temperature = yml.get("temperature", 0.8)
-        self.model = ChatOllama(model=yml["model"], temperature=self.temperature)
+        self.model = self.__get_model__(yml)
 
         self.input_variables = yml["input_variables"]
         self.prompt = ChatPromptTemplate(
@@ -51,6 +52,22 @@ class Agent(Runnable, Generic[P]):
         self.chain = self.prompt | self.model
         if self.parser:
             self.chain = self.chain | self.parser
+
+    def __get_model__(self, yml: dict[str, Any]) -> BaseLanguageModel:
+
+        model_source = yml["model"].get("source")
+        if not model_source:
+            return ChatOllama(model=yml["model"], temperature=self.temperature)
+
+        if model_source == "anthropic":
+            return ChatAnthropic(
+                model=yml["model"]["name"], temperature=self.temperature
+            )  # type: ignore
+
+        if model_source == "ollama":
+            return ChatOllama(model=yml["model"]["name"], temperature=self.temperature)
+
+        raise ValueError(f"{model_source} is not a supported model source")
 
     def invoke(self, **kwargs) -> P:
         call = {**kwargs}

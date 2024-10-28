@@ -1,8 +1,5 @@
-
-
-from src.models.agents.script_generator_agent import SCRIPT_GENERATOR_AGENT
-from src.models.data_docs_schemas_model import DataSourceSchema
-from src.models.script_model import Script
+from pkg_resources import Requirement
+from src.models.agents.script_generator_agent import ScriptGeneratorAgent
 from src.models.state import OverallState, ScriptGenerationState
 from utils.llm_logger import LOGGER
 
@@ -11,27 +8,24 @@ def generate_python_script(state: OverallState) -> OverallState:
 
     generation_state = state["messages"][-1]
     if not isinstance(generation_state, ScriptGenerationState) or not isinstance(
-        generation_state.pipeline_schema, DataSourceSchema
+        generation_state.requirements, Requirement
     ):
         raise ValueError("Last message should be a Generation State")
 
-    schema = generation_state.pipeline_schema
+    while len(generation_state.requirements.tasks) > 0:
+        task = generation_state.requirements.tasks.pop(0)
+        agent = ScriptGeneratorAgent()
 
-    LOGGER.info(f"[WRITTING SCRIPT] - INPUT SCHEMA - {schema.name}")
-    res = SCRIPT_GENERATOR_AGENT.invoke(
-        {
-            "SCHEMA": schema.model_dump_json(),
-            "SCRIPT_DESCRIPTION": generation_state.pipeline_type.value,
-        }
-    )
+        LOGGER.info(f"[WRITTING SCRIPT] - CURRENT TASK - {task}")
+        res = agent.invoke(TASK=task)
 
-    if not isinstance(res.content, str):
-        raise ValueError("Chain must return a string")
+        if not isinstance(res, str):
+            raise ValueError("Chain must return a string")
 
-    script = Script(raw_code=res.content, script_schema=schema)
+        generation_state.completed_tasks.tasks += [task]
+        generation_state.code += [res]
 
-    LOGGER.info(f"[CODE PARSER] - Finished - {script}")
-    script.save()
+    pipeline = "\n".join(generation_state.code)
     return OverallState(
-        messages=[script.raw_code], origin=SCRIPT_GENERATOR_AGENT, destination="__end__"
+        messages=[pipeline], origin=agent, destination="__end__"  # type: ignore
     )

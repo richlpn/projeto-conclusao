@@ -6,6 +6,7 @@ from langchain_core.messages import BaseMessage
 from pydantic import BaseModel, Field
 
 from src.models.agents.agent import Agent
+from src.models.requirement_model import Requirement
 
 
 class PipelineStates(Enum):
@@ -32,12 +33,7 @@ class OverallState(TypedDict):
     destination: str
 
 
-class ScriptGenerationState(
-    BaseModel,
-    Generic[S],
-):
-    pipeline_schema: S | str
-    pipeline_type: PipelineStates = Field(default=PipelineStates.EXTRACTION)
-    error_count: int = Field(default=0)
-    origin: str
-    destination: str
+class ScriptGenerationState(BaseModel):
+    requirements: Requirement
+    completed_tasks: Requirement
+    code: list[str]
