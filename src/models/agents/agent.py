@@ -55,8 +55,8 @@ class Agent(Runnable, Generic[P]):
 
     def __get_model__(self, yml: dict[str, Any]) -> BaseLanguageModel:
 
-        model_source = yml["model"].get("source")
-        if not model_source:
+        model_source = yml["model"]
+        if isinstance(model_source, str):
             return ChatOllama(model=yml["model"], temperature=self.temperature)
 
         if model_source == "anthropic":
@@ -64,7 +64,7 @@ class Agent(Runnable, Generic[P]):
                 model=yml["model"]["name"], temperature=self.temperature
             )  # type: ignore
 
-        if model_source == "ollama":
+        if yml["model"]["source"] == "ollama":
             return ChatOllama(model=yml["model"]["name"], temperature=self.temperature)
 
         raise ValueError(f"{model_source} is not a supported model source")

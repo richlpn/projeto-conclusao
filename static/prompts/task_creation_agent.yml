@@ -5,6 +5,7 @@ Agent:
         - PARSER
     model:
         llama3.1:latest
+    temperature: 0.4
     prompts:
         system:
             "You are a Senior Data Engineering Manager with 15+ years of experience in designing data pipelines.
@@ -21,5 +22,5 @@ Agent:
                  - Success criteria: Define measurable goals that indicate the pipeline ran successfully.
             {PARSER}"
         user:
-            "A new extraction data pipeline must be developed, here is the description:\n{SCHEMA}"
+            "A new data pipeline must be developed, here is the description:\n{SCHEMA}"
             

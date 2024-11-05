@@ -30,7 +30,8 @@ class TaskOutputParser(BaseOutputParser[Requirement]):
             {
             "title":"Standarize columns",
             "description" : "Check if the following columns are present, Raise an Excepiton with the message 'Missing required columns':customerId, orderDate, productCode, totalAmountPaid, shippingAddressWrite a function 'parse_columns' that takes a string and transforms then into sxample customerId -> customer_id; order_date -> proarse_columns' to transform the all the columns."
-            },{
+            },
+            {
             "title":"Load the processed dataframe",
             "description" : "Load the dataframe using the path at `SAILES_OUTPUT_PATH` as parquet file."
             }

@@ -27,5 +27,5 @@ def tool_call(state: OverallState):
     LOGGER.info(f"Calling tool {msg.tool_calls[-1]['name']}")
     tool_answer = tool.invoke(input=msg.tool_calls[-1]["args"])
     return OverallState(
-        messages=[tool_answer], origin="TOOL_CALL", destination="__end__"
+        messages=[tool_answer], origin="TOOL_CALL", destination="task_generation"
     )

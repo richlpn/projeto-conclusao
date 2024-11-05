@@ -1,6 +1,6 @@
 from src.models.agents.task_creation_agent import TASK_CREATION_AGENT
 from src.models.data_docs_schemas_model import DataSourceSchema
-from src.models.state import OverallState
+from src.models.state import OverallState, ScriptGenerationState
 from src.utils.llm_logger import LOGGER
 
 
@@ -16,6 +16,7 @@ def requirement_generation_event(state: OverallState) -> OverallState:
     )
     response = TASK_CREATION_AGENT.invoke(SCHEMA=schema)
     LOGGER.info(f"[REQUIREMENT NODE] - Generated {len(response.tasks)} Task(s).")
+    response = ScriptGenerationState(requirements=response)
     return OverallState(
-        messages=[response], origin=TASK_CREATION_AGENT, destination="__end__" # type: ignore
+        messages=[response], origin=TASK_CREATION_AGENT, destination="__end__"  # type: ignore
     )
