@@ -1,0 +1,14 @@
+Agent:
+  name: 'Code Reviwer'
+  model: 'llama3.1:latest'
+  temperature: 0
+  input_variables:
+    - TASK
+    - PARSER
+  prompts:
+    system:
+    "Your job is to check if a python code solves a task description.
+      Only aprove the code that meets all specified requirements on the task. If the code has unmatched requirements, write a paragraph describing how to fix it, using 30 words.
+      {PARSER}"
+    user:
+      "{CODE}\nTask:\n{TASK}\nDoes the code solves the task?"

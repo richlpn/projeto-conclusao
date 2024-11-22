@@ -103,3 +103,1318 @@ Note that this pipeline assumes that the source file is in a text format and can
 2024-10-20 09:50:49,718 - app - INFO - Calling tool extract_schema
 2024-10-20 09:54:11,669 - app - INFO - [NEW DATA EVENT] - Started from - user
 2024-10-20 09:54:24,330 - app - INFO - Calling tool extract_schema
+2024-10-20 10:38:03,936 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 10:38:17,858 - app - INFO - Calling tool extract_schema
+2024-10-20 11:09:46,570 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 11:09:59,347 - app - INFO - Calling tool extract_schema
+2024-10-20 11:10:30,275 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-20 11:17:21,537 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 11:17:34,051 - app - INFO - Calling tool extract_schema
+2024-10-20 11:18:05,258 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-20 11:35:26,939 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 11:35:39,852 - app - INFO - Calling tool extract_schema
+2024-10-20 11:36:13,218 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-20 11:46:57,577 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 11:47:10,556 - app - INFO - Calling tool extract_schema
+2024-10-20 11:47:43,666 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-20 11:48:39,751 - app - INFO - [REQUIREMENT NODE] - Generated 0 Task(s).
+2024-10-20 12:03:11,174 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 12:03:18,486 - app - INFO - Calling tool extract_schema
+2024-10-20 12:03:49,554 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-20 12:04:40,039 - app - INFO - [REQUIREMENT NODE] - Generated 0 Task(s).
+2024-10-20 14:30:02,026 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 14:30:14,628 - app - INFO - Calling tool extract_schema
+2024-10-20 14:30:45,488 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-20 14:36:14,768 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-20 14:36:28,618 - app - INFO - Calling tool extract_schema
+2024-10-20 14:37:00,379 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 10:05:30,854 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 10:05:46,757 - app - INFO - Calling tool extract_schema
+2024-10-21 10:06:38,349 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 10:14:19,819 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 10:14:33,496 - app - INFO - Calling tool extract_schema
+2024-10-21 10:15:07,005 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 10:19:48,960 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 10:20:03,287 - app - INFO - Calling tool extract_schema
+2024-10-21 10:20:34,592 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 10:34:39,175 - app - INFO - [REQUIREMENT NODE] - Generated 0 Task(s).
+2024-10-21 10:34:49,999 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 10:35:05,632 - app - INFO - Calling tool extract_schema
+2024-10-21 10:35:39,225 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 10:46:59,253 - app - INFO - [REQUIREMENT NODE] - Generated 0 Task(s).
+2024-10-21 10:47:49,880 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 10:48:04,830 - app - INFO - Calling tool extract_schema
+2024-10-21 10:48:35,133 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 11:21:14,255 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 11:21:26,027 - app - INFO - Calling tool extract_schema
+2024-10-21 11:21:56,864 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 11:31:16,880 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 11:31:21,319 - app - INFO - Calling tool extract_schema
+2024-10-21 11:31:52,393 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 11:42:36,973 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 11:42:52,140 - app - INFO - Calling tool extract_schema
+2024-10-21 11:43:21,429 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 11:49:33,498 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 11:49:45,104 - app - INFO - Calling tool extract_schema
+2024-10-21 11:50:16,095 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-21 13:41:40,068 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-21 13:41:56,598 - app - INFO - Calling tool extract_schema
+2024-10-26 12:47:15,552 - app - DEBUG - Created 0 Tasks - tasks:
+[]
+2024-10-27 18:46:25,788 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 18:46:39,242 - app - INFO - Calling tool extract_schema
+2024-10-27 18:47:10,837 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 18:47:36,581 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-10-27 18:53:17,839 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 18:53:31,562 - app - INFO - Calling tool extract_schema
+2024-10-27 18:54:04,396 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 18:54:33,589 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-10-27 18:55:32,883 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 18:55:46,110 - app - INFO - Calling tool extract_schema
+2024-10-27 18:56:19,251 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 18:56:48,172 - app - INFO - [REQUIREMENT NODE] - Generated 3 Task(s).
+2024-10-27 18:58:14,005 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 18:58:26,469 - app - INFO - Calling tool extract_schema
+2024-10-27 18:58:58,491 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 18:59:23,699 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-10-27 18:59:49,223 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TRIBUTARY_PATH` environment variable to get the path of the file, then use Pandas' `read_csv` function to load the dataframe. If any error occurs during this step, raise a ValueError with message 'Error reading CSV file'."
+2024-10-27 19:02:15,573 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Check columns present' description="Verify that the following columns are present in the dataframe: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito. If any of these columns are missing, raise an Exception with message 'Missing required columns'."
+2024-10-27 19:02:45,976 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Transform column names' description="Write a function `transform_columns` that takes the column names as input and transforms them into lowercase with underscores instead of spaces. For example, 'Numservico' -> 'num_servico'. This function should be used to transform all column names in the dataframe."
+2024-10-27 19:03:05,523 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate data types' description="Verify that the following columns have the correct data type: NumServico (string), NomeServico (string), CodReceita (string), SiglaReceita (string), codEstacaoDebito (string), ValorBase (float), DescCodEstacaoDebito (string). If any of these columns do not have the expected data type, raise a ValueError with message 'Invalid data type'."
+2024-10-27 19:03:46,781 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate column values' description="Verify that the following columns have valid values: ValorBase (should be greater than 0). If this condition is not met, raise a ValueError with message 'ValorBase should be greater than 0'."
+2024-10-27 19:04:10,159 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Write transformed dataframe to Parquet file' description="Use Pandas' `to_parquet` function to write the transformed dataframe to a Parquet file at the path specified by the `TRIBUTARY_OUTPUT_PATH` environment variable."
+2024-10-27 19:23:30,270 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 19:23:43,716 - app - INFO - Calling tool extract_schema
+2024-10-27 19:24:14,926 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 19:25:00,884 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-10-27 19:25:00,960 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes CSV' description="Use the `SAILES_PATH` environment variable to get the path of the file containing the Taxas_Estacoes.csv data. Read the CSV into a Pandas dataframe, raising a ValueError with message 'Invalid CSV format' if the file cannot be read successfully."
+2024-10-27 19:25:31,940 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Extract Required Columns' description="Check that the following columns are present in the dataframe: Numservico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito. Raise an Exception with message 'Missing required columns' if any of these columns are missing."
+2024-10-27 19:25:56,723 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Clean and Standardize Columns' description='Call the `parse_columns` function to transform column names into standard format: Numservico -> num_servico; NomeServico -> nome_servico; CodReceita -> cod_receita; SiglaReceita -> sigla_receita; codEstacaoDebito -> cod_estacao_debito; ValorBase -> valor_base; DescCodEstacaoDebito -> desc_cod_estacao_debito.'
+2024-10-27 19:26:51,234 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate CSV Data' description="Check that the following validation rules are met: Numservico is a numeric string with length between 1 and 20 characters, NomeServico is a string with length between 1 and 50 characters, CodReceita is a numeric string with length between 1 and 10 characters, SiglaReceita is one of the following values: TFI, TFI-SAT, TFF, TFF-SAT, CFRP, codEstacaoDebito is an alphanumeric string with length between 1 and 20 characters, ValorBase is a numeric string with length between 1 and 10 characters, DescCodEstacaoDebito is a string with length between 1 and 50 characters. Raise a ValueError with message 'Invalid data' for each column that fails validation."
+2024-10-27 19:32:20,804 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 19:32:45,843 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 19:33:25,679 - app - INFO - Calling tool extract_schema
+2024-10-27 19:33:57,216 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 19:34:18,084 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-10-27 19:34:18,157 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Extract Taxas_Estacoes.csv' description="Read the CSV file `Taxas_Estacoes.csv` from the path stored in the `SAILES_PATH` environment variable. Use pandas to read the file and store it in a dataframe. Check if any of the columns have a length greater than 255 characters, raise a ValueError with message 'Column exceeds maximum length' if true."
+2024-10-27 19:34:28,325 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if all the required columns are present in the dataframe: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito. Raise an Exception with message 'Missing required columns' if any of them are missing."
+2024-10-27 19:34:48,438 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Clean and preprocess data' description='Write a function `clean_data` that takes the dataframe as input and returns the cleaned dataframe. The function should drop any rows where any column is null or empty, and fill any null values in the columns with their respective default value.'
+2024-10-27 19:35:16,120 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description='Write a function `parse_columns` that takes a string and transforms it into the standard format. For example: NumServico -> num_servico; NomeServico -> nome_servico; CodReceita -> cod_receita; SiglaReceita -> sigla_receita; codEstacaoDebito -> cod_estacaodebito; ValorBase -> valor_base; DescCodEstacaoDebito -> desc_cod_estacaodebito. Apply this function to all the column names in the dataframe.'
+2024-10-27 19:35:44,533 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Write processed data to file' description='Write the cleaned and preprocessed dataframe to a CSV file at the path stored in the `SAILES_OUTPUT_PATH` environment variable, with the same structure as the original file.'
+2024-10-27 19:44:40,839 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-27 19:44:55,424 - app - INFO - Calling tool extract_schema
+2024-10-27 19:45:26,778 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-27 19:45:46,042 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-10-27 19:45:46,117 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Extract tax rates from CSV file' description="Use the `TAXES_CSV_PATH` environment variable to get the path of the Taxas_Estacoes.csv file, and then use Pandas' read_csv function to load the dataframe.                        Check if the file extension is correct and raise a ValueError with message 'File extention not suported by this .read_csv to load the dataframe.'                        if it's not csv or other supported format. The expected columns are NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase and DescCodEstacaoDebito."
+2024-10-27 19:46:00,718 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present in the dataframe:                        NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase and DescCodEstacaoDebito.                        Raise an Exception with message 'Missing required columns' if any of them is missing."
+2024-10-27 19:46:18,127 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Transform column names' description='Use the `parse_columns` function to transform the column names according to the following rules:                        NumServico -> service_code; NomeServico -> service_name; CodReceita -> receipt_code; SiglaReceita -> receipt_acronym; codEstacaoDebito -> station_code; ValorBase -> base_value; DescCodEstacaoDebito -> station_description.'
+2024-10-27 19:46:31,597 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use Pandas' to_parquet function to save the processed dataframe as a parquet file in the `TAXES_OUTPUT_PATH` directory.                        If any error occurs during this step, raise an exception with message 'Error saving dataframe to parquet file'."
+2024-10-28 15:35:52,565 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-28 15:36:09,341 - app - INFO - Calling tool extract_schema
+2024-10-28 15:36:41,718 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-28 15:37:07,038 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-10-28 15:37:07,119 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `SAILES_PATH` environment variable to get the path of the file on the `Arrecadação - Valores de Tributos e Preços Públicos` task. If the file extension is not supported by pandas, raise a ValueError with message 'File extension not supported'. Load the dataframe using pandas' `read_csv` function to load the Taxas_Estacoes.csv file."
+2024-10-28 15:40:16,820 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-28 15:40:20,303 - app - INFO - Calling tool extract_schema
+2024-10-28 15:40:54,117 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-28 15:41:25,529 - app - INFO - [REQUIREMENT NODE] - Generated 7 Task(s).
+2024-10-28 15:41:25,604 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TRIBUTES_PATH` environment variable to get the path of the Taxas_Estacoes.csv file on disk. Read the CSV file into a Pandas DataFrame using `pd.read_csv`. Raise a ValueError with message 'File extension not supported' if the file has an unsupported extension."
+2024-10-28 15:49:16,019 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Check for required columns' description="Verify that all required columns are present in the DataFrame: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, and DescCodEstacaoDebito. Raise an Exception with message 'Missing required columns' if any of these columns are missing."
+2024-10-28 15:49:45,942 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description='Call the `parse_columns` function to transform all column names into snake_case: NumServico -> num_servico, NomeServico -> nome_servico, etc. The `parse_columns` function should take a string and return a dictionary with the transformed column names.'
+2024-10-28 15:50:07,574 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Check for invalid values' description="Verify that all numeric columns (ValorBase) contain only valid numbers (integers or floats). Raise an Exception with message 'Invalid value in ValorBase' if any invalid values are found."
+2024-10-28 15:50:34,842 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Transform CodReceita and SiglaReceita columns' description='Create two new columns, cod_receita_type and sigla_receita_type, by parsing the values in the CodReceita and SiglaReceita columns. The parse function should return a dictionary with the parsed types (e.g., TFI, TFI-SAT, etc.).'
+2024-10-28 15:51:09,740 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Write processed DataFrame to parquet file' description="Use the `TRIBUTES_OUTPUT_PATH` environment variable to get the path of the output file. Write the processed DataFrame to a parquet file using `pd.to_parquet`. Raise an Exception with message 'Error writing output file' if any errors occur during writing."
+2024-10-28 15:51:35,319 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Error handling and validation' description="Wrap all ETL steps in a try/except block. If any unhandled exceptions occur, stop the pipeline and raise an Exception with a custom error message (e.g., 'Unexpected error: <error_message>')."
+2024-10-28 15:59:59,775 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-10-28 16:00:39,959 - app - INFO - Calling tool extract_schema
+2024-10-28 16:01:14,659 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-10-28 16:01:43,386 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-10-28 16:01:43,470 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file, then use Pandas' `read_csv` function to load the dataframe. If the file extension is not supported by this function, raise a ValueError with message 'File extension not supported'."
+2024-10-28 16:02:08,475 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Check required columns' description="Verify if the following columns are present in the dataframe: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito. If any of these columns are missing, raise an Exception with message 'Missing required columns'."
+2024-10-28 16:02:32,517 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description='Write a function `parse_columns` that takes a string and transforms it into the standard format (e.g., customerId -> customer_id; orderDate -> order_date). Apply this function to all column names in the dataframe. For example, NumServico -> service_number; NomeServico -> service_name.'
+2024-10-28 16:03:18,967 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Transform ValorBase column' description="Write a function `transform_valor_base` that takes the ValorBase column and converts it to a numeric type (e.g., float or int). If any values in this column cannot be converted, raise an Exception with message 'Invalid valor base value'."
+2024-10-28 16:04:00,805 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Transform DescCodEstacaoDebito column' description="Write a function `transform_desc_cod_estacao_debito` that takes the DescCodEstacaoDebito column and converts it to a standardized format (e.g., lowercase). If any values in this column cannot be converted, raise an Exception with message 'Invalid desc cod estacao debito value'."
+2024-10-28 16:04:56,663 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load processed dataframe' description='Use the `SAILES_OUTPUT_PATH` environment variable to get the path of the output directory. Then, write the processed dataframe to a Parquet file in this directory.'
+2024-11-01 16:49:21,115 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-01 16:49:39,252 - app - INFO - Calling tool extract_schema
+2024-11-01 16:50:12,285 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-01 16:50:35,789 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-01 16:57:43,584 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-01 16:58:26,771 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present, Raise an Exception with the message 'Missing required columns':                      NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.                     Use pandas' all function to check if all required columns are present."
+2024-11-01 16:59:04,721 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description="Write a function 'parse_columns' that takes a string and transforms it into snake_case example:                      NumServico -> num_servico; NomeServico -> nome_servico.                     Apply this function to all column names in the dataframe."
+2024-11-01 16:59:28,815 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Convert value types' description="Check if the following columns have the correct data type, Raise an Exception with the message 'Incorrect data type':                      NumServico: str -> int; ValorBase: str -> float.                     Use pandas' apply function to convert the data type of each column."
+2024-11-01 17:00:01,419 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use the path at `SAILES_OUTPUT_PATH` as parquet file.                      Check if the file already exists and raise a FileExistsError with message 'File already exists'.                     Use pandas' to_parquet function to save the dataframe."
+2024-11-01 18:27:09,304 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-01 18:27:50,564 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present, Raise an Exception with the message 'Missing required columns':                      NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.                     Use pandas' all function to check if all required columns are present."
+2024-11-01 18:28:30,992 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description="Write a function 'parse_columns' that takes a string and transforms it into snake_case example:                      NumServico -> num_servico; NomeServico -> nome_servico.                     Apply this function to all column names in the dataframe."
+2024-11-01 18:29:07,273 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Convert value types' description="Check if the following columns have the correct data type, Raise an Exception with the message 'Incorrect data type':                      NumServico: str -> int; ValorBase: str -> float.                     Use pandas' apply function to convert the data type of each column."
+2024-11-01 18:29:52,920 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use the path at `SAILES_OUTPUT_PATH` as parquet file.                      Check if the file already exists and raise a FileExistsError with message 'File already exists'.                     Use pandas' to_parquet function to save the dataframe."
+2024-11-01 19:03:10,814 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-01 19:13:33,439 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-01 19:40:37,080 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-01 19:55:08,246 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-05 08:19:36,422 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-05 08:20:27,876 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present, Raise an Exception with the message 'Missing required columns':                      NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.                     Use pandas' all function to check if all required columns are present."
+2024-11-05 08:21:00,284 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description="Write a function 'parse_columns' that takes a string and transforms it into snake_case example:                      NumServico -> num_servico; NomeServico -> nome_servico.                     Apply this function to all column names in the dataframe."
+2024-11-05 08:21:21,383 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Convert value types' description="Check if the following columns have the correct data type, Raise an Exception with the message 'Incorrect data type':                      NumServico: str -> int; ValorBase: str -> float.                     Use pandas' apply function to convert the data type of each column."
+2024-11-05 08:22:05,035 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use the path at `SAILES_OUTPUT_PATH` as parquet file.                      Check if the file already exists and raise a FileExistsError with message 'File already exists'.                     Use pandas' to_parquet function to save the dataframe."
+2024-11-05 08:25:22,852 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-05 08:25:59,903 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present, Raise an Exception with the message 'Missing required columns':                      NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.                     Use pandas' all function to check if all required columns are present."
+2024-11-05 08:26:33,726 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description="Write a function 'parse_columns' that takes a string and transforms it into snake_case example:                      NumServico -> num_servico; NomeServico -> nome_servico.                     Apply this function to all column names in the dataframe."
+2024-11-05 08:27:15,612 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Convert value types' description="Check if the following columns have the correct data type, Raise an Exception with the message 'Incorrect data type':                      NumServico: str -> int; ValorBase: str -> float.                     Use pandas' apply function to convert the data type of each column."
+2024-11-05 08:27:50,775 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use the path at `SAILES_OUTPUT_PATH` as parquet file.                      Check if the file already exists and raise a FileExistsError with message 'File already exists'.                     Use pandas' to_parquet function to save the dataframe."
+2024-11-05 08:34:00,561 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-05 08:34:32,985 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present, Raise an Exception with the message 'Missing required columns':                      NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.                     Use pandas' all function to check if all required columns are present."
+2024-11-05 08:35:08,673 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description="Write a function 'parse_columns' that takes a string and transforms it into snake_case example:                      NumServico -> num_servico; NomeServico -> nome_servico.                     Apply this function to all column names in the dataframe."
+2024-11-05 08:35:28,023 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Convert value types' description="Check if the following columns have the correct data type, Raise an Exception with the message 'Incorrect data type':                      NumServico: str -> int; ValorBase: str -> float.                     Use pandas' apply function to convert the data type of each column."
+2024-11-05 08:35:54,069 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use the path at `SAILES_OUTPUT_PATH` as parquet file.                      Check if the file already exists and raise a FileExistsError with message 'File already exists'.                     Use pandas' to_parquet function to save the dataframe."
+2024-11-05 08:39:11,186 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file.                      Check if the file exists and raise a FileNotFoundError with message 'File not found at specified path'.                     Use pandas' read_csv function to load the dataframe."
+2024-11-05 08:40:02,676 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Validate required columns' description="Check if the following columns are present, Raise an Exception with the message 'Missing required columns':                      NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.                     Use pandas' all function to check if all required columns are present."
+2024-11-05 08:40:39,512 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Standardize column names' description="Write a function 'parse_columns' that takes a string and transforms it into snake_case example:                      NumServico -> num_servico; NomeServico -> nome_servico.                     Apply this function to all column names in the dataframe."
+2024-11-05 08:41:23,051 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Convert value types' description="Check if the following columns have the correct data type, Raise an Exception with the message 'Incorrect data type':                      NumServico: str -> int; ValorBase: str -> float.                     Use pandas' apply function to convert the data type of each column."
+2024-11-05 08:41:49,784 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Load the processed dataframe' description="Use the path at `SAILES_OUTPUT_PATH` as parquet file.                      Check if the file already exists and raise a FileExistsError with message 'File already exists'.                     Use pandas' to_parquet function to save the dataframe."
+2024-11-05 19:12:01,225 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-05 19:12:15,746 - app - INFO - Calling tool extract_schema
+2024-11-05 19:12:49,060 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-05 19:13:07,473 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-05 19:13:07,551 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on which to perform the `read_csv` operation to load the dataframe. If the file extension is not supported, raise a ValueError with message 'File extention not suported by this .read_csv'." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-05 19:18:46,837 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-05 19:18:50,027 - app - INFO - Calling tool extract_schema
+2024-11-05 19:19:18,078 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos_v1,
+2024-11-05 19:20:05,617 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-05 19:20:05,747 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes CSV' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file. Load the dataframe using pandas' `read_csv` function, and raise a ValueError with message 'Invalid CSV format' if the file is not in the expected format." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-05 19:21:57,679 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-05 19:22:01,018 - app - INFO - Calling tool extract_schema
+2024-11-05 19:22:27,729 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos_v1,
+2024-11-05 19:22:54,178 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-05 19:22:54,252 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes CSV file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file. Read the file using pandas' read_csv function and return a DataFrame with the following columns:            - NumServico (str)            - NomeServico (str)            - CodReceita (str)            - SiglaReceita (str)            - codEstacaoDebito (str)            - ValorBase (str)            - DescCodEstacaoDebito (str)        Raise a ValueError with message 'File extension not supported by pandas' if the file extension is not .csv." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-05 19:23:57,383 - app - INFO - EVALUATING TASK - Read Taxas_Estacoes CSV file
+2024-11-05 19:24:21,529 - app - INFO - TASK - Read Taxas_Estacoes CSV file - REVIEW - ReviewStatus.DENIED
+2024-11-06 03:36:57,294 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 03:37:05,290 - app - INFO - Calling tool extract_schema
+2024-11-06 03:37:54,284 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 03:38:18,081 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 03:38:18,162 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `SAILES_PATH` environment variable to get the path of the file on the path, then use pandas' `read_csv` function to load the dataframe. Raise a ValueError with message 'File extension not supported by this pipeline' if the file extension is not supported." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 03:39:00,307 - app - INFO - EVALUATING TASK - Read Taxas_Estacoes.csv
+2024-11-06 03:39:33,767 - app - INFO - TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 04:09:15,354 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:09:29,381 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:10:02,346 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:10:25,381 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 04:10:25,455 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on disk. Read the CSV file using Pandas' read_csv function and store it in a dataframe called `taxas_estacoes_df`. Raise an Exception with message 'File not found' if the file is missing or cannot be loaded." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 04:14:47,931 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:15:00,590 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:15:33,443 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:15:57,786 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 04:15:57,859 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file. Read the CSV file using pandas' read_csv function and store it in a dataframe. Raise an Exception with message 'File extension not supported by this pipeline' if the file has an unsupported extension." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 04:20:10,604 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:20:24,227 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:20:57,037 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:21:26,671 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 04:23:25,782 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `SAILES_PATH` environment variable to get the path of the file and load it into a Pandas DataFrame using `pd.read_csv()` function. Raise an Exception with message 'File not found' if the file does not exist at the specified path." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 04:25:55,005 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:26:08,038 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:26:40,572 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:27:11,551 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 04:27:11,624 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on the path.                      Read the CSV file using pandas' `read_csv` function and store it in a dataframe.                     Raise an Exception with message 'File extention not suported by this .read_csv to load the dataframe.' if the file extension is not supported." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 04:28:11,664 - app - INFO - EVALUATING TASK - Read Taxas_Estacoes.csv file
+2024-11-06 04:28:41,267 - app - INFO - TASK - Read Taxas_Estacoes.csv file - REVIEW - ReviewStatus.DENIED
+2024-11-06 04:28:41,343 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on the path.                      Read the CSV file using pandas' `read_csv` function and store it in a dataframe.                     Raise an Exception with message 'File extention not suported by this .read_csv to load the dataframe.' if the file extension is not supported." review=Review(status=<ReviewStatus.DENIED: 'Denied'>, description="\n\nThe code has a few issues that need to be addressed:\n\n1. The `read_taxas_estacoes` function does not check if the file exists at the given path before attempting to read it using `pd.read_csv`. This can lead to unexpected behavior if the file is missing.\n\n2. The exception handling for unsupported file extensions is overly complex and can be simplified. Instead of checking if a specific string is in the exception message, you should catch the specific exception that pandas raises when it encounters an unsupported file extension (e.g., `pd.errors.EmptyDataError`).\n\n3. The function does not handle any potential errors that might occur while reading the CSV file. You should add try-except blocks to handle any exceptions that might be raised.\n\n4. The function does not check if the returned dataframe is empty before returning it. This can lead to unexpected behavior if the CSV file is empty.\n\n5. The function's docstring mentions raising a `FileNotFoundError` but this exception is already handled in the except block, so it should be removed from the docstring.\n\n6. The function does not follow PEP 8 guidelines for function naming conventions. It should be named `read_taxas_estacoes_csv` instead of `read_taxas_estacoes`.\n\n7. The imports are not correctly specified. The import statement should be `import pandas as pd` instead of `pandas as pd`. \n\nTo improve the code, you can follow these steps:\n\n* Check if the file exists at the given path before attempting to read it.\n* Simplify the exception handling for unsupported file extensions by catching the specific exception raised by pandas.\n* Add try-except blocks to handle any potential errors that might occur while reading the CSV file.\n* Check if the returned dataframe is empty before returning it.\n* Follow PEP 8 guidelines for function naming conventions.\n* Correctly specify the imports.") code=Script(code='import pandas as pd\nfrom utils import write_to_database, read_from_database\n\ndef read_taxas_estacoes(filepath: str) -> pd.DataFrame:\n    """Read Taxas_Estacoes.csv file and return a dataframe.\n    \n    Args:\n        filepath (str): Path of the Taxas_Estacoes.csv file.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the CSV file.\n    \n    Raises:\n        FileNotFoundError: If the file is not found at the given path.\n        Exception: If the file extension is not supported by pandas\' read_csv function.\n    """\n    try:\n        dataframe = pd.read_csv(filepath)\n    except FileNotFoundError as e:\n        raise e\n    except Exception as e:\n        if \'File extention not suported by this .read_csv to load the dataframe.\' in str(e):\n            raise e\n        else:\n            raise Exception(\'File extention not suported by this .read_csv to load the dataframe.\')\n    return dataframe', imports=['pandas as pd', 'write_to_database', 'read_from_database'], functions=[Function(name='read_taxas_estacoes', doc_string='"""Read Taxas_Estacoes.csv file and return a dataframe.\n    \n    Args:\n        filepath (str): Path of the Taxas_Estacoes.csv file.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the CSV file.\n    \n    Raises:\n        FileNotFoundError: If the file is not found at the given path.\n        Exception: If the file extension is not supported by pandas\' read_csv function.\n    """')])
+2024-11-06 04:29:47,515 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv file' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on the path.                      Read the CSV file using pandas' `read_csv` function and store it in a dataframe.                     Raise an Exception with message 'File extention not suported by this .read_csv to load the dataframe.' if the file extension is not supported." review=Review(status=<ReviewStatus.DENIED: 'Denied'>, description="\n\nThe code has a few issues that need to be addressed:\n\n1. The `read_taxas_estacoes` function does not check if the file exists at the given path before attempting to read it using `pd.read_csv`. This can lead to unexpected behavior if the file is missing.\n\n2. The exception handling for unsupported file extensions is overly complex and can be simplified. Instead of checking if a specific string is in the exception message, you should catch the specific exception that pandas raises when it encounters an unsupported file extension (e.g., `pd.errors.EmptyDataError`).\n\n3. The function does not handle any potential errors that might occur while reading the CSV file. You should add try-except blocks to handle any exceptions that might be raised.\n\n4. The function does not check if the returned dataframe is empty before returning it. This can lead to unexpected behavior if the CSV file is empty.\n\n5. The function's docstring mentions raising a `FileNotFoundError` but this exception is already handled in the except block, so it should be removed from the docstring.\n\n6. The function does not follow PEP 8 guidelines for function naming conventions. It should be named `read_taxas_estacoes_csv` instead of `read_taxas_estacoes`.\n\n7. The imports are not correctly specified. The import statement should be `import pandas as pd` instead of `pandas as pd`. \n\nTo improve the code, you can follow these steps:\n\n* Check if the file exists at the given path before attempting to read it.\n* Simplify the exception handling for unsupported file extensions by catching the specific exception raised by pandas.\n* Add try-except blocks to handle any potential errors that might occur while reading the CSV file.\n* Check if the returned dataframe is empty before returning it.\n* Follow PEP 8 guidelines for function naming conventions.\n* Correctly specify the imports.") code=Script(code='import pandas as pd\nfrom utils import write_to_database, read_from_database\n\ndef read_taxas_estacoes(filepath: str) -> pd.DataFrame:\n    """Read Taxas_Estacoes.csv file and return a dataframe.\n    \n    Args:\n        filepath (str): Path of the Taxas_Estacoes.csv file.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the CSV file.\n    \n    Raises:\n        FileNotFoundError: If the file is not found at the given path.\n        Exception: If the file extension is not supported by pandas\' read_csv function.\n    """\n    try:\n        dataframe = pd.read_csv(filepath)\n    except FileNotFoundError as e:\n        raise e\n    except Exception as e:\n        if \'File extention not suported by this .read_csv to load the dataframe.\' in str(e):\n            raise e\n        else:\n            raise Exception(\'File extention not suported by this .read_csv to load the dataframe.\')\n    return dataframe', imports=['pandas as pd', 'write_to_database', 'read_from_database'], functions=[Function(name='read_taxas_estacoes', doc_string='"""Read Taxas_Estacoes.csv file and return a dataframe.\n    \n    Args:\n        filepath (str): Path of the Taxas_Estacoes.csv file.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the CSV file.\n    \n    Raises:\n        FileNotFoundError: If the file is not found at the given path.\n        Exception: If the file extension is not supported by pandas\' read_csv function.\n    """')])
+2024-11-06 04:31:02,234 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:31:16,778 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:31:24,207 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:31:55,968 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:32:23,999 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 04:34:11,163 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `SAILES_PATH` environment variable to get the path of the file, then use `pandas.read_csv` to load the dataframe. Raise a ValueError with message 'File extension not supported by this function' if the file has an unsupported extension." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 04:38:03,487 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 04:38:37,594 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 04:44:08,127 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:44:22,157 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:44:53,499 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:45:12,008 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-06 04:45:25,367 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on disk. Read the CSV file using pandas' `read_csv` function and store it in a dataframe. Raise an Exception with message 'File extention not supported by this ETL' if the file extension is not .csv." review=Review(status=<ReviewStatus.WAITING: 'Waiting'>, description='WAITING FOR REVIEW') code=None
+2024-11-06 04:46:30,439 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 04:46:49,959 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 04:47:04,123 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on disk. Read the CSV file using pandas' `read_csv` function and store it in a dataframe. Raise an Exception with message 'File extention not supported by this ETL' if the file extension is not .csv." review=Review(status=<ReviewStatus.DENIED: 'Denied'>, description="\n\nThe code provided does not meet all specified requirements. The main issue lies in the fact that it does not check if the file extension is .csv before attempting to read it with pandas' `read_csv` function.\n\nTo improve this, you should add a condition to check the file extension and raise an exception if it's not .csv. This would involve using the `os.path.splitext` function to get the file extension and then comparing it with '.csv'. If they don't match, you can raise an Exception with the message 'File extention not supported by this ETL'.\n\nAdditionally, the code does not utilize the `TAXAS_ESTACOES_PATH` environment variable as specified in the task description. You should use this variable to get the path of the file on disk before passing it to the `read_taxas_estacoes` function.\n\nLastly, the function name and docstring suggest that it raises a `TableNotFoundException`, but the actual exception being raised is not related to the table name. This inconsistency should be addressed by either changing the function name and docstring or modifying the exception being raised.") code=Script(code='import pandas as pd\nfrom utils import write_to_database, read_from_database\nfrom exceptions import TableNotFoundException\n\ndef read_taxas_estacoes(filepath):\n    """Read Taxas Estacoes CSV file and store it in a dataframe.\n    \n    Args:\n        filepath (str): Path of the file to be read.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the file.\n        \n    Raises:\n        TableNotFoundException: If the table name is not found in the database.\n    """\n    dataframe = pd.read_csv(filepath)\n    return dataframe', imports=['pandas as pd', 'write_to_database', 'read_from_database', 'TableNotFoundException'], functions=[Function(name='read_taxas_estacoes', doc_string='"""Read Taxas Estacoes CSV file and store it in a dataframe.\n    \n    Args:\n        filepath (str): Path of the file to be read.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the file.\n        \n    Raises:\n        TableNotFoundException: If the table name is not found in the database.\n    """')])
+2024-11-06 04:47:55,050 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on disk. Read the CSV file using pandas' `read_csv` function and store it in a dataframe. Raise an Exception with message 'File extention not supported by this ETL' if the file extension is not .csv." review=Review(status=<ReviewStatus.DENIED: 'Denied'>, description="\n\nThe code provided does not meet all specified requirements. The main issue lies in the fact that it does not check if the file extension is .csv before attempting to read it with pandas' `read_csv` function.\n\nTo improve this, you should add a condition to check the file extension and raise an exception if it's not .csv. This would involve using the `os.path.splitext` function to get the file extension and then comparing it with '.csv'. If they don't match, you can raise an Exception with the message 'File extention not supported by this ETL'.\n\nAdditionally, the code does not utilize the `TAXAS_ESTACOES_PATH` environment variable as specified in the task description. You should use this variable to get the path of the file on disk before passing it to the `read_taxas_estacoes` function.\n\nLastly, the function name and docstring suggest that it raises a `TableNotFoundException`, but the actual exception being raised is not related to the table name. This inconsistency should be addressed by either changing the function name and docstring or modifying the exception being raised.") code=Script(code='import pandas as pd\nfrom utils import write_to_database, read_from_database\nfrom exceptions import TableNotFoundException\n\ndef read_taxas_estacoes(filepath):\n    """Read Taxas Estacoes CSV file and store it in a dataframe.\n    \n    Args:\n        filepath (str): Path of the file to be read.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the file.\n        \n    Raises:\n        TableNotFoundException: If the table name is not found in the database.\n    """\n    dataframe = pd.read_csv(filepath)\n    return dataframe', imports=['pandas as pd', 'write_to_database', 'read_from_database', 'TableNotFoundException'], functions=[Function(name='read_taxas_estacoes', doc_string='"""Read Taxas Estacoes CSV file and store it in a dataframe.\n    \n    Args:\n        filepath (str): Path of the file to be read.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the file.\n        \n    Raises:\n        TableNotFoundException: If the table name is not found in the database.\n    """')])
+2024-11-06 04:49:11,725 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - title='Read Taxas_Estacoes.csv' description="Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the file on disk. Read the CSV file using pandas' `read_csv` function and store it in a dataframe. Raise an Exception with message 'File extention not supported by this ETL' if the file extension is not .csv." review=Review(status=<ReviewStatus.DENIED: 'Denied'>, description="\n\nThe code provided does not meet all specified requirements. The main issue lies in the fact that it does not check if the file extension is .csv before attempting to read it with pandas' `read_csv` function.\n\nTo improve this, you should add a condition to check the file extension and raise an exception if it's not .csv. This would involve using the `os.path.splitext` function to get the file extension and then comparing it with '.csv'. If they don't match, you can raise an Exception with the message 'File extention not supported by this ETL'.\n\nAdditionally, the code does not utilize the `TAXAS_ESTACOES_PATH` environment variable as specified in the task description. You should use this variable to get the path of the file on disk before passing it to the `read_taxas_estacoes` function.\n\nLastly, the function name and docstring suggest that it raises a `TableNotFoundException`, but the actual exception being raised is not related to the table name. This inconsistency should be addressed by either changing the function name and docstring or modifying the exception being raised.") code=Script(code='import pandas as pd\nfrom utils import write_to_database, read_from_database\nfrom exceptions import TableNotFoundException\n\ndef read_taxas_estacoes(filepath):\n    """Read Taxas Estacoes CSV file and store it in a dataframe.\n    \n    Args:\n        filepath (str): Path of the file to be read.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the file.\n        \n    Raises:\n        TableNotFoundException: If the table name is not found in the database.\n    """\n    dataframe = pd.read_csv(filepath)\n    return dataframe', imports=['pandas as pd', 'write_to_database', 'read_from_database', 'TableNotFoundException'], functions=[Function(name='read_taxas_estacoes', doc_string='"""Read Taxas Estacoes CSV file and store it in a dataframe.\n    \n    Args:\n        filepath (str): Path of the file to be read.\n        \n    Returns:\n        pd.DataFrame: Dataframe containing the data from the file.\n        \n    Raises:\n        TableNotFoundException: If the table name is not found in the database.\n    """')])
+2024-11-06 04:55:25,425 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 04:55:39,402 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 04:56:10,914 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 04:56:31,336 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-06 04:57:29,304 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Read Taxas_Estacoes.csv file
+Description:
+Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file. Read the file using pandas' `read_csv` function and store it in a dataframe named `taxas_estacoes_df`. If the file does not exist or is corrupted, raise an `IOError` with message 'Failed to read Taxas_Estacoes.csv file.'
+2024-11-06 04:58:40,959 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 04:59:04,759 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 04:59:38,853 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+Verify that the following columns are present in the dataframe: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, and DescCodEstacaoDebito. If any of these columns are missing, raise a `ValueError` with message 'Missing required columns.'
+2024-11-06 05:01:24,899 - app - INFO - [EVALUATING TASK] - Check required columns
+2024-11-06 05:01:53,643 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:06:59,478 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 05:07:11,281 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 05:07:43,577 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 05:10:21,173 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 05:10:24,146 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 05:10:56,057 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 05:11:23,125 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 05:11:23,200 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Read Taxas_Estacoes.csv
+Description:
+Use the `TAXAS_ESTACOES_PATH` environment variable to get the path of the CSV file on disk. If the file does not exist or is corrupted, raise a FileNotFoundError with message 'File not found' or ValueError with message 'Corrupted file'. Load the dataframe using pandas.read_csv() and store it in a variable named `taxas_estacoes_df`.
+2024-11-06 05:12:21,678 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:12:45,188 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 05:12:45,266 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+Check if all required columns are present in the dataframe. Raise an Exception with message 'Missing required columns' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.
+2024-11-06 05:13:50,030 - app - INFO - [EVALUATING TASK] - Check required columns
+2024-11-06 05:14:18,485 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:14:18,568 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+
+
+The code provided has several issues that need to be addressed:
+
+1. **Importing pandas incorrectly**: The import statement for pandas is `import pandas as pd`, which is correct, but it should also include a comma after 'pandas' in the imports list.
+
+2. **Missing documentation for imported functions**: Although the function `check_required_columns` has a docstring, there's no mention of the imported functions from the `utils` module (`read_from_database` and `write_to_database`). These functions should have their own docstrings to explain what they do.
+
+3. **Function name in imports list**: The function name 'check_required_columns' is not correctly formatted in the imports list. It should be 'check_required_columns' without any quotes or commas.
+
+4. **Code organization**: The code mixes import statements with function definitions, which can make it harder to read and understand. Consider separating these into different sections of your code.
+
+5. **Exception handling**: While the code raises an exception when required columns are missing, consider adding more context to this exception, such as the dataframe that was being checked.
+
+6. **Type hints for function arguments**: The function `check_required_columns` takes a pandas DataFrame as an argument but does not include type hints for this argument. Adding these can improve code readability and help catch potential errors earlier.
+
+7. **Function docstring formatting**: The docstring for the `check_required_columns` function is formatted correctly, but consider using triple quotes (`"""..."""`) consistently throughout your code to make it easier to read.
+
+8. **Variable naming**: While not strictly necessary in this case, variable names like `required_columns` and `missing_columns` are clear and concise. However, if you were working with more complex data structures or functions, consider using more descriptive names to improve code readability.
+
+To address these issues, your colleagues should revise the code according to the points mentioned above.
+Code:
+code='import os\nimport pandas as pd\nfrom utils import read_from_database, write_to_database\n\ndef check_required_columns(dataframe):\n    """Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """\n    required_columns = [\'NumServico\', \'NomeServico\', \'CodReceita\', \'SiglaReceita\', \'codEstacaoDebito\', \'ValorBase\', \'DescCodEstacaoDebito\']\n    missing_columns = [column for column in required_columns if column not in dataframe.columns]\n    if len(missing_columns) > 0:\n        raise Exception(\'Missing required columns: {}\'.format(\', \'.join(missing_columns)))' imports=['os', 'pandas as pd', 'read_from_database', 'write_to_database'] functions=[Function(name='check_required_columns', doc_string='"""Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """')]
+2024-11-06 05:16:27,773 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+
+
+The code provided has several issues that need to be addressed:
+
+1. **Importing pandas incorrectly**: The import statement for pandas is `import pandas as pd`, which is correct, but it should also include a comma after 'pandas' in the imports list.
+
+2. **Missing documentation for imported functions**: Although the function `check_required_columns` has a docstring, there's no mention of the imported functions from the `utils` module (`read_from_database` and `write_to_database`). These functions should have their own docstrings to explain what they do.
+
+3. **Function name in imports list**: The function name 'check_required_columns' is not correctly formatted in the imports list. It should be 'check_required_columns' without any quotes or commas.
+
+4. **Code organization**: The code mixes import statements with function definitions, which can make it harder to read and understand. Consider separating these into different sections of your code.
+
+5. **Exception handling**: While the code raises an exception when required columns are missing, consider adding more context to this exception, such as the dataframe that was being checked.
+
+6. **Type hints for function arguments**: The function `check_required_columns` takes a pandas DataFrame as an argument but does not include type hints for this argument. Adding these can improve code readability and help catch potential errors earlier.
+
+7. **Function docstring formatting**: The docstring for the `check_required_columns` function is formatted correctly, but consider using triple quotes (`"""..."""`) consistently throughout your code to make it easier to read.
+
+8. **Variable naming**: While not strictly necessary in this case, variable names like `required_columns` and `missing_columns` are clear and concise. However, if you were working with more complex data structures or functions, consider using more descriptive names to improve code readability.
+
+To address these issues, your colleagues should revise the code according to the points mentioned above.
+Code:
+code='import os\nimport pandas as pd\nfrom utils import read_from_database, write_to_database\n\ndef check_required_columns(dataframe):\n    """Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """\n    required_columns = [\'NumServico\', \'NomeServico\', \'CodReceita\', \'SiglaReceita\', \'codEstacaoDebito\', \'ValorBase\', \'DescCodEstacaoDebito\']\n    missing_columns = [column for column in required_columns if column not in dataframe.columns]\n    if len(missing_columns) > 0:\n        raise Exception(\'Missing required columns: {}\'.format(\', \'.join(missing_columns)))' imports=['os', 'pandas as pd', 'read_from_database', 'write_to_database'] functions=[Function(name='check_required_columns', doc_string='"""Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """')]
+2024-11-06 05:18:09,163 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+
+
+The code provided has several issues that need to be addressed:
+
+1. **Importing pandas incorrectly**: The import statement for pandas is `import pandas as pd`, which is correct, but it should also include a comma after 'pandas' in the imports list.
+
+2. **Missing documentation for imported functions**: Although the function `check_required_columns` has a docstring, there's no mention of the imported functions from the `utils` module (`read_from_database` and `write_to_database`). These functions should have their own docstrings to explain what they do.
+
+3. **Function name in imports list**: The function name 'check_required_columns' is not correctly formatted in the imports list. It should be 'check_required_columns' without any quotes or commas.
+
+4. **Code organization**: The code mixes import statements with function definitions, which can make it harder to read and understand. Consider separating these into different sections of your code.
+
+5. **Exception handling**: While the code raises an exception when required columns are missing, consider adding more context to this exception, such as the dataframe that was being checked.
+
+6. **Type hints for function arguments**: The function `check_required_columns` takes a pandas DataFrame as an argument but does not include type hints for this argument. Adding these can improve code readability and help catch potential errors earlier.
+
+7. **Function docstring formatting**: The docstring for the `check_required_columns` function is formatted correctly, but consider using triple quotes (`"""..."""`) consistently throughout your code to make it easier to read.
+
+8. **Variable naming**: While not strictly necessary in this case, variable names like `required_columns` and `missing_columns` are clear and concise. However, if you were working with more complex data structures or functions, consider using more descriptive names to improve code readability.
+
+To address these issues, your colleagues should revise the code according to the points mentioned above.
+Code:
+code='import os\nimport pandas as pd\nfrom utils import read_from_database, write_to_database\n\ndef check_required_columns(dataframe):\n    """Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """\n    required_columns = [\'NumServico\', \'NomeServico\', \'CodReceita\', \'SiglaReceita\', \'codEstacaoDebito\', \'ValorBase\', \'DescCodEstacaoDebito\']\n    missing_columns = [column for column in required_columns if column not in dataframe.columns]\n    if len(missing_columns) > 0:\n        raise Exception(\'Missing required columns: {}\'.format(\', \'.join(missing_columns)))' imports=['os', 'pandas as pd', 'read_from_database', 'write_to_database'] functions=[Function(name='check_required_columns', doc_string='"""Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """')]
+2024-11-06 05:20:21,423 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+
+
+The code provided has several issues that need to be addressed:
+
+1. **Importing pandas incorrectly**: The import statement for pandas is `import pandas as pd`, which is correct, but it should also include a comma after 'pandas' in the imports list.
+
+2. **Missing documentation for imported functions**: Although the function `check_required_columns` has a docstring, there's no mention of the imported functions from the `utils` module (`read_from_database` and `write_to_database`). These functions should have their own docstrings to explain what they do.
+
+3. **Function name in imports list**: The function name 'check_required_columns' is not correctly formatted in the imports list. It should be 'check_required_columns' without any quotes or commas.
+
+4. **Code organization**: The code mixes import statements with function definitions, which can make it harder to read and understand. Consider separating these into different sections of your code.
+
+5. **Exception handling**: While the code raises an exception when required columns are missing, consider adding more context to this exception, such as the dataframe that was being checked.
+
+6. **Type hints for function arguments**: The function `check_required_columns` takes a pandas DataFrame as an argument but does not include type hints for this argument. Adding these can improve code readability and help catch potential errors earlier.
+
+7. **Function docstring formatting**: The docstring for the `check_required_columns` function is formatted correctly, but consider using triple quotes (`"""..."""`) consistently throughout your code to make it easier to read.
+
+8. **Variable naming**: While not strictly necessary in this case, variable names like `required_columns` and `missing_columns` are clear and concise. However, if you were working with more complex data structures or functions, consider using more descriptive names to improve code readability.
+
+To address these issues, your colleagues should revise the code according to the points mentioned above.
+Code:
+code='import os\nimport pandas as pd\nfrom utils import read_from_database, write_to_database\n\ndef check_required_columns(dataframe):\n    """Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """\n    required_columns = [\'NumServico\', \'NomeServico\', \'CodReceita\', \'SiglaReceita\', \'codEstacaoDebito\', \'ValorBase\', \'DescCodEstacaoDebito\']\n    missing_columns = [column for column in required_columns if column not in dataframe.columns]\n    if len(missing_columns) > 0:\n        raise Exception(\'Missing required columns: {}\'.format(\', \'.join(missing_columns)))' imports=['os', 'pandas as pd', 'read_from_database', 'write_to_database'] functions=[Function(name='check_required_columns', doc_string='"""Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """')]
+2024-11-06 05:22:19,483 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Title:
+Check required columns
+Description:
+
+
+The code provided has several issues that need to be addressed:
+
+1. **Importing pandas incorrectly**: The import statement for pandas is `import pandas as pd`, which is correct, but it should also include a comma after 'pandas' in the imports list.
+
+2. **Missing documentation for imported functions**: Although the function `check_required_columns` has a docstring, there's no mention of the imported functions from the `utils` module (`read_from_database` and `write_to_database`). These functions should have their own docstrings to explain what they do.
+
+3. **Function name in imports list**: The function name 'check_required_columns' is not correctly formatted in the imports list. It should be 'check_required_columns' without any quotes or commas.
+
+4. **Code organization**: The code mixes import statements with function definitions, which can make it harder to read and understand. Consider separating these into different sections of your code.
+
+5. **Exception handling**: While the code raises an exception when required columns are missing, consider adding more context to this exception, such as the dataframe that was being checked.
+
+6. **Type hints for function arguments**: The function `check_required_columns` takes a pandas DataFrame as an argument but does not include type hints for this argument. Adding these can improve code readability and help catch potential errors earlier.
+
+7. **Function docstring formatting**: The docstring for the `check_required_columns` function is formatted correctly, but consider using triple quotes (`"""..."""`) consistently throughout your code to make it easier to read.
+
+8. **Variable naming**: While not strictly necessary in this case, variable names like `required_columns` and `missing_columns` are clear and concise. However, if you were working with more complex data structures or functions, consider using more descriptive names to improve code readability.
+
+To address these issues, your colleagues should revise the code according to the points mentioned above.
+Code:
+code='import os\nimport pandas as pd\nfrom utils import read_from_database, write_to_database\n\ndef check_required_columns(dataframe):\n    """Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """\n    required_columns = [\'NumServico\', \'NomeServico\', \'CodReceita\', \'SiglaReceita\', \'codEstacaoDebito\', \'ValorBase\', \'DescCodEstacaoDebito\']\n    missing_columns = [column for column in required_columns if column not in dataframe.columns]\n    if len(missing_columns) > 0:\n        raise Exception(\'Missing required columns: {}\'.format(\', \'.join(missing_columns)))' imports=['os', 'pandas as pd', 'read_from_database', 'write_to_database'] functions=[Function(name='check_required_columns', doc_string='"""Check if all required columns are present in the dataframe. Raise an Exception with message \'Missing required columns\' if any of the following columns are missing: NumServico, NomeServico, CodReceita, SiglaReceita, codEstacaoDebito, ValorBase, DescCodEstacaoDebito.\n    \n    Args:\n        dataframe (pd.DataFrame): The dataframe to check for required columns.\n        \n    Raises:\n        Exception: If any of the required columns are missing from the dataframe.\n    """')]
+2024-11-06 05:23:06,603 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 05:23:22,700 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 05:23:53,607 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 05:24:14,962 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-06 05:24:15,040 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.WAITING
+2024-11-06 05:25:09,119 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:25:35,760 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:25:35,842 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:27:10,578 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:29:00,369 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:29:36,070 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 05:29:48,518 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 05:30:19,637 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 05:30:42,993 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-06 05:30:43,069 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.WAITING
+2024-11-06 05:31:15,013 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:31:34,166 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:31:34,241 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:33:03,484 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:33:28,920 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:33:29,000 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:35:34,087 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:36:02,449 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:36:02,528 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:38:11,311 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:38:36,564 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:38:36,642 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:40:25,762 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:40:50,126 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:40:50,208 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:43:01,288 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 05:43:25,107 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 05:43:25,185 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.WAITING
+2024-11-06 05:44:00,071 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 05:44:24,203 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:44:24,281 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 05:46:05,349 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 05:46:32,636 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 05:46:32,718 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 06:53:39,873 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 06:53:47,342 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 06:54:18,331 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 06:54:46,448 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 06:54:46,526 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - ReviewStatus.WAITING
+2024-11-06 06:55:41,703 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 06:56:19,936 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 06:56:20,015 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - ReviewStatus.DENIED
+2024-11-06 06:58:07,626 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 06:58:30,547 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 06:58:30,632 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check required columns - REVIEW - ReviewStatus.WAITING
+2024-11-06 06:59:17,731 - app - INFO - [EVALUATING TASK] - Check required columns
+2024-11-06 06:59:37,332 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 06:59:37,415 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.WAITING
+2024-11-06 07:00:16,487 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:00:45,780 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:00:45,864 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 07:02:03,577 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:02:25,493 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:02:25,578 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 07:03:55,614 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:04:21,275 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:04:21,354 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 07:06:08,239 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:06:33,669 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:06:33,746 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 07:09:02,029 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:09:18,655 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:09:18,736 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - ReviewStatus.DENIED
+2024-11-06 07:32:50,101 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:32:57,747 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 07:33:05,390 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 07:33:37,671 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 07:34:01,336 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 07:34:01,413 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 07:43:17,837 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 07:43:39,176 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:43:39,250 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 07:44:41,074 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 07:44:58,962 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 07:44:59,039 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Validate column presence - REVIEW - WAITING
+2024-11-06 07:45:46,106 - app - INFO - [EVALUATING TASK] - Validate column presence
+2024-11-06 07:46:06,775 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 07:46:06,853 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 07:46:59,161 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:47:22,014 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:47:22,093 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 07:48:55,950 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:49:20,639 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:49:20,724 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 07:50:57,483 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 07:51:19,303 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 07:51:19,488 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:00:40,982 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 08:00:52,743 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 08:01:24,020 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 08:01:39,775 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 08:01:39,855 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 08:13:28,735 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 08:13:50,361 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:13:50,441 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check required columns - REVIEW - WAITING
+2024-11-06 08:14:38,614 - app - INFO - [EVALUATING TASK] - Check required columns
+2024-11-06 08:14:57,192 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:14:57,273 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 08:15:32,474 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:15:59,909 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:15:59,989 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:17:17,206 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:17:44,047 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:17:44,129 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:20:07,718 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:20:38,855 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:20:38,937 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:22:39,291 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:23:02,449 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:23:02,525 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:24:10,774 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:24:34,528 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:24:34,611 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:26:03,048 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:26:23,242 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:26:23,320 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:27:52,616 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:28:14,510 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:28:14,587 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:32:47,651 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 08:32:58,912 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 08:33:29,563 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 08:33:51,319 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 08:33:51,393 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 08:34:22,007 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 08:34:38,642 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:34:38,717 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 08:35:21,153 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 08:35:40,870 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:35:40,951 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 08:36:20,503 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:36:44,206 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:36:44,285 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 08:38:02,579 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:38:21,384 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:38:23,260 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Transform column types - REVIEW - WAITING
+2024-11-06 08:39:36,395 - app - INFO - [EVALUATING TASK] - Transform column types
+2024-11-06 08:39:58,803 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:39:58,883 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Transform column types - REVIEW - DENIED
+2024-11-06 08:41:34,331 - app - INFO - [EVALUATING TASK] - Transform column types
+2024-11-06 08:41:55,078 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:41:55,159 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-06 08:47:37,129 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 08:47:48,856 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 08:48:19,835 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 08:48:43,716 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 08:48:43,794 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 08:49:23,404 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 08:49:39,777 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:49:39,851 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 08:50:47,864 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 08:51:07,207 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:51:07,287 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 08:51:56,573 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 08:52:18,256 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 08:52:18,335 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - WAITING
+2024-11-06 08:53:11,136 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 08:53:28,291 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:53:28,370 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 08:54:47,057 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 08:55:11,515 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:55:11,591 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 08:57:07,109 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 08:57:30,391 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:57:30,784 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 08:59:33,932 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 08:59:55,686 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 08:59:55,768 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 09:02:00,900 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 09:02:24,751 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:02:24,828 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 09:04:25,345 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 09:04:49,047 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:04:49,128 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 09:06:57,398 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 09:07:18,911 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:07:18,991 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - DENIED
+2024-11-06 09:09:22,834 - app - INFO - [EVALUATING TASK] - Check for invalid data types
+2024-11-06 09:09:46,943 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:31:42,134 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 09:31:49,411 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 09:32:22,333 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 09:32:48,165 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 09:32:48,241 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 09:33:30,733 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:33:55,730 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:33:55,811 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 09:35:06,111 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:35:31,442 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:35:31,521 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 09:36:43,357 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:37:06,737 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:37:06,818 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 09:38:07,156 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:38:31,497 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:38:31,578 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 09:39:33,124 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:39:54,942 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:39:55,024 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 09:40:41,700 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 09:40:54,119 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 09:41:25,172 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 09:41:48,152 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 09:41:48,230 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 09:42:24,523 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:42:45,158 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:45:28,040 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 09:46:20,506 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 09:46:43,557 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:50:30,213 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 09:50:42,259 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 09:51:13,619 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 09:51:36,099 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 09:51:36,174 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 09:52:12,953 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 09:52:37,386 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 09:57:39,503 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 09:58:59,845 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 09:59:21,325 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:30:53,592 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 10:31:44,612 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 10:32:13,908 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:38:45,206 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 10:39:00,544 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 10:39:32,302 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 10:39:56,801 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 10:39:56,877 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 10:40:27,856 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 10:40:50,215 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:40:58,594 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 10:49:37,582 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 10:49:46,365 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 10:50:18,917 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 10:50:40,959 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 10:50:41,036 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 10:51:14,703 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 10:51:43,773 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:51:43,851 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 10:52:20,456 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 10:52:43,234 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:52:43,316 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 10:53:50,893 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 10:54:19,645 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:54:19,730 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 10:54:57,799 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 10:55:17,417 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:58:19,860 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 10:58:30,739 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 10:59:04,123 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 10:59:32,513 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 10:59:32,589 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 10:59:41,048 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 10:59:54,052 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 10:59:54,129 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 11:00:11,013 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 11:00:25,753 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:00:25,831 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 11:00:46,656 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 11:00:58,748 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:00:58,823 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 11:01:24,521 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 11:01:36,534 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:01:36,609 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 11:01:58,058 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 11:02:14,795 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:02:14,869 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 11:06:30,150 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:06:40,139 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:07:12,797 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:07:38,850 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 11:07:38,925 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 11:07:47,074 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:07:53,666 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:07:53,741 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:08:15,613 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:08:27,397 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:08:27,470 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:08:48,547 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:09:04,697 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:09:04,771 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:09:46,615 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:10:05,330 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:10:05,404 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:10:47,620 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:11:56,483 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:11:56,557 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:15:13,708 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:15:24,356 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:15:55,416 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:16:22,542 - app - INFO - [REQUIREMENT NODE] - Generated 7 Task(s).
+2024-11-06 11:16:22,613 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 11:16:33,180 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:16:42,243 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:16:42,318 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:17:01,769 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:17:17,574 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:21:51,668 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:22:02,777 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:22:33,699 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:22:56,160 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 11:22:56,234 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 11:23:08,343 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:23:17,871 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:24:47,109 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:25:04,060 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:25:13,833 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:29:32,007 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:29:46,267 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:30:15,388 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:30:42,446 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 11:30:42,519 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 11:31:00,210 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:31:11,403 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:31:47,115 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:32:20,322 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:32:31,050 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:33:38,547 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:34:07,624 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:34:25,026 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:41:41,814 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:41:56,628 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:42:27,949 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:43:19,536 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:43:22,612 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:43:54,115 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:44:18,550 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 11:44:18,624 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 11:44:32,846 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:44:44,286 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:46:57,175 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:47:12,343 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:47:22,527 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:47:46,434 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:48:15,400 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:48:33,830 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:54:21,387 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 11:54:58,992 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 11:55:30,411 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 11:55:56,234 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 11:55:56,311 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 11:56:12,314 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:56:22,532 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 11:58:04,380 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 11:58:23,448 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 11:58:33,407 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 11:58:33,477 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 11:58:46,984 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 11:58:58,087 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:03:48,381 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:04:09,459 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:04:16,042 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 12:04:16,116 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 12:04:47,050 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 12:04:54,889 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 12:04:54,963 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Validate data types - REVIEW - WAITING
+2024-11-06 12:05:15,892 - app - INFO - [EVALUATING TASK] - Validate data types
+2024-11-06 12:05:28,627 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:07:23,592 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Validate data types - REVIEW - DENIED
+2024-11-06 12:07:55,631 - app - INFO - [EVALUATING TASK] - Validate data types
+2024-11-06 12:07:59,639 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:08:09,648 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Validate data types - REVIEW - DENIED
+2024-11-06 12:08:34,946 - app - INFO - [EVALUATING TASK] - Validate data types
+2024-11-06 12:08:52,158 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:13:03,940 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Validate data types - REVIEW - DENIED
+2024-11-06 12:13:49,710 - app - INFO - [EVALUATING TASK] - Validate data types
+2024-11-06 12:13:59,739 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:19:06,745 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 12:19:19,938 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 12:19:51,216 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 12:20:15,757 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 12:20:15,829 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 12:20:27,922 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:20:33,658 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 12:20:33,733 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 12:20:49,117 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:20:55,016 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:22:48,343 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:23:14,655 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:23:41,878 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:23:41,955 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:23:56,542 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:24:08,637 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:24:08,712 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:24:23,571 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:24:30,641 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:24:30,716 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:24:48,410 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:25:02,006 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:25:02,081 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:25:19,012 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 12:25:25,998 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:25:26,075 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 12:31:35,947 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 12:31:40,308 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 12:32:13,122 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 12:32:43,419 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 12:32:43,494 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 12:32:52,957 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:32:58,917 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:32:58,992 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 12:33:10,579 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:33:21,151 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:33:21,228 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 12:33:34,430 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:33:51,495 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:33:51,569 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 12:34:07,858 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:34:22,059 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:34:22,139 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 12:34:46,866 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:35:20,611 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 12:35:20,693 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 12:36:04,167 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 12:39:22,800 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 12:39:38,763 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 12:40:11,168 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 12:40:35,000 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 12:40:35,083 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:00:22,671 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:00:34,982 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:01:08,055 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:01:33,002 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 13:01:33,076 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:01:41,017 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:04:00,421 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:04:03,596 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:04:37,301 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:05:04,351 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 13:05:04,431 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:05:12,950 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:05:48,203 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:06:11,584 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:06:44,675 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:10:19,503 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:10:22,734 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:10:56,105 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:11:24,481 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 13:11:24,559 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:11:35,183 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:12:56,411 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:13:08,298 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:13:42,168 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:14:08,135 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 13:14:08,210 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 13:14:14,990 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 13:14:22,862 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:14:22,939 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 13:14:41,122 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 13:14:51,229 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 13:14:51,304 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 13:15:05,014 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 13:15:19,370 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:15:19,446 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - DENIED
+2024-11-06 13:15:30,279 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 13:15:37,825 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 13:15:37,901 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 13:15:50,604 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:15:56,040 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:15:56,115 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:16:13,155 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:16:18,782 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:16:18,856 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:16:33,733 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:16:39,351 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:16:39,427 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:16:56,640 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:17:02,194 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:17:02,270 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:17:19,276 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:17:24,898 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:17:24,974 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:17:39,791 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:17:45,469 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:17:45,545 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:18:02,541 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:18:08,109 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:27:05,319 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:27:34,307 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:28:08,049 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:28:33,346 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 13:28:33,423 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:28:49,539 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:28:58,122 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:28:58,204 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:29:11,853 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:29:17,422 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 13:29:17,499 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 13:29:33,680 - app - INFO - [EVALUATING TASK] - Check for missing columns
+2024-11-06 13:29:42,101 - app - INFO - [REVIEW] - ReviewStatus.APPROVED
+2024-11-06 13:29:42,175 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 13:30:02,540 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:30:14,327 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:30:14,403 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:30:34,521 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:30:47,115 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:30:47,192 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:31:07,375 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:31:19,722 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:31:19,800 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:31:39,684 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:31:51,336 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:31:51,410 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:32:09,004 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:32:23,414 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:32:23,493 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:32:41,217 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:32:55,577 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:32:55,652 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:33:13,042 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:33:26,650 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:33:26,726 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - DENIED
+2024-11-06 13:33:44,275 - app - INFO - [EVALUATING TASK] - Standardize column names
+2024-11-06 13:33:58,555 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:36:30,097 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:37:15,256 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:37:48,922 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:38:15,918 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 13:38:15,997 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:38:26,932 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:38:32,866 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:38:32,942 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:38:44,013 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:38:48,783 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:38:48,857 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:38:59,874 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:39:07,005 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:39:07,086 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:39:18,187 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:39:23,011 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:39:23,092 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:39:34,111 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:39:41,186 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:39:41,262 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:39:52,237 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:39:57,024 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:39:57,099 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:40:08,108 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:40:15,402 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:40:15,479 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:40:26,642 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:40:31,217 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:40:31,294 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:40:42,584 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:40:47,377 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:40:49,633 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:43:58,899 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:44:26,562 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:45:00,098 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:45:33,476 - app - INFO - [REQUIREMENT NODE] - Generated 7 Task(s).
+2024-11-06 13:47:51,584 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:48:21,545 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:48:53,430 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:49:14,321 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 13:49:14,398 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 13:49:24,770 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 13:49:31,385 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:49:31,478 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 13:49:55,416 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 13:49:59,479 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:49:59,554 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 13:50:25,426 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 13:50:29,544 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:50:29,620 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 13:50:55,943 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv file
+2024-11-06 13:51:00,017 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:51:00,093 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - DENIED
+2024-11-06 13:52:57,574 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:53:21,732 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:53:55,633 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:54:19,083 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 13:54:19,174 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:54:38,476 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:54:41,444 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:54:41,521 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:54:55,565 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:54:58,512 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:54:58,588 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:55:14,948 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:55:17,891 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:55:17,969 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:55:31,954 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:55:34,958 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:55:35,036 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:56:03,608 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 13:56:06,748 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 13:56:42,094 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 13:57:10,714 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 13:57:10,799 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 13:57:20,691 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:57:24,522 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:57:24,599 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:57:38,213 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:57:42,098 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:57:42,175 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:57:54,246 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:57:58,316 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:57:58,393 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:58:12,897 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:58:16,929 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:58:17,010 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 13:58:28,828 - app - INFO - [EVALUATING TASK] - Read Taxas_Estacoes.csv
+2024-11-06 13:58:32,971 - app - INFO - [REVIEW] - ReviewStatus.DENIED
+2024-11-06 13:58:33,051 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - DENIED
+2024-11-06 14:25:02,856 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 14:25:23,632 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 14:25:57,549 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 14:26:24,541 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-06 14:44:44,672 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 14:44:55,318 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 14:45:27,034 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 14:45:56,354 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 14:48:43,828 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 14:49:31,251 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 14:50:05,345 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 14:53:01,637 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 14:53:04,748 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 14:53:38,048 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 14:54:39,947 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 14:54:42,862 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 14:55:17,218 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 14:58:05,382 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 14:58:08,569 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 14:58:43,014 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 15:02:05,894 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 15:02:58,692 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 15:03:31,902 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 15:04:59,447 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 15:05:02,387 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 15:05:35,362 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 15:13:06,057 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 15:13:45,160 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 15:14:19,045 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 15:14:46,988 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 15:43:32,628 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 15:44:03,635 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 15:44:34,817 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 15:55:30,473 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 15:55:56,434 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 15:56:29,533 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 15:56:56,301 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 15:56:56,418 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-06 15:57:11,569 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 15:57:27,306 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 15:57:45,659 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid values - REVIEW - WAITING
+2024-11-06 15:57:57,756 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-06 16:01:42,715 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 16:02:18,806 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 16:02:51,859 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 16:03:17,623 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 16:07:07,039 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 16:07:41,181 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 16:08:12,290 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 16:08:39,333 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 16:08:39,412 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-06 16:08:49,008 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 16:09:05,254 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 16:09:16,628 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - WAITING
+2024-11-06 16:09:37,731 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-06 16:12:43,234 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-06 16:13:33,473 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-06 16:14:03,369 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-06 16:14:30,598 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-06 16:14:30,667 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes CSV file - REVIEW - WAITING
+2024-11-06 16:14:42,762 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-06 16:14:56,230 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-06 16:15:12,116 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid data types - REVIEW - WAITING
+2024-11-06 16:15:37,185 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-09 06:40:42,848 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 06:40:53,377 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 06:41:26,417 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 06:41:51,731 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 06:41:51,826 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-09 06:42:04,424 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-09 06:42:19,228 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-09 06:42:38,296 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Transform ValorBase to numeric - REVIEW - WAITING
+2024-11-09 06:42:47,666 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-09 07:07:17,996 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 07:07:33,159 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 07:08:06,250 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 07:12:34,258 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 07:12:37,448 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 07:13:10,350 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 07:44:15,556 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 07:44:28,362 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 07:45:01,093 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 07:46:37,697 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 07:46:52,037 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 07:47:25,431 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 07:50:52,639 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 07:51:06,453 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 07:51:40,027 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 07:52:41,146 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 07:52:41,232 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-09 07:52:51,292 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-09 07:53:02,659 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-09 07:53:21,436 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Convert data types - REVIEW - WAITING
+2024-11-09 07:53:41,054 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-09 08:01:59,949 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 08:02:04,881 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 08:02:39,219 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 08:03:11,878 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-09 08:03:11,955 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv - REVIEW - WAITING
+2024-11-09 08:03:25,410 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-09 08:03:41,313 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-09 08:04:02,559 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-09 10:10:59,048 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 10:11:13,804 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 10:11:48,123 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 10:12:15,666 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 10:12:15,749 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Read Taxas_Estacoes.csv file - REVIEW - WAITING
+2024-11-09 10:12:27,281 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for missing columns - REVIEW - WAITING
+2024-11-09 10:12:43,284 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Standardize column names - REVIEW - WAITING
+2024-11-09 10:13:01,453 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Check for invalid values - REVIEW - WAITING
+2024-11-09 10:13:19,614 - app - INFO - [WRITTING SCRIPT] - CURRENT TASK - Load the processed dataframe - REVIEW - WAITING
+2024-11-09 14:36:45,275 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 14:36:56,991 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 14:37:10,707 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 14:37:43,637 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 14:38:47,886 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 14:41:03,451 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 14:41:06,199 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 14:41:39,549 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 14:42:46,239 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 14:47:51,515 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 14:48:04,554 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 14:48:38,268 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 14:49:13,428 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 14:51:38,104 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 14:51:50,800 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 14:52:25,023 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 14:53:02,497 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-09 14:56:11,877 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 14:56:24,491 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 14:56:58,425 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 14:58:05,726 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-09 15:01:21,657 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 15:01:34,302 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 15:02:07,959 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 15:02:48,130 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-09 15:15:49,736 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-09 15:16:04,045 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-09 15:16:36,220 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-09 15:17:06,272 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-13 12:45:17,273 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-13 12:45:47,949 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-13 12:46:22,583 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-13 12:46:50,626 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-13 12:56:41,592 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-13 12:56:55,805 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-13 12:57:29,400 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-13 12:58:12,673 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-13 13:00:55,185 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-13 13:01:20,625 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-13 13:01:53,030 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-13 13:02:23,356 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-13 13:03:48,146 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-13 13:04:01,540 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-13 13:04:33,260 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-13 13:05:05,247 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-13 13:09:09,776 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-13 13:09:39,238 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-13 13:10:12,693 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-13 13:10:50,961 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-14 16:51:36,289 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 16:52:04,180 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 16:52:37,633 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 16:53:13,714 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-14 16:53:39,959 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 16:53:42,963 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 16:54:14,165 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 16:54:59,549 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-14 17:05:11,839 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:12:08,907 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:17:24,548 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:19:52,920 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:21:48,808 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:22:01,130 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 17:22:04,687 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 17:24:56,496 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:25:44,772 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 17:25:52,108 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 17:28:47,170 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:28:50,404 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 17:28:54,048 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 17:30:31,389 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:30:45,138 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 17:30:51,120 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 17:31:24,257 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-14 17:31:27,550 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-14 17:31:31,119 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-14 17:32:01,937 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-15 16:39:53,935 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 16:40:20,043 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 16:40:23,713 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 16:41:00,870 - app - INFO - [REQUIREMENT NODE] - Generated 6 Task(s).
+2024-11-15 16:52:19,166 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 16:52:31,659 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 16:52:35,488 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 16:53:02,580 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-15 17:45:37,348 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 17:45:50,348 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 17:45:54,065 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 17:49:30,611 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 17:49:43,354 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 17:49:47,021 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 17:52:49,872 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 17:53:02,495 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 17:53:06,319 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 17:53:36,132 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 17:53:50,366 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 17:53:55,424 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 17:55:57,276 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 17:56:10,275 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 17:56:14,012 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 18:02:02,212 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 18:02:15,725 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 18:02:19,892 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 18:05:01,149 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 18:05:13,873 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 18:05:17,662 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 18:09:14,716 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-15 18:09:27,389 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-15 18:09:31,194 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-15 18:09:36,601 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-16 08:55:18,360 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 08:55:35,291 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 09:01:56,423 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 09:02:07,817 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 09:17:11,597 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 09:17:23,075 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:01:05,435 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:01:14,154 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:07:51,204 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:08:02,677 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:08:02,680 - app - INFO - Loading file - ./static/data/docs/familias_atendidas_fomento_rural.txt - With Encoding None
+2024-11-16 10:13:08,793 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:13:21,316 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:13:21,318 - app - INFO - Loading file - ./static/data/docs/familias_atendidas_fomento_rural.txt - With Encoding True
+2024-11-16 10:19:06,118 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:19:12,212 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:19:12,215 - app - INFO - Loading file - ./static/data/docs/familias_atendidas_fomento_rural.txt - With Encoding True
+2024-11-16 10:23:33,923 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:23:44,882 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:23:44,884 - app - INFO - Loading file - ./static/data/docs/familias_atendidas_fomento_rural.txt - With Encoding False
+2024-11-16 10:26:42,170 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:26:55,700 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:26:55,702 - app - INFO - Loading file - ./static/data/docs/familias_atendidas_fomento_rural.txt - With Encoding True
+2024-11-16 10:27:12,858 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:27:14,313 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:27:14,315 - app - INFO - Loading file - ./static/data/docs/familias_atendidas_fomento_rural.txt - With Encoding True
+2024-11-16 10:30:52,361 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:31:04,120 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:52:24,549 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:52:36,041 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:54:35,413 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:54:50,806 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:54:54,324 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 10:54:59,926 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 10:56:05,023 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 10:56:07,771 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 10:56:11,200 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 10:56:16,766 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 11:28:02,285 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 11:28:17,414 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 11:28:22,256 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 11:28:27,505 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 11:40:18,644 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 11:40:25,503 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 11:40:29,040 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 11:40:34,462 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 11:46:36,424 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 11:46:52,408 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 11:46:55,794 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 11:47:04,103 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 11:47:04,113 - app - INFO - [SOLVING TASK] - Task 1: Extract Taxas_Estacoes CSV File
+2024-11-16 11:47:07,476 - app - INFO - [SOLVING TASK] - Task 2: Validate Taxas_Estacoes CSV File
+2024-11-16 11:47:11,645 - app - INFO - [SOLVING TASK] - Task 3: Transform Taxas_Estacoes CSV File
+2024-11-16 11:47:15,192 - app - INFO - [SOLVING TASK] - Task 4: Load Taxas_Estacoes CSV File into Database
+2024-11-16 11:49:14,884 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 11:57:06,164 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 11:57:19,511 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 11:57:23,052 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 11:57:28,467 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 12:00:24,533 - app - INFO - [SOLVING TASK] - Task 1: Extract Taxas_Estacoes CSV file
+2024-11-16 12:02:15,663 - app - INFO - [SOLVING TASK] - Task 2: Validate Taxas_Estacoes CSV file
+2024-11-16 12:04:40,973 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 12:04:45,338 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 12:04:48,666 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 12:04:53,845 - app - INFO - [REQUIREMENT NODE] - Generated 5 Task(s).
+2024-11-16 12:04:59,579 - app - INFO - [SOLVING TASK] - Task 1: Extract Taxas_Estacoes CSV file
+2024-11-16 12:05:32,911 - app - INFO - [SOLVING TASK] - Task 2: Validate Taxas_Estacoes CSV file
+2024-11-16 12:14:39,257 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 12:14:51,673 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 12:14:57,585 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 12:15:03,622 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-16 12:15:54,235 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-16 12:16:09,829 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-16 12:16:13,288 - app - INFO - [REQUIREMENT NODE] - Generating requirement for New data source - Arrecadação - Valores de Tributos e Preços Públicos,
+2024-11-16 12:16:19,502 - app - INFO - [REQUIREMENT NODE] - Generated 4 Task(s).
+2024-11-16 12:16:32,258 - app - INFO - [SOLVING TASK] - Extract Taxas_Estacoes CSV Data
+2024-11-16 12:18:15,469 - app - INFO - [SOLVING TASK] - Transform and Validate Taxas_Estacoes Data
+2024-11-16 12:18:25,741 - app - INFO - [SOLVING TASK] - Load Taxas_Estacoes Data into Destination
+2024-11-16 12:25:57,773 - app - INFO - [SOLVING TASK] - Combine Tasks into Pipeline
+2024-11-17 13:12:50,160 - app - INFO - [SOLVING TASK] - Extract Taxas_Estacoes CSV file
+2024-11-17 13:15:16,663 - app - INFO - [SOLVING TASK] - Extract Taxas_Estacoes CSV file
+2024-11-17 13:33:46,383 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-17 13:33:59,120 - app - INFO - [TOOL CALL] - extract_schema
+2024-11-17 13:39:12,251 - app - INFO - [NEW DATA EVENT] - Started from - user
+2024-11-17 13:39:24,356 - app - INFO - [TOOL CALL] - extract_schema
