@@ -11,7 +11,7 @@ class Task(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid4)
     title = Column(String, nullable=False)
     description = Column(String, nullable=False)
-    signature_function = Column(String, nullable=False)
+    signature_function = Column(String)
 
     requirement_id = Column(UUID(as_uuid=True), ForeignKey("requirements.id"))
     requirement = relationship("Requirement", back_populates="tasks")
