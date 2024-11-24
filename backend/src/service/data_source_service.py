@@ -1,7 +1,6 @@
-from uuid import UUID, uuid4
+from uuid import UUID
 
-from src.config.dependency_injection import component
-from src.config.dependency_injection.autowired import autowired
+from src.config.dependency_injection import component, autowired
 from src.models.domain.data_source.data_source import DataSource
 from src.models.dtos.data_source_dto import DataSourceDTO
 from src.repositories.data_source_repository import DataSourceRepository
@@ -21,24 +20,25 @@ class DataSourceService(BaseService[DataSource, DataSourceDTO, UUID]):
         super().__init__(repository)
         self.column_service = service
 
-    def create(self, dto: DataSourceDTO) -> DataSource:
+    def create(self, dto: DataSourceDTO) -> BaseSchema[DataSource]:
         columns = []
         for col in dto.columns:
             columns.append(self.column_service.create(col))
 
-        data_source = DataSource(
-            id=uuid4(),
+        data_source = DataSourceSchema(
             name=dto.name,
             columns=columns,
             type=dto.type,
             separator=dto.separator,
         )
 
-        return self.repository.create(data_source)
+        return self.repository.create(data_source.to_model())
 
-    def update(self, id: UUID, dto: DataSourceDTO) -> DataSourceSchema | None:
-
+    def update(self, id: UUID, dto: DataSourceDTO) -> BaseSchema[DataSource] | None:
         data_source = self.repository.get_by_id(id)
+
+        if not data_source:
+            return
 
         data_source.name = dto.name  # type: ignore
         data_source.type = dto.type  # type: ignore
@@ -52,7 +52,6 @@ class DataSourceService(BaseService[DataSource, DataSourceDTO, UUID]):
         sources = list(
             map(DataSourceSchema.from_model, self.repository.get_all(skip, limit))
         )
-        print("Sources", sources)
         return sources
 
     def delete(self, id: UUID) -> bool:
