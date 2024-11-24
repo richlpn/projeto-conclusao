@@ -1,41 +1,32 @@
 import argparse
-import src.tests as tests
 
-
-def run_test(test_name):
-    try:
-        if hasattr(tests, test_name):
-            test_module = getattr(tests, test_name)
-            test_module.main()
-        else:
-            print(f"Test {test_name} does not have a main function.")
-    except ImportError:
-        print(f"Test {test_name} not found.")
+import uvicorn
+from src.config.database import create_tables
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run tests")
-    parser.add_argument(
-        "test_name", type=str, nargs="?", default="all", help="Name of the test to run"
+    parser = argparse.ArgumentParser(
+        description="CLI tool for managing the application"
     )
+    subparsers = parser.add_subparsers(dest="command")
+
+    migrate_parser = subparsers.add_parser(
+        "migrate", help="Execute database migrations"
+    )
+    migrate_parser.set_defaults(func=create_tables)
+
+    run_parser = subparsers.add_parser(
+        "run", help="Create and start the FastAPI application"
+    )
+    run_parser.set_defaults(
+        func=lambda: uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    )
+
     args = parser.parse_args()
-
-    tests = [
-        "review_script_test",
-        "schema_extraction_test",
-        "script_generation_test",
-        "task_creation_test",
-    ]
-
-    if args.test_name == "all":
-        for test in tests:
-            print(f"Running test {test}...")
-            run_test(test)
-    elif args.test_name in tests:
-        print(f"Running test {args.test_name}...")
-        run_test(args.test_name)
+    if args.command:
+        args.func()
     else:
-        print(f"Test {args.test_name} not found.")
+        parser.print_help()
 
 
 if __name__ == "__main__":

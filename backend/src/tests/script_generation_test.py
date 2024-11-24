@@ -1,7 +1,7 @@
 import json
 from src.graph.graph import GRAPH
 from src.graph.nodes.script_generation_node import generate_python_script
-from src.schema.requirement_model import Requirement, Task
+from src.schema.requirement_schema import RequirementSchema, TaskSchema
 from src.models.script.script_model import Script
 from src.models.state import ScriptGenerationState
 
@@ -13,7 +13,7 @@ def main():
     import json
 
 
-from src.schema.requirement_model import Requirement
+from src.schema.requirement_schema import RequirementSchema
 
 
 def main():
@@ -22,8 +22,8 @@ def main():
         data = json.load(f)
 
     # Parse the JSON data into the Requirement model
-    tasks = map(lambda obj: Task(**obj), data["tasks"])
-    requirement = Requirement(title=data["title"], tasks=tasks)
+    tasks = map(lambda obj: TaskSchema(**obj), data["tasks"])
+    requirement = RequirementSchema(title=data["title"], tasks=tasks)
 
     state = ScriptGenerationState(requirements=requirement)
     script: Script = generate_python_script({"messages": [state]})[0]

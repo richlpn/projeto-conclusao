@@ -1,7 +1,10 @@
-from pydantic import BaseModel, Field
+from pydantic import Field
+from sqlalchemy import UUID
+from src.utils.base_schema import BaseSchema
 
 
-class Task(BaseModel):
+class TaskSchema(BaseSchema):
+    id: UUID = Field(..., alias="id", description="Unique identifier for the task.")
     title: str = Field(description="A short descriptive title about the task")
     description: str = Field(
         description="A Detailed explanation of what must be executed on this task, containing inputs, ouputs and previous dependecies."
@@ -12,11 +15,3 @@ class Task(BaseModel):
 
     def __str__(self) -> str:
         return f"Title: {self.title}\nDescription: {self.description}\n"
-
-
-class Requirement(BaseModel):
-    title: str = Field(description="Requirement title")
-    tasks: list[Task] = Field(
-        default_factory=list,
-        description="List of task to be completed in order to fulfill this requirement.",
-    )

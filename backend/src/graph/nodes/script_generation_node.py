@@ -1,11 +1,11 @@
 from src.models.agents.script_generator_agent import ScriptGeneratorAgent
-from src.schema.requirement_model import Requirement, Task
+from src.schema.requirement_schema import RequirementSchema, TaskSchema
 from src.models.script.script_model import Script
 from src.models.state import OverallState, ScriptGenerationState
 from src.utils.llm_logger import LOGGER
 
 
-def __process_script__(agent: ScriptGeneratorAgent, req: Requirement) -> Script:
+def __process_script__(agent: ScriptGeneratorAgent, req: RequirementSchema) -> Script:
     """
     Generate a script for the given task.
 
@@ -22,7 +22,7 @@ def __process_script__(agent: ScriptGeneratorAgent, req: Requirement) -> Script:
         res = agent.invoke(TASK=task, CODE="", agent_scratchpad="")
         codes.append(res.code)
 
-    return agent.invoke(TASK=Task(), CODE="\n".join(codes))
+    return agent.invoke(TASK=TaskSchema(), CODE="\n".join(codes))
 
 
 def generate_python_script(state: OverallState) -> OverallState:

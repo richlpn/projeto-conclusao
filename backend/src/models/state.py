@@ -6,7 +6,7 @@ from langchain_core.messages import BaseMessage
 from pydantic import BaseModel, Field
 
 from src.models.agents.agent import Agent
-from src.schema.requirement_model import Requirement, Task
+from src.schema.requirement_schema import RequirementSchema, TaskSchema
 
 
 class PipelineStates(Enum):
@@ -34,7 +34,7 @@ class OverallState(TypedDict):
 
 
 class ScriptGenerationState(BaseModel):
-    requirements: Requirement
-    task: Task | None = Field(
+    requirements: RequirementSchema
+    task: TaskSchema | None = Field(
         default=None, description="Task that was completed, waiting for evaluation!"
     )

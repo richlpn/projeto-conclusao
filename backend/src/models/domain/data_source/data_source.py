@@ -1,11 +1,10 @@
 import uuid
 import enum
-from sqlalchemy import Column, Enum, String
+from sqlalchemy import Column, Enum, ForeignKey, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 
 from src.config.database import Base
-from .data_source_column import DataSourceColumn
 
 
 class DataSourceType(str, enum.Enum):
@@ -41,3 +40,4 @@ class DataSource(Base):
     separator = Column(String, nullable=True)
 
     columns = relationship("DataSourceColumn", lazy="joined")
+    requirement = relationship("Requirement", lazy="joined")

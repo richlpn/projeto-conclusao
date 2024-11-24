@@ -1,0 +1,15 @@
+from uuid import uuid4
+
+from sqlalchemy import UUID, Column, ForeignKey, String
+from sqlalchemy.orm import relationship
+from src.config.database import Base
+
+
+class Requirement(Base):
+    __tablename__ = "requirements"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid4)
+    title = Column(String, nullable=False)
+    tasks = relationship("Task", backref="Requirement", lazy="joined")
+
+    data_source_id = Column(UUID(as_uuid=True), ForeignKey("data_sources.id"))

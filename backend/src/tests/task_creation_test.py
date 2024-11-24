@@ -2,10 +2,10 @@ import json
 
 from src.models.agents.task_creation_agent import TASK_CREATION_AGENT
 from src.models.column import DataSource
-from src.schema.requirement_model import Requirement
+from src.schema.requirement_schema import RequirementSchema
 
 
-def test_create_task_from_schema(path: str) -> Requirement:
+def test_create_task_from_schema(path: str) -> RequirementSchema:
     with open(path) as f:
         schema_data = json.load(f)
         schema = DataSource(**schema_data)

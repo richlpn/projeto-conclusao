@@ -1,24 +1,24 @@
 from langchain_core.output_parsers.base import BaseOutputParser
 
-from src.schema.requirement_model import Requirement, Task
+from src.schema.requirement_schema import RequirementSchema, TaskSchema
 from src.utils.llm_logger import LOGGER
 import json
 
 
-class TaskOutputParser(BaseOutputParser[Requirement]):
-    def parse(self, text: str) -> Requirement:
+class TaskOutputParser(BaseOutputParser[RequirementSchema]):
+    def parse(self, text: str) -> RequirementSchema:
         text = text.replace("\n", "").strip()
         block = text[text.index("[") : text.rindex("]") + 1]
         block = json.loads(block)
         tasks = [
-            Task(
+            TaskSchema(
                 title=task["title"],
                 description=task["description"],
                 done_codition=task["done_condition"],
             )
             for task in block
         ]
-        req = Requirement(title="", tasks=tasks)
+        req = RequirementSchema(title="", tasks=tasks)
         return req
 
     def get_format_instructions(self) -> str:
