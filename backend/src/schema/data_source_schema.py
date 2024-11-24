@@ -17,13 +17,23 @@ class DataSourceSchema(BaseSchema[DataSource]):
         description="Separator used only to describe the sperator of a CSV. If not informed must be set to None",
     )
 
+    def to_model(self) -> DataSource:
+
+        columns = [col_schema.to_model() for col_schema in self.columns]
+        return DataSource(
+            id=self.id,
+            name=self.name,
+            type=self.type,
+            columns=columns,
+            separator=self.separator,
+        )
+
     @classmethod
     def from_model(cls, model: DataSource) -> BaseSchema[DataSource]:
-        columns = list(map(DataSourceColumnSchema.from_model, model.columns))
         return cls(
             id=model.id,  # type: ignore
             name=model.name,  # type: ignore
             type=model.type,  # type: ignore
-            columns=columns,  # type: ignore
+            columns=[col.from_model(col) for col in model.columns],  # type: ignore
             separator=model.separator,  # type: ignore
         )

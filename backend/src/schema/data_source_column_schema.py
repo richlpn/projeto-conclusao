@@ -18,3 +18,11 @@ class DataSourceColumnSchema(BaseSchema[DataSourceColumn]):
             name=model.name,  # type: ignore
             description=model.description,  # type: ignore
         )
+
+    def to_model(self) -> DataSourceColumn:
+        return DataSourceColumn(
+            id=self.id,  # type: ignore
+            type=self.type,  # type: ignore
+            name=self.name,  # type: ignore
+            description=self.description,  # type: ignore
+        )
