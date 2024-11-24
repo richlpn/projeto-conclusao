@@ -19,7 +19,7 @@ class DTOMetaclass(type(BaseModel)):
 
 class BaseDTO(ABC, BaseModel, Generic[M], metaclass=DTOMetaclass):
 
-    __model__: ClassVar[Type[M]]  # type: ignore
+    __model__: Type[M]
 
     class Config:
         from_attributes = True

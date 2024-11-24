@@ -1,12 +1,12 @@
-from typing import Generic, TypeVar, Optional, List
 from abc import ABC, abstractmethod
+from typing import Generic, List, Optional, TypeVar
+
 from pydantic import BaseModel
 from src.utils.base_repository import BaseRepository
 from src.utils.base_schema import BaseSchema
 
 ModelType = TypeVar("ModelType", bound=BaseModel)
 InputType = TypeVar("InputType")
-OutputType = TypeVar("OutputType")
 IDType = TypeVar("IDType")
 
 

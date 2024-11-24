@@ -16,9 +16,8 @@ class BaseSchema(ABC, BaseModel, Generic[T]):
     Type parameter T represents the type of the model that the schema is created from.
     """
 
-    @classmethod
     @abstractmethod
-    def from_model(cls, model: T) -> "BaseSchema[T]":
+    def to_model(self) -> T:
         """
         Creates a schema instance from a model.
 
@@ -32,3 +31,8 @@ class BaseSchema(ABC, BaseModel, Generic[T]):
             NotImplementedError: If the method is not implemented by a subclass.
         """
         ...
+
+    @classmethod
+    @abstractmethod
+    def from_model(cls, model: T) -> "BaseSchema[T]":
+        raise NotImplementedError()
