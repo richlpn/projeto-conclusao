@@ -1,7 +1,7 @@
 # %%
 from fastapi import FastAPI
 from src.controller.schema_controller import router
-from src.utils.database import create_tables
+from src.config.database import create_tables
 
 app = FastAPI(debug=True)
 app.include_router(router)

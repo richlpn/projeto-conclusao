@@ -7,7 +7,7 @@ from sqlalchemy import Column, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from src.models.script.function_model import Function
-from src.utils.database import Base
+from src.config.database import Base
 
 
 class Script(BaseModel):

@@ -1,67 +1,73 @@
-from fastapi import APIRouter, HTTPException, status, Depends
+from typing import Iterable
+from uuid import UUID
+
+from fastapi import APIRouter, HTTPException, status
 from pydantic import ValidationError
-from typing import List
-from sqlalchemy.orm import Session
-
-from src.models.domain.data_source import DataSource
+from src.config.controller import controller
+from src.config.dependency_injection.autowired import autowired
 from src.models.dtos.data_source_dto import DataSourceDTO
-from src.utils.database import get_session
-
+from src.schema.data_source_schema import DataSourceSchema
+from src.service.data_source_service import DataSourceService
+from src.utils.base_controller import BaseController
 
 router = APIRouter(prefix="/data-sources", tags=["Data Sources"])
 
 
-@router.post("/", response_model=DataSource, status_code=status.HTTP_201_CREATED)
-async def create_data_source(
-    payload: DataSourceDTO, db: Session = Depends(get_session)
+@controller(router)
+class DataSourceController(
+    BaseController[DataSourceService, DataSourceDTO, DataSourceSchema, UUID]
 ):
-    """
-    Create a new data source.
 
-    Args:
-    - data_source: A `DataSource` Schema object containing the data source details.
+    @autowired
+    def __init__(self, service: DataSourceService) -> None:
+        super().__init__(service)
 
-    Returns:
-    - The created `DataSource` object.
-    """
-    try:
-        data_source = DataSource.model_schema(**payload)
-    except ValidationError as e:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
-    finally:
-        db.add(data_source)
-        db.commit()
-        db.refresh(data_source)
-    return payload
+    @router.get("/", response_model=DataSourceSchema, status_code=status.HTTP_200_OK)
+    async def get(self, id: UUID) -> DataSourceSchema:
+        obj = self.service.get_by_id(id)
+        if obj is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Object with ID `{id}` was not found.",
+            )
+        return obj
 
+    @router.get("/all", response_model=None)
+    async def get_all(self, skip: int, limit: int) -> list[DataSourceSchema]:
+        return self.service.get_all(skip, limit)  # type: ignore
 
-@router.get("/", response_model=List[DataSource])
-async def get_all_data_sources():
-    """
-    Get all data sources.
+    @router.post(
+        "/", response_model=DataSourceSchema, status_code=status.HTTP_201_CREATED
+    )
+    async def create(self, input: DataSourceDTO) -> DataSourceSchema:
+        try:
+            return self.service.create(input)
+        except ValidationError as e:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
 
-    Returns:
-    - A list of `DataSource` objects.
-    """
-    try:
-        return []
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e)
-        )
+    @router.delete("/", status_code=status.HTTP_200_OK)
+    async def delete(self, id: UUID):
+        """
+        Delete a data source.
 
+        Args:
+        - name: The name of the data source.
+        """
+        obj = self.service.delete(id)
 
-@router.delete("/{name}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_data_source(name: str):
-    """
-    Delete a data source.
+        if obj is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Object with ID `{id}` was not found.",
+            )
 
-    Args:
-    - name: The name of the data source.
-    """
-    try:
-        # Add data source deletion logic here (e.g., database deletion)
-        # For demonstration purposes, we'll just pass
-        pass
-    except Exception as e:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+    @router.patch("/", status_code=status.HTTP_200_OK)
+    async def update(self, id: UUID, input: DataSourceDTO) -> DataSourceSchema:
+        obj = self.service.update(id, input)
+
+        if obj is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Object with ID `{id}` was not found.",
+            )
+        return obj
