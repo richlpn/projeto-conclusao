@@ -6,7 +6,7 @@ from langchain_core.messages import BaseMessage
 from pydantic import BaseModel, Field
 
 from src.models.agents.agent import Agent
-from src.models.requirement_model import Requirement, Task
+from src.schema.requirement_model import Requirement, Task
 
 
 class PipelineStates(Enum):

@@ -1,7 +1,7 @@
 import json
 from src.graph.graph import GRAPH
 from src.graph.nodes.script_generation_node import generate_python_script
-from src.models.requirement_model import Requirement, Task
+from src.schema.requirement_model import Requirement, Task
 from src.models.script.script_model import Script
 from src.models.state import ScriptGenerationState
 
@@ -13,7 +13,7 @@ def main():
     import json
 
 
-from src.models.requirement_model import Requirement
+from src.schema.requirement_model import Requirement
 
 
 def main():

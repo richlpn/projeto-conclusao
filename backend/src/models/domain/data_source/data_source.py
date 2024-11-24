@@ -1,11 +1,10 @@
 import uuid
 import enum
-from pydantic import BaseModel, Field
 from sqlalchemy import Column, Enum, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 
-from src.utils.database import Base
+from src.config.database import Base
 from .data_source_column import DataSourceColumn
 
 
@@ -16,24 +15,29 @@ class DataSourceType(str, enum.Enum):
     JSON = "json"
 
 
-class DataSource(BaseModel):
-    id: uuid.UUID = Field(default_factory=uuid.uuid4)
-    name: str = Field(description="Data Source Name")
-    type: DataSourceType = Field(description="Type of the data source.")
-    columns: list[DataSourceColumn] = Field(
-        default_factory=list, description="Columns used or referenced on the table."
-    )
-    separator: str | None = Field(
-        default=None,
-        description="Separator used only to describe the sperator of a CSV. If not informed must be set to None",
-    )
+class DataSource(Base):
+    """
+    Represents a data source in the database.
 
-    class model_schema(Base):
-        __tablename__ = "data_sources"
+    A data source is a collection of data that can be used for analysis or processing.
+    It can be a file, a database table, or any other type of data storage.
 
-        id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-        name = Column(String)
-        type = Column(Enum(DataSourceType))
-        separator = Column(String, nullable=True)
+    Attributes:
+        id (UUID): A unique identifier for the data source.
+        name (str): The name of the data source.
+        type (DataSourceType): The type of the data source (e.g. CSV, Excel, etc.).
+        separator (str): The separator used in the data source (e.g. comma, semicolon, etc.).
+        columns (list[DataSourceColumn]): A list of columns in the data source.
 
-        columns = relationship("DataSourceColumnSchema")
+    Relationships:
+        columns: A one-to-many relationship with the DataSourceColumn class.
+    """
+
+    __tablename__ = "data_sources"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4, index=True)
+    name = Column(String)
+    type = Column(Enum(DataSourceType))
+    separator = Column(String, nullable=True)
+
+    columns = relationship("DataSourceColumn", lazy="joined")

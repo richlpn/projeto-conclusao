@@ -20,28 +20,19 @@ See Also:
 
 import uuid
 
-from pydantic import BaseModel, Field
 from sqlalchemy import Column, ForeignKey, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
+from src.config.database import Base
 
-from src.utils.database import Base
 
+class DataSourceColumn(Base):
+    __tablename__ = "column_schemas"
 
-class DataSourceColumn(BaseModel):
-    id: uuid.UUID = Field(description="Unique Indentifier")
-    type: str = Field(description="Column type.")
-    name: str = Field(description="Column name.")
-    description: str = Field(description="Column brief description (used for context)")
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    type = Column(String, default="str")
+    name = Column(String, default="str")
+    description = Column(String)
 
-    # Define the ColumnSchema table
-    class data_schema(Base):
-        __tablename__ = "column_schemas"
-
-        id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-        type = Column(String, default="str")
-        name = Column(String, default="str")
-        description = Column(String)
-
-        data_source_id = Column(UUID(as_uuid=True), ForeignKey("data_sources.id"))
-        data_source = relationship("DataSource", back_populates="columns")
+    data_source_id = Column(UUID(as_uuid=True), ForeignKey("data_sources.id"))
+    data_source = relationship("DataSource", back_populates="columns")

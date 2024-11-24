@@ -1,5 +1,5 @@
 from src.models.agents.script_generator_agent import ScriptGeneratorAgent
-from src.models.requirement_model import Requirement, Task
+from src.schema.requirement_model import Requirement, Task
 from src.models.script.script_model import Script
 from src.models.state import OverallState, ScriptGenerationState
 from src.utils.llm_logger import LOGGER

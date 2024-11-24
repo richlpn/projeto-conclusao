@@ -1,7 +1,7 @@
 from langchain_core.output_parsers import PydanticOutputParser
 
 from src.models.agents.agent import Agent
-from src.models.requirement_model import Requirement
+from src.schema.requirement_model import Requirement
 from src.output_parsers.tasks_output_parser import TaskOutputParser
 
 

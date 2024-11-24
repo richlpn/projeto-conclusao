@@ -1,6 +1,6 @@
 from langchain_core.output_parsers.base import BaseOutputParser
 
-from src.models.requirement_model import Requirement, Task
+from src.schema.requirement_model import Requirement, Task
 from src.utils.llm_logger import LOGGER
 import json
 

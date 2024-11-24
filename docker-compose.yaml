@@ -9,7 +9,8 @@ services:
       - db
     volumes:
       - ./backend:/app
-
+    links:
+      - "db:database"
   # frontend:
   #   build: ./frontend
   #   ports:
