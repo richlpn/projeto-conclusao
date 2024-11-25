@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Generic, Iterable, TypeVar
+from typing import Generic, TypeVar
 
 from src.utils.base_dto import BaseDTO
 from src.utils.base_service import BaseService
@@ -44,7 +44,7 @@ class BaseController(ABC, Generic[ServiceType, InputType, OutputType, IDType]):
         raise NotImplementedError()
 
     @abstractmethod
-    async def get_all(self, *args, **kwargs) -> list[OutputType]:
+    async def get_all(self, skip: int, limit: int, *args, **kwargs) -> list[OutputType]:
         raise NotImplementedError()
 
     @abstractmethod
