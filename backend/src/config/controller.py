@@ -1,13 +1,12 @@
-from typing import Optional, Type
 from fastapi import APIRouter
 from src.config.dependency_injection.component import component
 
 
-def controller(router: APIRouter, interface: Optional[Type] = None):
+def controller(router: APIRouter):
     def decorator(cls):
         for route in router.routes:
-            if hasattr(route, "name") and hasattr(cls, route.name):
-                route.endpoint = getattr(cls(), route.name)
+            if (name := getattr(route, "name")) and hasattr(cls, name):
+                setattr(route, "endpoint", getattr(cls(), name))
         return cls
 
     return decorator
