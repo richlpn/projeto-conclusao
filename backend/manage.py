@@ -19,7 +19,9 @@ def main():
         "run", help="Create and start the FastAPI application"
     )
     run_parser.set_defaults(
-        func=lambda: uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+        func=lambda: uvicorn.run(
+            "src.config.app:app", host="0.0.0.0", port=8000, reload=True
+        )
     )
 
     args = parser.parse_args()
