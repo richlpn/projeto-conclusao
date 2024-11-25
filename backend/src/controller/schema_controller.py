@@ -4,17 +4,26 @@ from fastapi import APIRouter, HTTPException, status
 from pydantic import ValidationError
 from src.config.controller import controller
 from src.config.dependency_injection.autowired import autowired
-from src.models.dtos.data_source_dto import DataSourceDTO
-from src.schema.data_source_schema import DataSourceSchema
-from src.service.data_source_service import DataSourceService
+from src.schema.data_source_schema import BaseSchema, DataSource, DataSourceSchema
+from src.service.data_source_service import (
+    BaseService,
+    DataSourceService,
+    DataSourceDTO,
+)
 from src.utils.base_controller import BaseController
+from src.utils.base_dto import BaseDTO
 
 router = APIRouter(prefix="/data-sources", tags=["Data Sources"])
 
 
 @controller(router)
 class DataSourceController(
-    BaseController[DataSourceService, DataSourceDTO, DataSourceSchema, UUID]
+    BaseController[
+        BaseService[DataSource, DataSourceDTO, UUID],
+        BaseDTO[DataSource],
+        BaseSchema[DataSource],
+        UUID,
+    ]
 ):
 
     @autowired
@@ -22,7 +31,7 @@ class DataSourceController(
         super().__init__(service)
 
     @router.get("/", response_model=DataSourceSchema, status_code=status.HTTP_200_OK)
-    async def get(self, id: UUID) -> DataSourceSchema:
+    async def get(self, id: UUID) -> BaseSchema[DataSource]:
         obj = self.service.get_by_id(id)
         if obj is None:
             raise HTTPException(
@@ -32,13 +41,13 @@ class DataSourceController(
         return obj
 
     @router.get("/all", response_model=None)
-    async def get_all(self, skip: int, limit: int) -> list[DataSourceSchema]:
+    async def get_all(self, *args, **kwargs) -> list[BaseSchema[DataSource]]:
         return self.service.get_all(skip, limit)  # type: ignore
 
     @router.post(
         "/", response_model=DataSourceSchema, status_code=status.HTTP_201_CREATED
     )
-    async def create(self, input: DataSourceDTO) -> DataSourceSchema:
+    async def create(self, input: DataSourceDTO) -> BaseSchema[DataSource]:
         try:
             return self.service.create(input)
         except ValidationError as e:
@@ -61,7 +70,7 @@ class DataSourceController(
             )
 
     @router.patch("/", status_code=status.HTTP_200_OK)
-    async def update(self, id: UUID, input: DataSourceDTO) -> DataSourceSchema:
+    async def update(self, id: UUID, input: DataSourceDTO) -> BaseSchema[DataSource]:
         obj = self.service.update(id, input)
 
         if obj is None:
