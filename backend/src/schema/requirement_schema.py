@@ -1,6 +1,5 @@
-from uuid import uuid4
+from uuid import UUID, uuid4
 
-from sqlalchemy import UUID
 from src.models.domain.requirement import Requirement
 from src.models.domain.task import Task
 from src.schema.task_schema import BaseSchema, Field, TaskSchema

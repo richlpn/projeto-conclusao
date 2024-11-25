@@ -2,8 +2,8 @@ from typing import List
 from uuid import UUID
 
 from src.config.dependency_injection import autowired, component
+from src.models.domain.task import Task
 from src.models.dtos.taskDTO import TaskDTO
-from src.models.task import Task
 from src.schema.task_schema import TaskSchema
 from src.utils.base_repository import BaseRepository
 from src.utils.base_schema import BaseSchema

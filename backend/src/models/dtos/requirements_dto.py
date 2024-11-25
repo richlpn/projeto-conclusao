@@ -1,5 +1,5 @@
+from uuid import UUID
 from pydantic import Field
-from sqlalchemy import UUID
 from src.models.domain.requirement import Requirement
 from src.models.dtos.taskDTO import TaskDTO
 from src.utils.base_dto import BaseDTO

@@ -1,7 +1,6 @@
-from uuid import uuid4
+from uuid import UUID, uuid4
 from pydantic import Field
-from sqlalchemy import UUID
-from src.models.task import Task
+from src.models.domain.task import Task
 from src.utils.base_schema import BaseSchema
 
 
