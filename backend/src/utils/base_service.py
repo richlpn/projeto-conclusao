@@ -1,36 +1,51 @@
-from abc import ABC, abstractmethod
-from typing import Generic, List, Optional, TypeVar
+from abc import ABC
+from typing import Generic, List, Optional, Type, TypeVar
 
+from fastapi import HTTPException
 from pydantic import BaseModel
+from src.config.database import Base
 from src.utils.base_repository import BaseRepository
-from src.utils.base_schema import BaseSchema
 
-ModelType = TypeVar("ModelType", bound=BaseModel)
-InputType = TypeVar("InputType")
+ModelType = TypeVar("ModelType", bound=Base)  # type: ignore
+InputType = TypeVar("InputType", bound=BaseModel)
+UpdateType = TypeVar("UpdateType", bound=BaseModel)
 IDType = TypeVar("IDType")
 
 
-class BaseService(ABC, Generic[ModelType, InputType, IDType]):
+class BaseService(ABC, Generic[ModelType, InputType, UpdateType, IDType]):
 
-    def __init__(self, repository: BaseRepository[ModelType, IDType]):
+    def __init__(
+        self,
+        model: Type[ModelType],
+        repository: BaseRepository[ModelType, IDType],
+    ):
+        self.model = model
         self.repository = repository
 
-    @abstractmethod
-    def create(self, dto: InputType) -> BaseSchema[ModelType]:
-        raise NotImplementedError
+    def create(self, obj: InputType) -> ModelType:
+        db_obj: ModelType = self.model(**obj.model_dump())
+        self.repository.create(db_obj)
+        return db_obj
 
-    @abstractmethod
-    def get_by_id(self, id: IDType) -> Optional[BaseSchema[ModelType]]:
-        raise NotImplementedError
+    def get_by_id(self, id: IDType) -> Optional[ModelType]:
+        obj: Optional[ModelType] = self.repository.get_by_id(id)
+        if obj is None:
+            raise HTTPException(status_code=404, detail="Not Found")
+        return obj
 
-    @abstractmethod
-    def update(self, id: IDType, dto: InputType) -> Optional[BaseSchema[ModelType]]:
-        raise NotImplementedError
+    def update(self, id: IDType, obj: UpdateType) -> Optional[ModelType]:
+        db_obj = self.repository.get_by_id(id)
+        if db_obj is None:
+            raise HTTPException(status_code=404, detail="Not Found")
 
-    @abstractmethod
-    def delete(self, id: IDType) -> bool:
-        raise NotImplementedError
+        for column, value in obj.model_dump(exclude_unset=True).items():
+            setattr(db_obj, column, value)
+        self.repository.update(db_obj)
+        return db_obj
 
-    @abstractmethod
-    def get_all(self, skip: int = 0, limit: int = 100) -> List[BaseSchema[ModelType]]:
-        raise NotImplementedError
+    def delete(self, id: IDType):
+        db_obj = self.repository.delete(id)
+
+    def get_all(self, skip: int = 0, limit: int = 100) -> List[ModelType]:
+        objs: List[ModelType] = self.repository.get_all(skip, limit)
+        return objs
