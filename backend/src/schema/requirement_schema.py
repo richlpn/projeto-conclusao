@@ -1,25 +1,24 @@
 from uuid import UUID, uuid4
 
 from src.models.domain.requirement import Requirement
-from src.models.domain.task import Task
-from src.schema.task_schema import BaseSchema, Field, TaskSchema
+from src.schema.task_schema import BaseSchema, Field, TaskCreateSchema
 
 
-class RequirementSchema(BaseSchema[Requirement]):
-    id: UUID = Field(
-        default_factory=uuid4, description="Unique identifier for the requirement"
-    )
+class RequirementCreateSchema(BaseSchema[Requirement]):
     title: str = Field(description="Requirement title")
-    tasks: list[BaseSchema[Task]] = Field(
-        default_factory=list,
+    tasks: list[TaskCreateSchema] = Field(
         description="List of task to be completed in order to fulfill this requirement.",
     )
 
-    def to_model(self) -> Requirement:
-        model = self.model_dump()
-        model["tasks"] = [task.to_model() for task in self.tasks]
-        return Requirement(model)
 
-    @classmethod
-    def from_model(cls, model: Requirement) -> BaseSchema[Requirement]:
-        return cls(**model.__dict__)
+class RequirementUpdateSchema(BaseSchema[Requirement]):
+    title: str
+
+
+class RequirementSchema(RequirementCreateSchema):
+    id: UUID = Field(
+        default_factory=uuid4, description="Unique identifier for the requirement"
+    )
+
+    class Config(BaseSchema.Config):
+        orm_mode = True
