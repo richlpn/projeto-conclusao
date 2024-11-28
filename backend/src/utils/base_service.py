@@ -2,13 +2,13 @@ from abc import ABC
 from typing import Generic, List, Optional, Type, TypeVar
 
 from fastapi import HTTPException
-from pydantic import BaseModel
 from src.config.database import Base
 from src.utils.base_repository import BaseRepository
+from src.utils.base_schema import BaseSchema
 
 ModelType = TypeVar("ModelType", bound=Base)  # type: ignore
-InputType = TypeVar("InputType", bound=BaseModel)
-UpdateType = TypeVar("UpdateType", bound=BaseModel)
+InputType = TypeVar("InputType", bound=BaseSchema)
+UpdateType = TypeVar("UpdateType", bound=BaseSchema)
 IDType = TypeVar("IDType")
 
 
