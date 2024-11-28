@@ -1,11 +1,20 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from typing import Generic, TypeVar
+
 from pydantic import BaseModel
 
 T = TypeVar("T")
 
 
-class BaseSchema(ABC, BaseModel, Generic[T]):
+def to_camel(string: str) -> str:
+    if "_" not in string:
+        return string
+    words = string.split("_")
+    words = [words[0]] + [word.capitalize() for word in words[1:]]
+    return "".join(words)
+
+
+class BaseSchema(BaseModel):
     """
     Abstract base class for creating Pydantic schemas from models.
 
@@ -16,23 +25,6 @@ class BaseSchema(ABC, BaseModel, Generic[T]):
     Type parameter T represents the type of the model that the schema is created from.
     """
 
-    @abstractmethod
-    def to_model(self) -> T:
-        """
-        Creates a schema instance from a model.
-
-        Args:
-            model: The model instance to create the schema from.
-
-        Returns:
-            A schema instance representing the model.
-
-        Raises:
-            NotImplementedError: If the method is not implemented by a subclass.
-        """
-        ...
-
-    @classmethod
-    @abstractmethod
-    def from_model(cls, model: T) -> "BaseSchema[T]":
-        raise NotImplementedError()
+    class Config:
+        alias_generator = to_camel
+        populate_by_name = True

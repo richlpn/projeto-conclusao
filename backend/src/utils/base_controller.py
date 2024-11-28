@@ -36,7 +36,7 @@ class BaseController(ABC, Generic[ServiceType, InputType, OutputType, IDType]):
         This class is abstract and cannot be instantiated directly. Concrete subclasses must implement all of the abstract methods.
     """
 
-    def __init__(self, service: ServiceType, *args, **kwargs) -> None:
+    def __init__(self, service: ServiceType):
         self.service = service
 
     @abstractmethod
