@@ -27,7 +27,7 @@ class DataSourceColumnService(
         super().__init__(DataSourceColumn, repository)
 
 
-def get_data_source_service(
+def get_data_source_column_service(
     repo=Depends(DataSourceColumnRepository),
 ) -> DataSourceColumnService:
     return DataSourceColumnService(repo)

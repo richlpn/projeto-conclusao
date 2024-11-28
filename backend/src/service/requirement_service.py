@@ -1,6 +1,6 @@
 from fastapi import Depends
 from src.models.dtos.requirements_dto import Requirement
-from src.repositories.requirement_repository import RequirementRepository
+from src.repositories.requirement_repository import get_requirement_repository
 from src.schema.requirement_schema import (
     UUID,
     RequirementCreateSchema,
@@ -9,8 +9,8 @@ from src.schema.requirement_schema import (
 from src.service.task_service import (
     Task,
     TaskCreateSchema,
-    TaskService,
     TaskUpdateSchema,
+    get_task_service,
 )
 from src.utils.base_repository import BaseRepository
 from src.utils.base_service import BaseService
@@ -30,11 +30,13 @@ class RequirementService(
 
     def create(self, obj: RequirementCreateSchema) -> Requirement:
         tasks = [self.task_service.create(task) for task in obj.tasks]
-        model = self.model(obj.model_dump().update({"tasks": tasks}))
-        return self.repository.create(model)
+        obj_dict = obj.model_dump(exclude={"tasks"})
+        obj_dict["tasks"] = tasks
+        model = self.repository.create(self.model(**obj_dict))
+        return model
 
 
 def get_requirement_service(
-    repo=Depends(RequirementRepository), task_service=Depends(TaskService)
+    repo=Depends(get_requirement_repository), task_service=Depends(get_task_service)
 ):
     return RequirementService(repo, task_service)

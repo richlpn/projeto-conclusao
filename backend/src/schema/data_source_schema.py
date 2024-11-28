@@ -28,4 +28,4 @@ class DataSourceSchema:
     id: uuid.UUID = Field(default_factory=uuid.uuid4)
 
     class Config(BaseSchema.Config):
-        orm_mode = True
+        from_attributes = True

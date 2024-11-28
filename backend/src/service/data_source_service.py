@@ -3,13 +3,12 @@ from uuid import UUID
 from fastapi import Depends
 from src.models.domain.data_source.data_source import DataSource
 from src.models.domain.data_source.data_source_column import DataSourceColumn
-from src.repositories.data_source_repository import DataSourceRepository
-
+from src.repositories.data_source_repository import get_data_source_repository
 from src.schema.data_source_schema import DataSourceCreateSchema, DataSourceUpdateSchema
 from src.service.data_source_column_service import (
     DataSourceColumnCreateSchema,
-    DataSourceColumnService,
     DataSourceColumnUpdateSchema,
+    get_data_source_column_service,
 )
 from src.utils.base_repository import BaseRepository
 from src.utils.base_service import BaseService
@@ -34,11 +33,14 @@ class DataSourceService(
 
     def create(self, obj: DataSourceCreateSchema) -> DataSource:
         columns = [self.column_service.create(col) for col in obj.columns]
-        model = self.model(obj.model_dump().update({"columns": columns}))
+        obj_dict = obj.model_dump()
+        obj_dict["columns"] = columns
+        model = self.model(**obj_dict)
         return self.repository.create(model)
 
 
 def get_data_source_service(
-    repo=Depends(DataSourceRepository), column_service=Depends(DataSourceColumnService)
+    repo=Depends(get_data_source_repository),
+    column_service=Depends(get_data_source_column_service),
 ):
     return DataSourceService(repo, column_service)

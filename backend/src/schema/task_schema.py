@@ -39,4 +39,4 @@ class TaskSchema(TaskCreateSchema):
         return f"Title: {self.title}\nDescription: {self.description}\n"
 
     class Config(BaseSchema.Config):
-        orm_mode = True
+        from_attributes = True
