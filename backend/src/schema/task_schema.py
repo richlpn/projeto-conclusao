@@ -2,11 +2,10 @@ from typing import Optional
 from uuid import UUID, uuid4
 
 from pydantic import Field
-from src.models.domain.task import Task
 from src.utils.base_schema import BaseSchema
 
 
-class TaskUpdateSchema(BaseSchema[Task]):
+class TaskUpdateSchema(BaseSchema):
     title: Optional[str]
     description: Optional[str] = Field(
         max_length=200,
@@ -16,7 +15,7 @@ class TaskUpdateSchema(BaseSchema[Task]):
     )
 
 
-class TaskCreateSchema(BaseSchema[Task]):
+class TaskCreateSchema(BaseSchema):
     title: Optional[str] = Field(
         max_length=20, description="A short descriptive title about the task"
     )

@@ -1,43 +1,44 @@
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, status
-from sqlalchemy.orm import Session
+from src.models.domain.data_source.data_source import DataSource
 from src.schema.data_source_schema import (
-    DataSource,
     DataSourceCreateSchema,
+    DataSourceSchema,
     DataSourceUpdateSchema,
 )
 from src.service.data_source_service import get_data_source_service
 from src.utils.base_service import BaseService
 
 serviceType = BaseService[
-    DataSource, DataSourceCreateSchema, DataSourceUpdateSchema, UUID
+    DataSource, DataSourceCreateSchema, DataSourceUpdateSchema, DataSourceSchema, UUID
 ]
 router = APIRouter(prefix="/data-sources", tags=["Data Sources"])
 
 
 @router.get("/", status_code=status.HTTP_200_OK)
-async def get(id: UUID, service: serviceType = Depends(get_data_source_service)):
+async def get(
+    id: UUID, service: serviceType = Depends(get_data_source_service)
+) -> DataSourceSchema:
     obj = service.get_by_id(id)
 
     return obj
 
 
-@router.get("/all", response_model=None)
+@router.get("/all")
 async def get_all(
     skip: int,
     limit: int,
     service: serviceType = Depends(get_data_source_service),
-) -> list[DataSource]:
-    l = service.get_all(skip, limit)
-    return l
+) -> list[DataSourceSchema]:
+    return service.get_all(skip, limit)
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def create(
     input: DataSourceCreateSchema,
     service: serviceType = Depends(get_data_source_service),
-):
+) -> DataSourceSchema:
     return service.create(input)
 
 
@@ -46,7 +47,6 @@ async def delete(
     id: UUID,
     service: serviceType = Depends(get_data_source_service),
 ):
-
     obj = service.delete(id)
 
 
@@ -55,6 +55,6 @@ async def update(
     id: UUID,
     input: DataSourceUpdateSchema,
     service: serviceType = Depends(get_data_source_service),
-):
+) -> DataSourceSchema:
     obj = service.update(id, input)
     return obj

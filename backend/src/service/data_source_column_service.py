@@ -5,6 +5,7 @@ from src.models.domain.data_source import DataSourceColumn
 from src.repositories.data_source_columns_repository import DataSourceColumnRepository
 from src.schema.data_source_column_schema import (
     DataSourceColumnCreateSchema,
+    DataSourceColumnSchema,
     DataSourceColumnUpdateSchema,
 )
 from src.utils.base_repository import BaseRepository
@@ -16,6 +17,7 @@ class DataSourceColumnService(
         DataSourceColumn,
         DataSourceColumnCreateSchema,
         DataSourceColumnUpdateSchema,
+        DataSourceColumnSchema,
         UUID,
     ]
 ):
@@ -24,7 +26,7 @@ class DataSourceColumnService(
         self,
         repository: BaseRepository[DataSourceColumn, UUID],
     ):
-        super().__init__(DataSourceColumn, repository)
+        super().__init__(DataSourceColumn, DataSourceColumnSchema, repository)
 
 
 def get_data_source_column_service(

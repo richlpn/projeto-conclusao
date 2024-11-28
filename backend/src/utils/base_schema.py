@@ -14,7 +14,7 @@ def to_camel(string: str) -> str:
     return "".join(words)
 
 
-class BaseSchema(BaseModel, Generic[T]):
+class BaseSchema(BaseModel):
     """
     Abstract base class for creating Pydantic schemas from models.
 

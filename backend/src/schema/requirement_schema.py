@@ -1,17 +1,16 @@
 from uuid import UUID, uuid4
 
-from src.models.domain.requirement import Requirement
 from src.schema.task_schema import BaseSchema, Field, TaskCreateSchema, TaskSchema
 
 
-class RequirementCreateSchema(BaseSchema[Requirement]):
+class RequirementCreateSchema(BaseSchema):
     title: str = Field(description="Requirement title")
     tasks: list[TaskCreateSchema] = Field(
         description="List of task to be completed in order to fulfill this requirement.",
     )
 
 
-class RequirementUpdateSchema(BaseSchema[Requirement]):
+class RequirementUpdateSchema(BaseSchema):
     title: str
 
 

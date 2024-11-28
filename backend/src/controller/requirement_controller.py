@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends, status
 from src.models.domain.requirement import Requirement
 from src.schema.requirement_schema import (
     UUID,
-    Requirement,
     RequirementCreateSchema,
     RequirementSchema,
     RequirementUpdateSchema,
@@ -13,7 +12,11 @@ from src.utils.base_service import BaseService
 router = APIRouter(prefix="/requirement", tags=["Data Sources Requirements"])
 
 ServiceType = BaseService[
-    Requirement, RequirementCreateSchema, RequirementUpdateSchema, UUID
+    Requirement,
+    RequirementCreateSchema,
+    RequirementUpdateSchema,
+    RequirementSchema,
+    UUID,
 ]
 
 

@@ -4,8 +4,10 @@ from src.repositories.requirement_repository import get_requirement_repository
 from src.schema.requirement_schema import (
     UUID,
     RequirementCreateSchema,
+    RequirementSchema,
     RequirementUpdateSchema,
 )
+from src.schema.task_schema import TaskSchema
 from src.service.task_service import (
     Task,
     TaskCreateSchema,
@@ -17,16 +19,24 @@ from src.utils.base_service import BaseService
 
 
 class RequirementService(
-    BaseService[Requirement, RequirementCreateSchema, RequirementUpdateSchema, UUID]
+    BaseService[
+        Requirement,
+        RequirementCreateSchema,
+        RequirementUpdateSchema,
+        RequirementSchema,
+        UUID,
+    ]
 ):
 
     def __init__(
         self,
         repository: BaseRepository[Requirement, UUID],
-        task_service: BaseService[Task, TaskCreateSchema, TaskUpdateSchema, UUID],
+        task_service: BaseService[
+            Task, TaskCreateSchema, TaskUpdateSchema, TaskSchema, UUID
+        ],
     ):
         self.task_service = task_service
-        super().__init__(Requirement, repository)
+        super().__init__(Requirement, RequirementSchema, repository)
 
     def create(self, obj: RequirementCreateSchema) -> Requirement:
         tasks = [self.task_service.create(task) for task in obj.tasks]
