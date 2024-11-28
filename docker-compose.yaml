@@ -2,7 +2,7 @@ services:
   backend:
     build: ./backend
     environment:
-      - DATABASE_URL=postgresql+psycopg2://user:password@db:5432/database
+      - DATABASE_URL=postgresql://user:password@db:5432/database
     ports:
       - "8000:8000"
     depends_on:
