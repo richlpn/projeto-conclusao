@@ -9,12 +9,13 @@ class DataSourceColumnCreateSchema(BaseSchema):
     type: str = Field(description="Column type.")
     name: str = Field(description="Column name.")
     description: str = Field(description="Column brief description (used for context)")
+    data_source_id: uuid.UUID = Field()
 
 
 class DataSourceColumnUpdateSchema(BaseSchema):
-    type: Optional[str]
-    name: Optional[str]
-    description: Optional[str]
+    type: Optional[str] = Field(default=None)
+    name: Optional[str] = Field(default=None)
+    description: Optional[str] = Field(default=None)
 
 
 class DataSourceColumnSchema(DataSourceColumnCreateSchema):

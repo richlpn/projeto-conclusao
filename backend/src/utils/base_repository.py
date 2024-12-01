@@ -34,6 +34,7 @@ class BaseRepository(ABC, Generic[T, IDType]):
         db_obj = self.get_by_id(id)
         if db_obj:
             self.db.delete(db_obj)
+            self.db.commit()
             return True
         return False
 

@@ -1,3 +1,4 @@
+from typing import Optional
 import uuid
 
 from pydantic import Field
@@ -12,9 +13,7 @@ from src.utils.base_schema import BaseSchema
 class DataSourceCreateSchema(BaseSchema):
     name: str = Field(description="Data Source Name")
     type: DataSourceType = Field(description="Type of the data source.")
-    columns: list[DataSourceColumnCreateSchema] = Field(
-        default_factory=list, description="Columns used or referenced on the table."
-    )
+
     separator: str | None = Field(
         default=None,
         description="Separator used only to describe the sperator of a CSV. If not informed must be set to None",
@@ -22,9 +21,9 @@ class DataSourceCreateSchema(BaseSchema):
 
 
 class DataSourceUpdateSchema(BaseSchema):
-    name: str
-    type: DataSourceType
-    separator: str | None
+    name: Optional[str] = Field(default=None)
+    type: Optional[DataSourceType] = Field(default=None)
+    separator: Optional[str] = Field(default=None)
 
 
 class DataSourceSchema(DataSourceCreateSchema):

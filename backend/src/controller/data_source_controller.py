@@ -47,7 +47,7 @@ async def delete(
     id: UUID,
     service: serviceType = Depends(get_data_source_service),
 ):
-    obj = service.delete(id)
+    return service.delete(id)
 
 
 @router.patch("/", status_code=status.HTTP_200_OK)

@@ -2,7 +2,7 @@ services:
   backend:
     build: ./backend
     environment:
-      - DATABASE_URL=postgresql://user:password@db:5432/database
+      - DEBUG=${DEBUG:-false}
     ports:
       - "8000:8000"
     depends_on:

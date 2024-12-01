@@ -32,29 +32,17 @@ class DataSourceService(
     def __init__(
         self,
         repository: BaseRepository[DataSource, UUID],
-        column_service: BaseService[
-            DataSourceColumn,
-            DataSourceColumnCreateSchema,
-            DataSourceColumnUpdateSchema,
-            DataSourceColumnSchema,
-            UUID,
-        ],
         schema=DataSourceSchema,
     ):
-        self.column_service = column_service
         super().__init__(DataSource, schema, repository)
 
     def create(self, obj: DataSourceCreateSchema) -> DataSourceSchema:
-        columns = [self.column_service.create(col) for col in obj.columns]
-        obj_dict = obj.model_dump(exclude={"columns"})
-        model = self.model(**obj_dict)
+        model = self.model(**obj.model_dump())
         self.repository.create(model)
-        model.columns = columns
         return model
 
 
 def get_data_source_service(
     repo=Depends(get_data_source_repository),
-    column_service=Depends(get_data_source_column_service),
 ):
-    return DataSourceService(repo, column_service)
+    return DataSourceService(repo)

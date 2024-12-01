@@ -49,7 +49,7 @@ class BaseService(ABC, Generic[ModelType, InputType, UpdateType, OutputType, IDT
         return schema
 
     def delete(self, id: IDType):
-        db_obj = self.repository.delete(id)
+        return self.repository.delete(id)
 
     def get_all(self, skip: int = 0, limit: int = 100) -> List[OutputType]:
         objs: List[ModelType] = self.repository.get_all(skip, limit)
