@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Generic, TypeVar
 
-from src.utils.base_dto import BaseDTO
-from src.utils.base_service import BaseService
+from src.models.dtos.base_dto import BaseDTO
+from src.service.base_service import BaseService
 
 ServiceType = TypeVar("ServiceType", bound=BaseService)
 InputType = TypeVar("InputType", bound=BaseDTO)

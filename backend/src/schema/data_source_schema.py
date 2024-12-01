@@ -7,7 +7,7 @@ from src.schema.data_source_column_schema import (
     DataSourceColumnCreateSchema,
     DataSourceColumnSchema,
 )
-from src.utils.base_schema import BaseSchema
+from src.schema.base_schema import BaseSchema
 
 
 class DataSourceCreateSchema(BaseSchema):

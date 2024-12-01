@@ -1,6 +1,6 @@
 from uuid import UUID
 from src.models.domain.requirements.task import Task
-from src.utils.base_repository import BaseRepository
+from src.repositories.base_repository import BaseRepository
 
 
 class TaskRepository(BaseRepository[Task, UUID]):

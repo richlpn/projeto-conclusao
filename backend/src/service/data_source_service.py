@@ -15,8 +15,8 @@ from src.service.data_source_column_service import (
     DataSourceColumnUpdateSchema,
     get_data_source_column_service,
 )
-from src.utils.base_repository import BaseRepository
-from src.utils.base_service import BaseService
+from src.repositories.base_repository import BaseRepository
+from src.service.base_service import BaseService
 
 
 class DataSourceService(

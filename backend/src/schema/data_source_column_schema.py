@@ -2,7 +2,7 @@ from typing import Optional
 import uuid
 from pydantic import Field
 from src.models.domain.data_source.data_source_column import DataSourceColumn
-from src.utils.base_schema import BaseSchema
+from src.schema.base_schema import BaseSchema
 
 
 class DataSourceColumnCreateSchema(BaseSchema):

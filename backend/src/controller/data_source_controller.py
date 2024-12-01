@@ -8,7 +8,7 @@ from src.schema.data_source_schema import (
     DataSourceUpdateSchema,
 )
 from src.service.data_source_service import get_data_source_service
-from src.utils.base_service import BaseService
+from src.service.base_service import BaseService
 
 serviceType = BaseService[
     DataSource, DataSourceCreateSchema, DataSourceUpdateSchema, DataSourceSchema, UUID

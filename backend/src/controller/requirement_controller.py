@@ -7,7 +7,7 @@ from src.schema.requirement_schema import (
     RequirementUpdateSchema,
 )
 from src.service.requirement_service import get_requirement_service
-from src.utils.base_service import BaseService
+from src.service.base_service import BaseService
 
 router = APIRouter(prefix="/requirement", tags=["Data Sources Requirements"])
 

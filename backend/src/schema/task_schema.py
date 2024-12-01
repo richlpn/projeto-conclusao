@@ -2,7 +2,7 @@ from typing import Optional
 from uuid import UUID, uuid4
 
 from pydantic import Field
-from src.utils.base_schema import BaseSchema
+from src.schema.base_schema import BaseSchema
 
 
 class TaskUpdateSchema(BaseSchema):

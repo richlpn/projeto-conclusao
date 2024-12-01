@@ -1,5 +1,5 @@
 from src.models.domain.requirements.task import Task
-from src.utils.base_dto import BaseDTO
+from src.models.dtos.base_dto import BaseDTO
 
 
 class TaskDTO(BaseDTO[Task]):

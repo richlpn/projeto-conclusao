@@ -3,7 +3,7 @@ from pydantic import Field
 from src.models.domain.data_source.data_source import DataSource, DataSourceType
 from src.models.dtos.data_source_column_dto import DataSourceColumnDTO
 from src.schema.data_source_schema import DataSourceSchema
-from src.utils.base_dto import BaseDTO
+from src.models.dtos.base_dto import BaseDTO
 
 
 class DataSourceDTO(BaseDTO[DataSource]):

@@ -1,6 +1,6 @@
 from pydantic import Field
 from src.models.domain.data_source.data_source import DataSource
-from src.utils.base_dto import BaseDTO
+from src.models.dtos.base_dto import BaseDTO
 
 
 class DataSourceColumnDTO(BaseDTO[DataSource]):

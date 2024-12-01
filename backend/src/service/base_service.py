@@ -3,8 +3,8 @@ from typing import Generic, List, Optional, Type, TypeVar
 
 from fastapi import HTTPException
 from src.config.database import Base
-from src.utils.base_repository import BaseRepository
-from src.utils.base_schema import BaseSchema
+from src.repositories.base_repository import BaseRepository
+from src.schema.base_schema import BaseSchema
 
 ModelType = TypeVar("ModelType", bound=Base)  # type: ignore
 InputType = TypeVar("InputType", bound=BaseSchema)

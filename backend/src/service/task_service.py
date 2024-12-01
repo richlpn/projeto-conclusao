@@ -4,8 +4,8 @@ from fastapi import Depends
 from src.models.domain.requirements.task import Task
 from src.repositories.task_repository import get_task_repository
 from src.schema.task_schema import TaskCreateSchema, TaskSchema, TaskUpdateSchema
-from src.utils.base_repository import BaseRepository
-from src.utils.base_service import BaseService
+from src.repositories.base_repository import BaseRepository
+from src.service.base_service import BaseService
 
 
 class TaskService(

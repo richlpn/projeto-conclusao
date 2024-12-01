@@ -8,8 +8,8 @@ from src.schema.data_source_column_schema import (
     DataSourceColumnSchema,
     DataSourceColumnUpdateSchema,
 )
-from src.utils.base_repository import BaseRepository
-from src.utils.base_service import BaseService
+from src.repositories.base_repository import BaseRepository
+from src.service.base_service import BaseService
 
 
 class DataSourceColumnService(
