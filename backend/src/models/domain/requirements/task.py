@@ -11,4 +11,6 @@ class Task(Base):
     description = Column(String, nullable=False)
     signature_function = Column(String, nullable=False)
 
-    requirement_id = Column(UUID(as_uuid=True), ForeignKey("requirements.id"))
+    requirement_id = Column(
+        UUID(as_uuid=True), ForeignKey("requirements.id", ondelete="CASCADE")
+    )

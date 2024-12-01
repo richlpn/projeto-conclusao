@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, status
-from src.models.domain.requirement import Requirement
+from src.models.domain.requirements.requirement import Requirement
 from src.schema.requirement_schema import (
     UUID,
     RequirementCreateSchema,

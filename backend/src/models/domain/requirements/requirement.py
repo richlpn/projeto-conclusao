@@ -12,4 +12,6 @@ class Requirement(Base):
     title = Column(String, nullable=False)
     tasks = relationship("Task", backref="Requirement", lazy="joined")
 
-    data_source_id = Column(UUID(as_uuid=True), ForeignKey("data_sources.id"))
+    data_source_id = Column(
+        UUID(as_uuid=True), ForeignKey("data_sources.id", ondelete="CASCADE")
+    )

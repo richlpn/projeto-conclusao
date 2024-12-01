@@ -40,7 +40,8 @@ class TestDataSourceService(unittest.TestCase):
             self.data_source_service.create(data_source_schema)
 
     def tearDown(self):
-        self.data_source_service.delete(self.created_data_source.id)
+        res = self.data_source_service.delete(self.created_data_source.id)
+        self.assertTrue(res)
 
 
 if __name__ == "__main__":
