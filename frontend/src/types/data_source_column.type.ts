@@ -1,14 +1,14 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const CreateDataSourceColumnSchema = z.object({
   type: z.string(),
   name: z.string(),
   description: z.string(),
-  data_source_id: z.string().uuid(),
-})
+  dataSourceId: z.string().uuid(),
+});
 
 export const DataSourceColumnSchema = CreateDataSourceColumnSchema.extend({
-  id: z.string().uuid()
+  id: z.string().uuid(),
 });
 
 export type DataSourceColumn = z.infer<typeof DataSourceColumnSchema>;

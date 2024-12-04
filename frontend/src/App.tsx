@@ -1,8 +1,10 @@
-
-export function App () {
-
+import { HeaderElement } from "@/components/elements/header_element";
+import LeftPanelElement from "@/components/elements/left_panel_element";
+export function App() {
   return (
-    <h1 className="font-bold text-lg">Hello World</h1>
-  )
+    <div className="bg-gray-500">
+      <HeaderElement />
+      <LeftPanelElement />
+    </div>
+  );
 }
-

@@ -1,11 +1,9 @@
-// data_source.schema.ts
-import { z } from 'zod';
-import { DataSourceColumnSchema } from './data_source_column.type';
-import { DataSourceTypeSchema } from './data_source_type.type';
+import { z } from "zod";
+import { DataSourceColumnSchema } from "./data_source_column.type";
 
 export const dataSourceCreateSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  type: DataSourceTypeSchema,
+  name: z.string().min(1, "Name is required"),
+  type: z.string().min(1),
   separator: z.string().optional().nullable(),
 });
 
@@ -14,5 +12,5 @@ export const dataSourceSchema = dataSourceCreateSchema.extend({
   columns: z.array(DataSourceColumnSchema).default([]),
 });
 
-type DataSourceCreateSchema = z.infer<typeof dataSourceCreateSchema>;
-type DataSourceSchema = z.infer<typeof dataSourceSchema>;
+export type DataSourceCreateSchema = z.infer<typeof dataSourceCreateSchema>;
+export type DataSourceSchema = z.infer<typeof dataSourceSchema>;
