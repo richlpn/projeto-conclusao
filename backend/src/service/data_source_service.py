@@ -10,11 +10,7 @@ from src.schema.data_source_schema import (
     DataSourceSchema,
     DataSourceUpdateSchema,
 )
-from src.service.data_source_column_service import (
-    DataSourceColumnCreateSchema,
-    DataSourceColumnUpdateSchema,
-    get_data_source_column_service,
-)
+
 from src.repositories.base_repository import BaseRepository
 from src.service.base_service import BaseService
 
