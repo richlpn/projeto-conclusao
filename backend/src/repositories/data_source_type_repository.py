@@ -6,3 +6,7 @@ from src.repositories.base_repository import BaseRepository
 class DataSourceColumnRepository(BaseRepository[DataSourceType, UUID]):
 
     model = DataSourceType
+
+
+def get_data_source_repository() -> BaseRepository[DataSourceType, UUID]:
+    return DataSourceColumnRepository()
