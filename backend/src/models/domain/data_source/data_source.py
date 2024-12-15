@@ -33,7 +33,7 @@ class DataSource(Base):
 
     columns = relationship("DataSourceColumn", lazy="joined")
     requirement = relationship("Requirement", lazy="joined")
-    type = relationship("DataSourceType", backref="DataSource", lazy="joined")
+    type = relationship("DataSourceType", lazy="joined")
     type_id = Column(
         UUID(as_uuid=True), ForeignKey("data_source_type.id", ondelete="CASCADE")
     )
