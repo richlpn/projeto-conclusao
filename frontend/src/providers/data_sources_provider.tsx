@@ -13,10 +13,6 @@ export const DataContext = createContext(
   {} as DataContextProps<DataSourceSchema[]>
 );
 
-interface DataProviderProps {
-  children: ReactNode;
-}
-
 const DataProvider = ({ children }: PropsWithChildren<{}>) => {
   const { data, isLoading, error } = useFetchAllData(
     dataSourceSchema,

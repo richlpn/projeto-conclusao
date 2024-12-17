@@ -1,52 +1,50 @@
 import { DataSourceSchema } from "@/types/data_source.type";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
-import React, { useCallback, useContext, useMemo, useState } from "react";
-import { Button } from "../ui/button";
+import { useState } from "react";
 import { Input } from "../ui/input";
-import { DataContext } from "@/providers/data_sources_provider";
+import { DataSourceSchemaList } from "./data_source_schema_list";
+import { Button } from "../ui/button";
+import { ScrollArea } from "../ui/scroll-area";
+import { CreateSchemaModal } from "./create_schema_modal";
+import { useDataSources } from "@/context/data_sources_context";
 
-export default function () {
-  const { data, isLoading, error } = useContext(DataContext);
-  const [selectedSchema, setSelectedSchema] = useState<DataSourceSchema | null>(
-    null
-  );
-  const [search, setSearch] = useState<string>("");
+interface LeftPanelProps {
+  onSelectSchema: (schema: DataSourceSchema) => void;
+  selectedSchema: DataSourceSchema | null;
+}
 
-  const filteredSchemas = useMemo(
-    () => data?.filter((source) => source.name.includes(search)),
-    [data, search]
-  );
-  const handleSearchChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value),
-    []
-  );
-  console.log("filteredSchemas", filteredSchemas, search);
+export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
+  const { dataSources, isLoading, error } = useDataSources();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
+  const [search, setSearch] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  if (isLoading || !dataSources) return <div>Loading...</div>;
+  if (error && dataSources == null)
+    return <div>Error When loading Data Sources Try again latter: {error}</div>;
+
   return (
-    <div className="w-1/4 border-r p-4">
-      <div className="flex flex-row gap-4">
-        <Input
-          type="text"
-          placeholder="Search DataSourceSchemas..."
-          onChange={handleSearchChange}
-          className="mb-4 text-white "
+    <div className="h-full flex flex-col p-4 space-y-4 mb-5 mx-2">
+      <Input
+        placeholder="Search schemas..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <Button onClick={() => setIsModalOpen(true)}>Create Schema</Button>
+      <ScrollArea className="flex-grow">
+        <DataSourceSchemaList
+          searchQuery={search}
+          schemas={dataSources}
+          onSelectSchema={onSelectSchema}
+          selectedSchema={selectedSchema}
         />
-      </div>
-      <ScrollArea className="h-[calc(100vh-120px)]">
-        {filteredSchemas?.map((schema) => (
-          <Button
-            key={schema.id}
-            variant={selectedSchema?.id === schema.id ? "secondary" : "default"}
-            className="w-full justify-start mb-2"
-            onClick={() => setSelectedSchema(schema)}
-          >
-            {schema.name} ({schema.type})
-          </Button>
-        ))}
       </ScrollArea>
+      <CreateSchemaModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
