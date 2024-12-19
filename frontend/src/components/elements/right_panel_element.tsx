@@ -4,7 +4,7 @@ import { Copy, Check } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { DataSourceSchema } from "@/types/data_source.type";
+import { DataSource } from "@/types/data_source.type";
 
 const pythonScript = `
 def example_function():
@@ -24,7 +24,7 @@ if __name__ == "__main__":
   `;
 
 interface RightPanelProps {
-  schema: DataSourceSchema;
+  schema: DataSource;
 }
 export function RightPanelElement({ schema }: RightPanelProps) {
   const { isCopied, copyToClipboard } = useCopyToClipboard();

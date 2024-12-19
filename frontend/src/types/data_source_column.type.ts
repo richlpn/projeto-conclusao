@@ -12,3 +12,6 @@ export const DataSourceColumnSchema = CreateDataSourceColumnSchema.extend({
 });
 
 export type DataSourceColumn = z.infer<typeof DataSourceColumnSchema>;
+export type CreateDataSourceColumn = z.infer<
+  typeof CreateDataSourceColumnSchema
+>;

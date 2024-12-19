@@ -11,6 +11,7 @@ export interface EndpointType {
 interface EndpointsType {
   data_source: EndpointType;
   data_source_type: EndpointType;
+  data_source_columns: EndpointType;
 }
 
 export const endpoints: EndpointsType = {
@@ -29,5 +30,13 @@ export const endpoints: EndpointsType = {
     create: `${BASE_URL}/data-source-type`,
     update: (id: string) => `${BASE_URL}/data-source-type/${id}`,
     delete: (id: string) => `${BASE_URL}/data-source-type/${id}`,
+  },
+  data_source_columns: {
+    getAll: (skip: number, limit: number) =>
+      `${BASE_URL}/data-source-columns/all?skip=${skip}&limit=${limit}`,
+    getById: (id: string) => `${BASE_URL}/data-source-columns/${id}`,
+    create: `${BASE_URL}/data-source-columns`,
+    update: (id: string) => `${BASE_URL}/data-source-columns/${id}`,
+    delete: (id: string) => `${BASE_URL}/data-source-columns/${id}`,
   },
 };

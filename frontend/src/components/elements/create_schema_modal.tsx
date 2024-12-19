@@ -20,7 +20,7 @@ import { useFetchAllData } from "@/hooks/useFetchAllData";
 import { Controller, useForm } from "react-hook-form";
 import {
   dataSourceCreateSchema,
-  DataSourceCreateSchema,
+  DataSourceCreate,
   dataSourceSchema,
 } from "@/types/data_source.type";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -52,7 +52,7 @@ export function CreateSchemaModal({ isOpen, onClose }: CreateSchemaModalProps) {
   const { mutateAsync: mutateDataSourceCreate, error: mutateDsError } =
     useCreateSchema(endpoints.data_source, dataSourceSchema);
 
-  const form = useForm<DataSourceCreateSchema>({
+  const form = useForm<DataSourceCreate>({
     resolver: zodResolver(dataSourceCreateSchema),
     defaultValues: {
       name: "",
@@ -62,7 +62,7 @@ export function CreateSchemaModal({ isOpen, onClose }: CreateSchemaModalProps) {
 
   const typePlaceHolder = isLoading ? "Loading..." : "Select a type";
 
-  async function handleSubmit(schema: DataSourceCreateSchema) {
+  async function handleSubmit(schema: DataSourceCreate) {
     form.reset();
     try {
       let resp = await mutateDataSourceCreate(schema);

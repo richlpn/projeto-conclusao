@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { DataSourceSchema } from "@/types/data_source.type";
+import { DataSource } from "@/types/data_source.type";
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 
 interface DataSourceSchemaListProps {
-  schemas: DataSourceSchema[];
+  schemas: DataSource[];
   searchQuery: string;
-  onSelectSchema: (schema: DataSourceSchema) => void;
-  selectedSchema: DataSourceSchema | null;
+  onSelectSchema: (schema: DataSource) => void;
+  selectedSchema: DataSource | null;
   onDeleteSchema: (schemaID: string) => void;
 }
 

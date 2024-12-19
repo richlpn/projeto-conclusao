@@ -6,16 +6,14 @@ import {
   ResizableHandle,
 } from "./components/ui/resizable";
 import { MiddlePanel } from "./components/elements/middle_panel_element";
-import { DataSourceSchema } from "./types/data_source.type";
+import { DataSource } from "./types/data_source.type";
 import { useState } from "react";
 import { RightPanelElement } from "./components/elements/right_panel_element";
 
 export function App() {
-  const [selectedSchema, setSelectedSchema] = useState<DataSourceSchema | null>(
-    null
-  );
+  const [selectedSchema, setSelectedSchema] = useState<DataSource | null>(null);
 
-  const handleSelectSchema = (schema: DataSourceSchema) => {
+  const handleSelectSchema = (schema: DataSource) => {
     selectedSchema != null && schema == selectedSchema
       ? setSelectedSchema(null)
       : setSelectedSchema(schema);

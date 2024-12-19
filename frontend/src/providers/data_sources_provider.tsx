@@ -1,6 +1,6 @@
 import { createContext, PropsWithChildren } from "react";
 import { useFetchAllData } from "../hooks/useFetchAllData";
-import { DataSourceSchema, dataSourceSchema } from "@/types/data_source.type";
+import { DataSource, dataSourceSchema } from "@/types/data_source.type";
 import { endpoints } from "@/utils/endpoints";
 
 interface DataContextProps<T> {
@@ -9,9 +9,7 @@ interface DataContextProps<T> {
   error: any;
 }
 
-export const DataContext = createContext(
-  {} as DataContextProps<DataSourceSchema[]>
-);
+export const DataContext = createContext({} as DataContextProps<DataSource[]>);
 
 const DataProvider = ({ children }: PropsWithChildren<{}>) => {
   const { data, isLoading, error } = useFetchAllData({

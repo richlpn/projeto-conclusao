@@ -14,5 +14,5 @@ export const dataSourceSchema = dataSourceCreateSchema.extend({
   type: DataSourceTypeSchema,
 });
 
-export type DataSourceCreateSchema = z.infer<typeof dataSourceCreateSchema>;
-export type DataSourceSchema = z.infer<typeof dataSourceSchema>;
+export type DataSourceCreate = z.infer<typeof dataSourceCreateSchema>;
+export type DataSource = z.infer<typeof dataSourceSchema>;

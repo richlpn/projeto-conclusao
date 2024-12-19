@@ -5,12 +5,13 @@ import { DataSourceColumn } from "@/types/data_source_column.type";
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import { PlusIcon } from "lucide-react";
-import useCreateSchema from "@/hooks/useMutateSchema";
+import { CreateColumnModal } from "./create_data_source_column_modal_element";
+import { DataSource } from "@/types/data_source.type";
 
 interface ColumnListElementProps {
-  columns: DataSourceColumn[];
+  data_source: DataSource;
 }
-export function ColumnListElement({ columns }: ColumnListElementProps) {
+export function ColumnListElement({ data_source }: ColumnListElementProps) {
   const [selectedColumn, setSelectedColumn] = useState<DataSourceColumn | null>(
     null
   );
@@ -23,10 +24,7 @@ export function ColumnListElement({ columns }: ColumnListElementProps) {
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-row-reverse">
-        <Button>{<PlusIcon />}</Button>
-      </div>
-      {columns.map((col) => (
+      {data_source.columns.map((col) => (
         <Card
           key={col.id}
           className={`cursor-pointer transition-all duration-300 ${selected_style(

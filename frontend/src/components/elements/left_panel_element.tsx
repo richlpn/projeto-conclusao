@@ -1,4 +1,4 @@
-import { DataSourceSchema } from "@/types/data_source.type";
+import { DataSource } from "@/types/data_source.type";
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { DataSourceSchemaList } from "./data_source_schema_list";
@@ -11,8 +11,8 @@ import { useDeleteSchema } from "@/hooks/useDeleteSchema";
 import { FloatingNotification } from "./floating_notification_element";
 
 interface LeftPanelProps {
-  onSelectSchema: (schema: DataSourceSchema) => void;
-  selectedSchema: DataSourceSchema | null;
+  onSelectSchema: (schema: DataSource) => void;
+  selectedSchema: DataSource | null;
 }
 interface Message {
   type: "error" | "success";

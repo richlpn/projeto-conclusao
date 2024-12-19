@@ -1,11 +1,11 @@
 import { FloatingNotification } from "@/components/elements/floating_notification_element";
 import { useFetchAllData } from "@/hooks/useFetchAllData";
-import { dataSourceSchema, DataSourceSchema } from "@/types/data_source.type";
+import { dataSourceSchema, DataSource } from "@/types/data_source.type";
 import { endpoints } from "@/utils/endpoints";
 import React from "react";
 
 interface DataSourceContextType {
-  dataSources: DataSourceSchema[] | undefined;
+  dataSources: DataSource[] | undefined;
   isLoading: boolean;
   error: Error | null;
   refetch: () => void;
