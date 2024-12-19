@@ -47,12 +47,10 @@ export function CreateSchemaModal({ isOpen, onClose }: CreateSchemaModalProps) {
     skip: 0,
     limit: 100,
   });
-  
+
   const { refetch } = useDataSources();
-  const mutateDataSourceCreate = useCreateSchema(
-    endpoints.data_source.create,
-    dataSourceSchema
-  );
+  const { mutateAsync: mutateDataSourceCreate, error: mutateDsError } =
+    useCreateSchema(endpoints.data_source, dataSourceSchema);
 
   const form = useForm<DataSourceCreateSchema>({
     resolver: zodResolver(dataSourceCreateSchema),
@@ -67,7 +65,7 @@ export function CreateSchemaModal({ isOpen, onClose }: CreateSchemaModalProps) {
   async function handleSubmit(schema: DataSourceCreateSchema) {
     form.reset();
     try {
-      let resp = await mutateDataSourceCreate.mutateAsync(schema);
+      let resp = await mutateDataSourceCreate(schema);
     } catch (error) {
       console.error("Error creating schema:", error);
     }

@@ -1,15 +1,10 @@
+import { EndpointType } from "@/utils/endpoints";
 import { useQuery } from "@tanstack/react-query";
 import { ZodSchema } from "zod";
 
 interface FectchTypes<T extends ZodSchema> {
   schema: T;
-  endpoint: {
-    getAll: (skip: number, limit: number) => string;
-    getById: (id: string) => string;
-    create: string;
-    update: (id: string) => string;
-    delete: (id: string) => string;
-  };
+  endpoint: EndpointType;
   skip: number;
   limit: number;
 }

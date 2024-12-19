@@ -1,6 +1,19 @@
 const BASE_URL = "http://localhost:8000";
 
-export const endpoints = {
+export interface EndpointType {
+  getAll: (skip: number, limit: number) => string;
+  getById: (id: string) => string;
+  create: string;
+  update: (id: string) => string;
+  delete: (id: string) => string;
+}
+
+interface EndpointsType {
+  data_source: EndpointType;
+  data_source_type: EndpointType;
+}
+
+export const endpoints: EndpointsType = {
   data_source: {
     getAll: (skip: number, limit: number) =>
       `${BASE_URL}/data-sources/all?skip=${skip}&limit=${limit}`,

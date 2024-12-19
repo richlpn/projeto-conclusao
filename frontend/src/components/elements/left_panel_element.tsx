@@ -21,9 +21,9 @@ interface Message {
 }
 export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
   const { dataSources, isLoading, error } = useDataSources();
-  const { mutate: deleteSchema, error: deleteError } = useDeleteSchema({
-    endpoint: endpoints.data_source,
-  });
+  const { mutate: deleteSchema, error: deleteError } = useDeleteSchema(
+    endpoints.data_source
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
