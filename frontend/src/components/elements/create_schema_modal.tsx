@@ -41,10 +41,13 @@ interface CreateSchemaModalProps {
 }
 
 export function CreateSchemaModal({ isOpen, onClose }: CreateSchemaModalProps) {
-  const { data, isLoading, error } = useFetchAllData(
-    DataSourceTypeSchema,
-    endpoints.data_source_type.getAll(0, 100)
-  );
+  const { data, isLoading, error } = useFetchAllData({
+    schema: DataSourceTypeSchema,
+    endpoint: endpoints.data_source_type,
+    skip: 0,
+    limit: 100,
+  });
+  
   const { refetch } = useDataSources();
   const mutateDataSourceCreate = useCreateSchema(
     endpoints.data_source.create,

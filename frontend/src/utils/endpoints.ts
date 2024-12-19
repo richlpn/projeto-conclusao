@@ -7,7 +7,7 @@ export const endpoints = {
     getById: (id: string) => `${BASE_URL}/data-sources/${id}`,
     create: `${BASE_URL}/data-sources`,
     update: (id: string) => `${BASE_URL}/data-sources/${id}`,
-    delete: (id: string) => `${BASE_URL}/data-sources/${id}`,
+    delete: (id: string) => `${BASE_URL}/data-sources/?id=${id}`,
   },
   data_source_type: {
     getAll: (skip: number, limit: number) =>

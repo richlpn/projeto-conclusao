@@ -25,7 +25,7 @@ export function App() {
     <div className="bg-slate-400 min-h-screen">
       <HeaderElement />
       <ResizablePanelGroup direction="horizontal" className="min-h-screen">
-        <ResizablePanel defaultSize={20} minSize={10}>
+        <ResizablePanel id="left_bar" defaultSize={25} minSize={10}>
           <LeftPanelElement
             selectedSchema={selectedSchema}
             onSelectSchema={handleSelectSchema}
@@ -34,16 +34,17 @@ export function App() {
         <ResizableHandle />
         {selectedSchema ? (
           <>
-            <ResizablePanel defaultSize={25} minSize={20}>
+            <ResizablePanel id="middle" defaultSize={35} minSize={20}>
               <MiddlePanel selectedSchema={selectedSchema} />
             </ResizablePanel>
-            <ResizableHandle />
-            <ResizablePanel defaultSize={50} minSize={30}>
+            <ResizableHandle id="handle" />
+            <ResizablePanel id="code" defaultSize={40} minSize={30}>
               <RightPanelElement schema={selectedSchema} />
             </ResizablePanel>
           </>
         ) : (
           <ResizablePanel
+            id="placeholder"
             defaultSize={75}
             minSize={20}
             className="flex justify-center items-center"

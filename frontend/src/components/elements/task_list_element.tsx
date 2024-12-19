@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { DataSourceSchema } from "@/types/data_source.type";
 
 interface Task {
   id: string;
@@ -9,11 +8,7 @@ interface Task {
   description: string;
 }
 
-interface TaskListProps {
-  schema: DataSourceSchema;
-}
-
-export function TaskList({ schema }: TaskListProps) {
+export function TaskList() {
   const [selectedTask, setSelectedTask] = useState<string | null>(null);
   const tasks: Task[] = [
     { id: "1", name: "Task 1", description: "Description for Task 1" },

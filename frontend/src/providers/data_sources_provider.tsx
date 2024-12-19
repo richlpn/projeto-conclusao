@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, ReactNode } from "react";
+import { createContext, PropsWithChildren } from "react";
 import { useFetchAllData } from "../hooks/useFetchAllData";
 import { DataSourceSchema, dataSourceSchema } from "@/types/data_source.type";
 import { endpoints } from "@/utils/endpoints";
@@ -14,10 +14,12 @@ export const DataContext = createContext(
 );
 
 const DataProvider = ({ children }: PropsWithChildren<{}>) => {
-  const { data, isLoading, error } = useFetchAllData(
-    dataSourceSchema,
-    endpoints.data_source.getAll(0, 100)
-  );
+  const { data, isLoading, error } = useFetchAllData({
+    schema: dataSourceSchema,
+    endpoint: endpoints.data_source,
+    skip: 0,
+    limit: 100,
+  });
 
   return (
     <DataContext.Provider value={{ data, isLoading, error }}>

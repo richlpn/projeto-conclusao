@@ -1,3 +1,4 @@
+import { FloatingNotification } from "@/components/elements/floating_notification_element";
 import { useFetchAllData } from "@/hooks/useFetchAllData";
 import { dataSourceSchema, DataSourceSchema } from "@/types/data_source.type";
 import { endpoints } from "@/utils/endpoints";
@@ -16,10 +17,12 @@ const DataSourceContext = React.createContext<
 export const DataSourceProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const { data, isLoading, error, refetch } = useFetchAllData(
-    dataSourceSchema,
-    endpoints.data_source.getAll(0, 100)
-  );
+  const { data, isLoading, error, refetch } = useFetchAllData({
+    schema: dataSourceSchema,
+    endpoint: endpoints.data_source,
+    limit: 100,
+    skip: 0,
+  });
 
   const value = React.useMemo(
     () => ({
@@ -30,7 +33,9 @@ export const DataSourceProvider: React.FC<{ children: React.ReactNode }> = ({
     }),
     [data, isLoading, error, refetch]
   );
-
+  if (isLoading) {
+    return <FloatingNotification message="Loading Chats" title="loading..." />;
+  }
   return (
     <DataSourceContext.Provider value={value}>
       {children}
