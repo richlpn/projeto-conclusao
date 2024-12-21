@@ -7,7 +7,10 @@ from src.schema.data_source_column_schema import (
     DataSourceColumnSchema,
     DataSourceColumnUpdateSchema,
 )
-from src.service.data_source_column_service import get_data_source_column_service
+from src.service.data_source_column_service import (
+    DataSourceColumnService,
+    get_data_source_column_service,
+)
 from src.service.base_service import BaseService
 
 serviceType = BaseService[
@@ -61,3 +64,20 @@ async def update(
 ) -> DataSourceColumnSchema:
     obj = service.update(id, input)
     return obj
+
+
+@router.get("/data-source/{data_source_id}", status_code=status.HTTP_200_OK)
+async def get_by_data_source_id(
+    data_source_id: UUID,
+    service: DataSourceColumnService = Depends(get_data_source_column_service),
+) -> list[DataSourceColumnSchema]:
+    """
+    Gets all DataSourceColumns associated with a given DataSource id.
+
+    Args:
+    - data_source_id (UUID): The id of the DataSource.
+
+    Returns:
+    - list[DataSourceColumnSchema]: A list of DataSourceColumnSchema objects.
+    """
+    return service.find_all_by_data_source_id(data_source_id)

@@ -21,12 +21,28 @@ class DataSourceColumnService(
         UUID,
     ]
 ):
+    repository: DataSourceColumnRepository
 
     def __init__(
         self,
         repository: BaseRepository[DataSourceColumn, UUID],
     ):
         super().__init__(DataSourceColumn, DataSourceColumnSchema, repository)
+
+    def find_all_by_data_source_id(
+        self, data_source_id: UUID
+    ) -> list[DataSourceColumnSchema]:
+        """
+        Finds all DataSourceColumns associated with a given DataSource id.
+
+        Args:
+        - data_source_id (UUID): The id of the DataSource.
+
+        Returns:
+        - list[DataSourceColumnSchema]: A list of DataSourceColumnSchema objects.
+        """
+        data_source_columns = self.repository.filter_by_data_source_id(data_source_id)
+        return [self.schema(**column.__dict__) for column in data_source_columns]
 
 
 def get_data_source_column_service(

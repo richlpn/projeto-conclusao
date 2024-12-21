@@ -1,6 +1,8 @@
-from abc import ABC
+from functools import wraps
+from inspect import signature
 from typing import Generic, List, Optional, Type, TypeVar
 
+from sqlalchemy import and_, or_
 from sqlalchemy.exc import NoInspectionAvailable
 from sqlalchemy.inspection import inspect
 from src.config.database import create_session
@@ -9,11 +11,47 @@ T = TypeVar("T")
 IDType = TypeVar("IDType")
 
 
-class BaseRepository(ABC, Generic[T, IDType]):
+def query(func):
+    @wraps(func)
+    def wrapper(self, *args, **kwargs):
+        # Parse the function name
+        func_name = func.__name__
+        if not func_name.startswith("filter_by_"):
+            raise ValueError(
+                f"Function name '{func_name}' must start with 'filter_by_'."
+            )
+
+        # Extract attributes and logical operator from the function name
+        query_parts = (
+            func_name[10:].split("_and_")
+            if "_and_" in func_name
+            else func_name[10:].split("_or_")
+        )
+        operator = and_ if "_and_" in func_name else or_
+
+        # Map arguments to their corresponding model attributes
+        sig = signature(func)
+        bound_args = sig.bind(self, *args, **kwargs)
+        bound_args.apply_defaults()  # Apply default values if any
+
+        filters = [
+            getattr(self.model, attr) == bound_args.arguments[attr]
+            for attr in query_parts
+            if attr in bound_args.arguments
+        ]
+
+        # Execute the query using SQLAlchemy
+        return self.db.query(self.model).filter(operator(*filters)).all()
+
+    return wrapper
+
+
+class BaseRepository(Generic[T, IDType]):
 
     model: Type[T]
 
-    def __init__(self):
+    def __init__(self, model: Type[T]):
+        self.model = model
         self.db = create_session()
         self.primary_key = self._get_primary_key()
 
