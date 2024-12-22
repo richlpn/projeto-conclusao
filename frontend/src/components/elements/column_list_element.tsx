@@ -1,33 +1,62 @@
 import React, { useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
-import { DataSourceColumn } from "@/types/data_source_column.type";
-import { Label } from "../ui/label";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardDescription,
+} from "@/components/ui/card";
+import {
+  CreateDataSourceColumn,
+  CreateDataSourceColumnSchema,
+  DataSourceColumn,
+} from "@/types/data_source_column.type";
 import { Button } from "../ui/button";
-import { PlusIcon } from "lucide-react";
-import { CreateColumnModal } from "./create_data_source_column_modal_element";
-import { DataSource } from "@/types/data_source.type";
+import { Trash2 } from "lucide-react";
+import { FormSubmitResponse, GenericForm } from "./form_element";
+import { FormFieldInterface } from "./generic_form_item_element";
 
 interface ColumnListElementProps {
-  data_source: DataSource;
+  columns: DataSourceColumn[];
+  isColumnCreationPending: boolean;
+  data_source_id: string;
+  createColumnFields: FormFieldInterface<CreateDataSourceColumn>[];
+  onCreateColumn: (
+    submit_form: FormSubmitResponse<CreateDataSourceColumn>
+  ) => Promise<void>;
+  onDeleteColumn: (id: string) => void;
 }
-export function ColumnListElement({ data_source }: ColumnListElementProps) {
+export function ColumnListElement({
+  columns,
+  onCreateColumn,
+  data_source_id,
+  isColumnCreationPending,
+  createColumnFields,
+  onDeleteColumn,
+}: ColumnListElementProps) {
+  // Track the Selected Column for update or expand
   const [selectedColumn, setSelectedColumn] = useState<DataSourceColumn | null>(
     null
   );
 
+  // Used to change the style of the hover effect and background color of the selected column
   const selected_style = (col: DataSourceColumn) => {
     if (!(selectedColumn && col.id == selectedColumn.id))
-      return "hover:bg-slate-300 dark:hover:bg-slate-500";
-    return "";
+      return "hover:bg-slate-700 dark:hover:bg-slate-500";
+    return "bg-white-200 ";
+  };
+
+  //
+  const onDelete = (e: React.MouseEvent, col_id: string) => {
+    e.stopPropagation();
+    onDeleteColumn(col_id);
   };
 
   return (
     <div className="space-y-4">
-      {data_source.columns.map((col) => (
+      {columns.map((col) => (
         <Card
           key={col.id}
-          className={`cursor-pointer transition-all duration-300 ${selected_style(
+          className={`text-white cursor-pointer transition-all duration-300 bg-gray-600 ${selected_style(
             col
           )}`}
           onClick={() =>
@@ -36,15 +65,44 @@ export function ColumnListElement({ data_source }: ColumnListElementProps) {
               : setSelectedColumn(null)
           }
         >
-          <CardHeader>
-            <CardTitle>{col.name}</CardTitle>
-            <Label>{col.type}</Label>
-          </CardHeader>
-          {selectedColumn?.id == col.id ? (
-            <CardContent onClick={(e: React.MouseEvent) => e.stopPropagation()}>
-              <Textarea defaultValue={col.description} />
-            </CardContent>
-          ) : null}
+          {selectedColumn?.id != col.id ? (
+            <>
+              <CardHeader>
+                <div className="flex items-center justify-between gap-2">
+                  {col.name} ({col.type})
+                  <Button
+                    onClick={(e: React.MouseEvent) => onDelete(e, col.id)}
+                  >
+                    <Trash2 className="text-red-500" />
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-white">
+                  {col.description}
+                </CardDescription>
+              </CardContent>
+            </>
+          ) : (
+            <div className="mx-10 my-5">
+              <CardContent
+                onClick={(e: React.MouseEvent) => e.stopPropagation()}
+              >
+                <GenericForm
+                  schema={CreateDataSourceColumnSchema}
+                  fields={createColumnFields}
+                  onSubmit={onCreateColumn}
+                  isLoading={isColumnCreationPending}
+                  defaultValues={{
+                    dataSourceId: data_source_id,
+                    description: col.description,
+                    name: col.name,
+                    type: col.type,
+                  }}
+                />
+              </CardContent>
+            </div>
+          )}
         </Card>
       ))}
     </div>
