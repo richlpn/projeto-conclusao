@@ -1,38 +1,24 @@
-import { EndpointType } from "@/utils/endpoints";
-import {
-  useMutation,
-  UseMutationResult,
-  useQueryClient,
-} from "@tanstack/react-query";
 import axios from "axios";
-import { z, ZodType } from "zod";
+import { EndpointType } from "@/utils/endpoints";
+import { useMutation } from "@tanstack/react-query";
+import { z } from "zod";
 
-const createSchema = async <T extends ZodType, C extends ZodType>(
-  schema: T,
-  data: z.infer<C>,
-  endpoint: EndpointType
-): Promise<z.infer<T>> => {
-  try {
-    const resp = await axios.post<z.infer<T>>(endpoint.create, data);
-    return schema.parse(resp.data);
-  } catch (error) {
-    console.error("Error in createSchema:", error);
-    throw error;
-  }
-};
-
-export default function useCreateSchema<T extends ZodType, C extends ZodType>(
+export function useCreateSchema<
+  TSchema extends z.ZodType,
+  TResponse extends z.ZodType
+>(
   endpoint: EndpointType,
-  schema: T
-): UseMutationResult<z.infer<T>, Error, z.infer<C>> {
-  const queryClient = useQueryClient();
-  
+  operationalSchema: TSchema,
+  definiteSchema: TResponse
+) {
+  const key = ["create", endpoint.create, definiteSchema];
+
   return useMutation({
-    mutationKey: [endpoint],
-    mutationFn: (data: z.infer<C>) =>
-      createSchema<T, C>(schema, data, endpoint),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [endpoint] });
+    mutationKey: key,
+    mutationFn: async (data: z.infer<TSchema>) => {
+      const validated = operationalSchema.parse(data);
+      const response = await axios.post(endpoint.create, validated);
+      return definiteSchema.parse(response.data);
     },
   });
 }

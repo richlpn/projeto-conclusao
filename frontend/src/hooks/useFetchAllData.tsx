@@ -1,22 +1,34 @@
-import { EndpointType } from "@/utils/endpoints";
 import { useQuery } from "@tanstack/react-query";
-import { ZodSchema } from "zod";
+import { z } from "zod";
+import axios from "axios";
+import { EndpointType } from "@/utils/endpoints";
 
-interface FectchTypes<T extends ZodSchema> {
-  schema: T;
-  endpoint: EndpointType;
+interface PaginationParams {
   skip: number;
   limit: number;
 }
-export const useFetchAllData = <T extends ZodSchema>(query: FectchTypes<T>) => {
+
+export function useListSchema<TResponse extends z.ZodType>(
+  endpoint: EndpointType,
+  definiteSchema: TResponse,
+  params: PaginationParams
+) {
+  const queryKey = ["list", endpoint.getAll(params.skip, params.limit)];
+
   return useQuery({
-    queryKey: [query.endpoint],
+    queryKey,
     queryFn: async () => {
-      const response = await fetch(
-        query.endpoint.getAll(query.skip, query.limit)
-      );
-      const data = await response.json();
-      return query.schema.array().parse(data);
+      const response = await axios.get(queryKey[1]);
+      const parsed = definiteSchema.array().parse(response.data);
+      return parsed;
     },
+    select: (data) => ({
+      items: data,
+      pagination: {
+        skip: params.skip,
+        limit: params.limit,
+        total: data.length,
+      },
+    }),
   });
-};
+}
