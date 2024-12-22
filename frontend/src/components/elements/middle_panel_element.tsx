@@ -3,7 +3,7 @@ import { DataSource } from "@/types/data_source.type";
 import { ColumnListElement } from "./column_list_element";
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { PlusIcon } from "lucide-react";
+import { PlusIcon, PlayIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -104,7 +104,10 @@ export function MiddlePanel({ selectedSchema }: MiddlePanelProps) {
 
   return (
     <div className="h-full p-4 flex flex-col gap-2">
-      <div className="flex flex-row-reverse">
+      <div className="flex flex-row-reverse gap-2">
+        <Button variant="outline">
+          {<PlayIcon className="text-green-600" />}
+        </Button>
         <Button onClick={() => setOpenColumnForm(true)}>{<PlusIcon />}</Button>
       </div>
       {columns ? (
