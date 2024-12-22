@@ -1,6 +1,7 @@
 from uuid import uuid4
 
 from sqlalchemy import UUID, Column, ForeignKey, String
+from sqlalchemy.dialects.postgresql import TEXT
 from sqlalchemy.orm import relationship
 from src.config.database import Base
 
@@ -15,3 +16,4 @@ class Requirement(Base):
     data_source_id = Column(
         UUID(as_uuid=True), ForeignKey("data_sources.id", ondelete="CASCADE")
     )
+    code = Column(TEXT)
