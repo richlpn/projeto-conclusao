@@ -1,23 +1,12 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Path, useForm, UseFormReturn } from "react-hook-form";
+import { useForm, UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
+import { Form, FormField } from "@/components/ui/form";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-export interface FormField<T> {
-  name: Path<T>;
-  label: string;
-  type?: string;
-  placeholder?: string;
-}
+  FormFieldInterface,
+  GenericFormItem,
+} from "@/components/elements/generic_form_item_element";
 
 export interface FormSubmitResponse<T> {
   schema: T;
@@ -29,7 +18,7 @@ interface GenericFormProps<T extends z.ZodType> {
   onSubmit: (
     submit_form: FormSubmitResponse<z.infer<T>>
   ) => Promise<z.infer<T> | void>;
-  fields: FormField<z.infer<T>>[];
+  fields: FormFieldInterface<z.infer<T>>[];
   isLoading: boolean;
   defaultValues?: Partial<z.infer<T>>;
 }
@@ -43,7 +32,9 @@ export function GenericForm<T extends z.ZodType>({
 }: GenericFormProps<T>) {
   const form = useForm<z.infer<T>>({
     resolver: zodResolver(schema),
-    defaultValues: defaultValues as z.infer<T>,
+    defaultValues: defaultValues
+      ? (defaultValues as z.infer<T>)
+      : ({} as z.infer<T>),
   });
 
   return (
@@ -52,7 +43,7 @@ export function GenericForm<T extends z.ZodType>({
         onSubmit={form.handleSubmit((schema: T) =>
           onSubmit({ schema: schema, form: form })
         )}
-        className="space-y-8"
+        className="space-y-2"
       >
         {fields.map((field) => (
           <FormField
@@ -60,23 +51,15 @@ export function GenericForm<T extends z.ZodType>({
             control={form.control}
             name={field.name}
             render={({ field: formField }) => (
-              <FormItem>
-                <FormLabel>{field.label}</FormLabel>
-                <FormControl>
-                  <Input
-                    type={field.type || "text"}
-                    placeholder={field.placeholder}
-                    {...formField}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+              <GenericFormItem field={field} formField={formField} />
             )}
           />
         ))}
-        <Button type="submit" disabled={isLoading}>
-          {isLoading ? "Submitting..." : "Submit"}
-        </Button>
+        <div className="flex flex-row-reverse">
+          <Button type="submit" disabled={isLoading}>
+            {isLoading ? "Submitting..." : "Submit"}
+          </Button>
+        </div>
       </form>
     </Form>
   );
