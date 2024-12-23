@@ -27,6 +27,9 @@ class TaskCreateSchema(BaseSchema):
         max_length=20,
         description="Name of the python signature function that must be implemented by the task.",
     )
+    requirement_id: UUID = Field(
+        description="Requeriment that this task must be implemented",
+    )
 
 
 class TaskSchema(TaskCreateSchema):
