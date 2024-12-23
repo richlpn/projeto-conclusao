@@ -16,4 +16,4 @@ class Requirement(Base):
     data_source_id = Column(
         UUID(as_uuid=True), ForeignKey("data_sources.id", ondelete="CASCADE")
     )
-    code = Column(TEXT)
+    code = Column(TEXT, nullable=True)

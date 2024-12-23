@@ -1,6 +1,5 @@
 from uuid import UUID, uuid4
 
-from src.schema.script_schema import Script
 from src.schema.task_schema import BaseSchema, Field, TaskCreateSchema, TaskSchema
 
 
@@ -23,7 +22,7 @@ class RequirementSchema(RequirementCreateSchema):
         description="List of task to be completed in order to fulfill this requirement.",
     )
 
-    code: Script = Field(description="Python script generated from the tasks")
+    code: str | None = Field(description="Python script generated from the tasks")
 
     class Config(BaseSchema.Config):
         from_attributes = True
