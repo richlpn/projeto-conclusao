@@ -1,11 +1,17 @@
 from uuid import UUID
 
-from fastapi import Depends
+from fastapi import Depends, UploadFile
+from pydantic import ValidationError
+from src.graph.tools.extract_docs_schema_tool import extract_schema_columns
 from src.models.domain.data_source.data_source import DataSource
 from src.models.domain.data_source.data_source_column import DataSourceColumn
 from src.models.domain.data_source.data_source_type import DataSourceType
 from src.repositories.data_source_repository import get_data_source_repository
-from src.schema.data_source_column_schema import DataSourceColumnSchema
+from src.schema.data_source_column_schema import (
+    DataSourceColumnCreateSchema,
+    DataSourceColumnSchema,
+    DataSourceColumnUpdateSchema,
+)
 from src.schema.data_source_schema import (
     DataSourceCreateSchema,
     DataSourceSchema,
@@ -20,6 +26,7 @@ from src.schema.data_source_type_schema import (
 )
 from src.service.base_service import BaseService
 from src.service.data_source_type_service import get_data_source_type_service
+from src.service.data_source_column_service import get_data_source_column_service
 
 
 class DataSourceService(
@@ -42,10 +49,18 @@ class DataSourceService(
             DataSourceTypeSchema,
             UUID,
         ],
+        column_service: BaseService[
+            DataSourceColumn,
+            DataSourceColumnCreateSchema,
+            DataSourceColumnUpdateSchema,
+            DataSourceColumnSchema,
+            UUID,
+        ],
         schema=DataSourceSchema,
     ):
         super().__init__(DataSource, schema, repository)
         self.type_service = type_service
+        self.column_service = column_service
 
     def create(self, obj: DataSourceCreateSchema) -> DataSourceSchema:
 
@@ -60,15 +75,35 @@ class DataSourceService(
         # The DataSourceSchema has no type_id attribute so it must be set on it's resulting dict
         schema_dict = schema.model_dump(exclude={"type"})
         schema_dict["type_id"] = schema.type.id
-        db_obj = self.model(**schema_dict)
+        db_model = self.model(**schema_dict)
+        self.repository.create(db_model)
 
-        # By this point 'db_obj' has no attribute type only type_id
-        self.repository.create(db_obj)
+        # From this point the database object has no attribute type only type_id
         return schema
+
+    def from_file_text(self, file: UploadFile) -> DataSourceSchema:
+        """Takes an file and uses an LLM to extract the Data Source data"""
+        content = file.file.read().decode(errors="replace")
+        schema, columns = extract_schema_columns(
+            content=content, data_source_types=self.type_service.get_all()
+        )
+        created_schema = self.create(schema)
+
+        for column in columns:
+            col_dict = column.model_dump()
+            col_dict["data_source_id"] = created_schema.id
+            try:
+                valid_col = DataSourceColumnCreateSchema.model_validate(col_dict)
+                self.column_service.create(valid_col)
+            except ValidationError:
+                pass
+
+        return created_schema
 
 
 def get_data_source_service(
     repo=Depends(get_data_source_repository),
     dst_service=Depends(get_data_source_type_service),
+    column_service=Depends(get_data_source_column_service),
 ):
-    return DataSourceService(repo, dst_service)
+    return DataSourceService(repo, dst_service, column_service)

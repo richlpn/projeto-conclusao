@@ -1,11 +1,17 @@
-from langchain_core.output_parsers import PydanticOutputParser
-from src.models.agents.agent import Agent
-from src.models.data_docs_schemas_model import DataSource
+from typing import Iterable
+from src.graph.agents.agent import Agent
+from src.graph.output_parsers.schema_parser import DataSourceSchemaParser
+from src.schema.data_source_column_schema import DataSourceColumnUpdateSchema
+from src.schema.data_source_schema import DataSourceUpdateSchema
+from src.schema.data_source_type_schema import DataSourceTypeSchema
 
 
-class SchemaExtractorAgent(Agent[DataSource]):
+class SchemaExtractorAgent(
+    Agent[tuple[DataSourceUpdateSchema, list[DataSourceColumnUpdateSchema]]]
+):
 
-    name: str = "Schema Extractor Agent"
-    parser = PydanticOutputParser(
-        name="Data source Schema parser", pydantic_object=DataSource
-    )
+    llm_name: str = "Schema Extractor Agent"
+
+    def __init__(self, types: Iterable[DataSourceTypeSchema]) -> None:
+        self.parser = DataSourceSchemaParser(types)
+        super().__init__()

@@ -8,8 +8,11 @@ export interface EndpointType {
   delete: (id: string) => string;
 }
 
+export interface EndpointWithFile extends EndpointType {
+  file: string;
+}
 interface EndpointsType {
-  data_source: EndpointType;
+  data_source: EndpointWithFile;
   data_source_type: EndpointType;
   data_source_columns: EndpointType;
 }
@@ -22,7 +25,9 @@ export const endpoints: EndpointsType = {
     create: `${BASE_URL}/data-sources`,
     update: (id: string) => `${BASE_URL}/data-sources/?id=${id}`,
     delete: (id: string) => `${BASE_URL}/data-sources/?id=${id}`,
+    file: `${BASE_URL}/data-sources/from-file`,
   },
+
   data_source_type: {
     getAll: (skip: number, limit: number) =>
       `${BASE_URL}/data-source-type/all?skip=${skip}&limit=${limit}`,
@@ -31,6 +36,7 @@ export const endpoints: EndpointsType = {
     update: (id: string) => `${BASE_URL}/data-source-type/?id=${id}`,
     delete: (id: string) => `${BASE_URL}/data-source-type/?id=${id}`,
   },
+
   data_source_columns: {
     getAll: (skip: number, limit: number) =>
       `${BASE_URL}/data-source-columns/all?skip=${skip}&limit=${limit}`,

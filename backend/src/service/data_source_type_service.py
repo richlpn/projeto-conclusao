@@ -3,7 +3,10 @@ from uuid import UUID
 from fastapi import Depends
 from src.models.domain.data_source.data_source_type import DataSourceType
 from src.repositories.base_repository import BaseRepository
-from src.repositories.data_source_type_repository import get_data_source_type_repository
+from src.repositories.data_source_type_repository import (
+    get_data_source_type_repository,
+    DataSourceTypeRepository,
+)
 from src.schema.data_source_type_schema import (
     DataSourceTypeCreateSchema,
     DataSourceTypeSchema,
@@ -21,6 +24,7 @@ class DataSourceTypeService(
         UUID,
     ]
 ):
+    repository: DataSourceTypeRepository
 
     def __init__(
         self,
@@ -42,6 +46,9 @@ class DataSourceTypeService(
 
     def get_by_id(self, id: UUID) -> DataSourceTypeSchema:
         return super().get_by_id(id)
+
+    def get_by_name(self, name: str) -> DataSourceTypeSchema | None:
+        return self.repository.get_by_name(name)
 
 
 def get_data_source_type_service(

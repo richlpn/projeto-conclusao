@@ -20,6 +20,7 @@ class DataSourceColumnUpdateSchema(BaseSchema):
 
 class DataSourceColumnSchema(DataSourceColumnCreateSchema):
     id: uuid.UUID = Field(description="Unique Indentifier", default_factory=uuid.uuid4)
+    data_source_id: uuid.UUID = Field()
 
     class Config(BaseSchema.Config):
         from_attributes = True

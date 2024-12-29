@@ -8,6 +8,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):  # type: ignore
     database_url: PostgresDsn
     debug: bool = Field(default=False)
+    prompts: str = Field(description="path to the agents prompts")
 
     @field_validator("database_url")
     def check_db_name(cls, v):
@@ -22,5 +23,8 @@ class Settings(BaseSettings):  # type: ignore
 
 @lru_cache
 def get_settings() -> Settings:
-    settings = Settings(os.getenv("POSTGRES_DB"), os.getenv("DEBUG"))  # type: ignore
+    env = {}
+    for variable in Settings.model_fields:
+        env[variable] = os.environ.get(variable.upper())
+    settings = Settings(**env)  # type: ignore
     return settings

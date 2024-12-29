@@ -1,27 +1,25 @@
 import os
-import yaml
 from typing import Any, Generic, TypeVar
 
+import yaml
 from langchain.prompts import ChatPromptTemplate
 from langchain_anthropic import ChatAnthropic
+from langchain_community.chat_models.sambanova import ChatSambaNovaCloud
 from langchain_core.language_models.base import BaseLanguageModel
 from langchain_core.messages import BaseMessage
 from langchain_core.output_parsers.base import BaseOutputParser
 from langchain_core.runnables import Runnable
 from langchain_ollama import ChatOllama
-from langchain_community.chat_models.sambanova import ChatSambaNovaCloud
+from src.config import get_settings
 
+settings = get_settings()
 P = TypeVar("P")
-PROMPT_DIR = os.getenv("PROMPT_DIR")
-
-if PROMPT_DIR is None:
-    raise ValueError("Missing env variable `PROMPT_DIR`.")
 
 
 class Agent(Runnable, Generic[P]):
-    __prompt_dir__: str = PROMPT_DIR
+    __prompt_dir__: str = settings.prompts
 
-    name: str
+    llm_name: str 
     model: Runnable[list, BaseMessage]
     prompt: ChatPromptTemplate
     parser: BaseOutputParser[P] | None = None
@@ -35,13 +33,13 @@ class Agent(Runnable, Generic[P]):
 
         dir = os.path.join(self.__prompt_dir__, f"{self._filename}.yml")
 
-        with open(dir, 'r') as f:
+        with open(dir, "r") as f:
             yml = yaml.safe_load(f)["Agent"]
 
         return yml
 
     def __set_params__(self, yml: dict):
-        self.name = yml["name"]
+        self.llm_name = yml["name"]
         self.temperature = yml.get("temperature", 0.8)
 
         self.prompt = ChatPromptTemplate(
@@ -75,7 +73,7 @@ class Agent(Runnable, Generic[P]):
 
         if model_source["source"] == "anthropic":
             return ChatAnthropic(
-                model=yml["model"]["name"], temperature=self.temperature
+                model_name=yml["model"]["name"], temperature=self.temperature
             )  # type: ignore
 
         if model_source["source"] == "ollama":
@@ -88,7 +86,7 @@ class Agent(Runnable, Generic[P]):
 
         raise ValueError(f"{model_source} is not a supported model source")
 
-    def invoke(self, **kwargs) -> P:
+    def invoke(self, *args, **kwargs) -> P:
         call = {**kwargs}
         if self.parser:
             call["PARSER"] = self.parser.get_format_instructions()

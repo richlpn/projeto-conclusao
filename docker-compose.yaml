@@ -4,6 +4,13 @@ services:
     environment:
       - DEBUG=${DEBUG:-false}
       - DATABASE_URL=${DATABASE_URL:-postgresql://user:password@db:5432/database}
+      - PROMPTS=${PROMPTS:-static/prompts/}
+      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-true}
+      - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT:-https://api.smith.langchain.com}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY:-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}
+      - SAMBANOVA_API_KEY=${SAMBANOVA_API_KEY:-e66dce4b-5f25-4714-b5ce-398eddeda808}
+      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT:-TCC}
+
     ports:
       - "8000:8000"
     depends_on:

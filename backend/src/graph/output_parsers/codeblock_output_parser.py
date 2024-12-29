@@ -4,8 +4,6 @@ from functools import reduce
 from langchain_core.exceptions import OutputParserException
 from langchain_core.output_parsers import BaseOutputParser
 
-from src.models.script.script_model import Script
-
 
 class PythonCodeParser(BaseOutputParser):
 
@@ -20,7 +18,7 @@ class PythonCodeParser(BaseOutputParser):
         # Extract the code and remove the ```python markers
         python_code = text[code_start:code_end].strip()
 
-        return Script.from_code_block(python_code)
+        return python_code
 
     def get_format_instructions(self):
         return "The output should be a valid Python code block enclosed in triple backticks (```python ... ```)."

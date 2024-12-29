@@ -1,13 +1,13 @@
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, UploadFile, status
 from src.models.domain.data_source.data_source import DataSource
 from src.schema.data_source_schema import (
     DataSourceCreateSchema,
     DataSourceSchema,
     DataSourceUpdateSchema,
 )
-from src.service.data_source_service import get_data_source_service
+from src.service.data_source_service import get_data_source_service, DataSourceService
 from src.service.base_service import BaseService
 
 serviceType = BaseService[
@@ -21,6 +21,15 @@ async def get(
     id: UUID, service: serviceType = Depends(get_data_source_service)
 ) -> DataSourceSchema:
     obj = service.get_by_id(id)
+
+    return obj
+
+
+@router.post("/from-file", status_code=status.HTTP_200_OK)
+async def create_from_file(
+    file: UploadFile, service: DataSourceService = Depends(get_data_source_service)
+) -> DataSourceSchema:
+    obj = service.from_file_text(file)
 
     return obj
 

@@ -9,6 +9,7 @@ import { MiddlePanel } from "./components/elements/middle_panel_element";
 import { DataSource } from "./types/data_source.type";
 import { useState } from "react";
 import { RightPanelElement } from "./components/elements/right_panel_element";
+import { Toaster } from "./components/ui/toaster";
 
 export function App() {
   const [selectedSchema, setSelectedSchema] = useState<DataSource | null>(null);
@@ -51,6 +52,7 @@ export function App() {
           </ResizablePanel>
         )}
       </ResizablePanelGroup>
+      <Toaster />
     </div>
   );
 }

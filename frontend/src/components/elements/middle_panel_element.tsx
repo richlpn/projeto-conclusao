@@ -1,4 +1,4 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { DataSource } from "@/types/data_source.type";
 import { ColumnListElement } from "./column_list_element";
 import { useState } from "react";
@@ -65,7 +65,10 @@ export function MiddlePanel({ selectedSchema }: MiddlePanelProps) {
     data: columns,
     error: colErro,
     refetch: refetchColumns,
-  } = useListColumnsFromDataSource(selectedSchema.id);
+  } = useListColumnsFromDataSource(
+    selectedSchema.id,
+    endpoints.data_source_columns
+  );
 
   // Prepare mutation to create new columns
   const {
@@ -96,10 +99,7 @@ export function MiddlePanel({ selectedSchema }: MiddlePanelProps) {
 
   async function onDeleteColumn(id: string) {
     deleteColumn(id);
-    toast({
-      title: "Successfully deleted",
-      description: `The column was deleted successfully`,
-    });
+    refetchColumns();
   }
 
   return (

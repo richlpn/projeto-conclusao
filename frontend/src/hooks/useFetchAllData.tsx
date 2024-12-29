@@ -13,12 +13,13 @@ export function useListSchema<TResponse extends z.ZodType>(
   definiteSchema: TResponse,
   params: PaginationParams
 ) {
-  const queryKey = ["list", endpoint.getAll(params.skip, params.limit)];
+  const endpoint_str = endpoint.getAll(params.skip, params.limit);
+  const queryKey = [endpoint];
 
   return useQuery({
     queryKey,
     queryFn: async () => {
-      const response = await axios.get(queryKey[1]);
+      const response = await axios.get(endpoint_str);
       const parsed = definiteSchema.array().parse(response.data);
       return parsed;
     },

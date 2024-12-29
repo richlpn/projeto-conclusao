@@ -42,7 +42,7 @@ export function ColumnListElement({
   const selected_style = (col: DataSourceColumn) => {
     if (!(selectedColumn && col.id == selectedColumn.id))
       return "hover:bg-slate-700 dark:hover:bg-slate-500";
-    return "bg-white-200 ";
+    return "bg-slate-700 ";
   };
 
   //

@@ -26,8 +26,8 @@ class DataSourceUpdateSchema(BaseSchema):
 class DataSourceSchema(DataSourceCreateSchema):
     id: uuid.UUID = Field(default_factory=uuid.uuid4)
     type: DataSourceTypeSchema = Field(description="File type.")  # type: ignore
-    columns: list[DataSourceColumnSchema] = Field(  # type: ignore
-        default_factory=list, description="Columns used or referenced on the table."
+    columns: list[DataSourceColumnSchema] = Field(
+        default_factory=list, description="List of columns of this data source."
     )
 
     class Config(BaseSchema.Config):

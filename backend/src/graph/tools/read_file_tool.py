@@ -31,7 +31,4 @@ def read_file_tool(path: str) -> ToolCallAnswer[str]:
         with open(path, encoding="utf-8") as file:
             content = file.read()
 
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-    texts = text_splitter.split_text(content)
-
     return ToolCallAnswer[list[str]](tool_name="read_file", input=path, output=texts)
