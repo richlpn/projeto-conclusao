@@ -1,15 +1,14 @@
+from uuid import UUID
 from langchain_core.output_parsers import PydanticOutputParser
 
-from src.models.agents.agent import Agent
-from src.schema.requirement_schema import RequirementSchema
-from src.output_parsers.tasks_output_parser import TaskOutputParser
+from src.graph.agents.agent import Agent
+from src.graph.output_parsers.tasks_output_parser import RequirementOutputParser
+from src.schema.requirement_schema import RequirementCreateFromLLMSchema
 
 
-class TaskCreationAgent(Agent[RequirementSchema]):
+class RequirementsCreationAgent(Agent[RequirementCreateFromLLMSchema]):
     name = "task_creation_agent"
-    parser = PydanticOutputParser(
-        name="TaskParsingOutput", pydantic_object=RequirementSchema
-    )
 
-
-TASK_CREATION_AGENT = TaskCreationAgent()
+    def __init__(self, id: UUID) -> None:
+        self.parser = RequirementOutputParser(data_source_id=id)
+        super().__init__()

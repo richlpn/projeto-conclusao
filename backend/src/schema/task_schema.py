@@ -16,15 +16,12 @@ class TaskUpdateSchema(BaseSchema):
 
 
 class TaskCreateSchema(BaseSchema):
-    title: Optional[str] = Field(
-        max_length=20, description="A short descriptive title about the task"
-    )
+    title: Optional[str] = Field(description="A short descriptive title about the task")
     description: str = Field(
-        max_length=200,
-        description="A Detailed explanation of what must be executed on this task, containing inputs, outputs and previous dependencies.",
+        max_length=400,
+        description="An explanation of what must be executed on this task, containing inputs, outputs and previous dependencies.",
     )
     signature_function: str = Field(
-        max_length=20,
         description="Name of the python signature function that must be implemented by the task.",
     )
     requirement_id: UUID = Field(

@@ -1,19 +1,20 @@
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, HTTPException, status
+from pydantic import ValidationError
 from src.models.domain.requirements.requirement import Requirement
 from src.schema.requirement_schema import (
     UUID,
-    RequirementCreateSchema,
+    RequirementCreateFromLLMSchema,
     RequirementSchema,
     RequirementUpdateSchema,
 )
-from src.service.requirement_service import get_requirement_service
+from src.service.requirement_service import RequirementService, get_requirement_service
 from src.service.base_service import BaseService
 
 router = APIRouter(prefix="/requirement", tags=["Data Sources Requirements"])
 
 ServiceType = BaseService[
     Requirement,
-    RequirementCreateSchema,
+    RequirementCreateFromLLMSchema,
     RequirementUpdateSchema,
     RequirementSchema,
     UUID,
@@ -35,7 +36,7 @@ async def get_all(
 
 @router.post("/", status_code=status.HTTP_201_CREATED, response_model=RequirementSchema)
 async def create(
-    input: RequirementCreateSchema,
+    input: RequirementCreateFromLLMSchema,
     service: ServiceType = Depends(get_requirement_service),
 ):
     c = service.create(input)
@@ -55,3 +56,16 @@ async def update(
 ):
     obj = service.update(id, input)
     return obj
+
+
+@router.post("/from-data-source", status_code=status.HTTP_200_OK)
+async def from_data_source(
+    data_source_id: UUID, service: RequirementService = Depends(get_requirement_service)
+):
+    # try:
+    return service.gen_from_data_source(data_source_id=data_source_id)
+    # except ValidationError as err:
+    #     raise HTTPException(
+    #         status_code=status.HTTP_400_BAD_REQUEST,
+    #         detail=f"Error while parsing the schema.{err}",
+    #     )

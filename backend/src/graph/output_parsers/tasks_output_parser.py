@@ -1,26 +1,40 @@
-from langchain_core.output_parsers.base import BaseOutputParser
-
-from src.schema.requirement_schema import RequirementSchema, TaskSchema
-from src.utils.llm_logger import LOGGER
 import json
+from typing import Type
+from uuid import UUID
+
+from langchain_core.output_parsers.pydantic import _PYDANTIC_FORMAT_INSTRUCTIONS
+from langchain_core.outputs import Generation
+from pydantic import Field
+from src.graph.output_parsers.schema_parser import SchemaParser
+from src.schema.requirement_schema import RequirementCreateFromLLMSchema
+from src.schema.task_schema import TaskCreateSchema
 
 
-class TaskOutputParser(BaseOutputParser[RequirementSchema]):
-    def parse(self, text: str) -> RequirementSchema:
-        text = text.replace("\n", "").strip()
-        block = text[text.index("[") : text.rindex("]") + 1]
-        block = json.loads(block)
+class RequirementOutputParser(SchemaParser[RequirementCreateFromLLMSchema]):
+
+    data_source_id: UUID = Field()
+    pydantic_object: Type[RequirementCreateFromLLMSchema] = Field(
+        default=RequirementCreateFromLLMSchema
+    )
+
+    def parse_result(self, result: list[Generation], *, partial: bool = False):
+        schema = super().parse_result(result, partial=partial)
         tasks = [
-            TaskSchema(
-                title=task["title"],
-                description=task["description"],
-                done_codition=task["done_condition"],
+            TaskCreateSchema.model_validate(
+                {**task, "requirement_id": self.data_source_id}
             )
-            for task in block
+            for task in schema["tasks"]
         ]
-        req = RequirementSchema(title="", tasks=tasks)
+        req = RequirementCreateFromLLMSchema(tasks=tasks)
         return req
 
     def get_format_instructions(self) -> str:
+        data_source_schema = self.remove_id_properties(
+            self.pydantic_object.model_json_schema()
+        )
 
-        return "All tasks must be inside a triple backticks JSON block, for better formatting. A single task is a json with the fields 'title' and 'description' and 'done_condition'. You're expected to create multipe tasks. The 'description' field is a text describing what must be executed on the task."
+        # Transforming the reduced schema into a refined string for token minimization
+        schema_str = json.dumps(data_source_schema, ensure_ascii=False)
+
+        # Insert the schema string on the basic concat prompt
+        return _PYDANTIC_FORMAT_INSTRUCTIONS.format(schema=schema_str)
