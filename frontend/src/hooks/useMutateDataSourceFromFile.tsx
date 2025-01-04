@@ -41,7 +41,7 @@ export function useMutateDataSourceFromFile(endpoint: EndpointWithFile) {
       });
       queryClient.invalidateQueries({ queryKey: [endpoint] });
     },
-    onError: (error, _, context) => {
+    onError: (__, _, context) => {
       // Dismiss loading toast and show error
       context?.dismiss();
       toast({
