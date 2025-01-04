@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
-import { Requirement } from "@/types/requirement.type";
 import { Task, taskCreateSchema, taskSchema } from "@/types/task.type";
 import { Description, DialogTitle } from "@radix-ui/react-dialog";
 import { Label } from "@radix-ui/react-label";
@@ -12,15 +11,15 @@ import { endpoints } from "@/utils/endpoints";
 
 interface TaskListProps {
   dataSourceId: string;
-  requirement: Requirement | null;
+  tasks: Task[];
   isPanelOpen: boolean;
   closePanel: () => void;
 }
 
-export default function TaskList({ requirement }: TaskListProps) {
+export default function TaskList({ tasks, isPanelOpen }: TaskListProps) {
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 
-  const { mutateAsync: createColumn } = useCreateSchema(
+  const { mutateAsync: createTask } = useCreateSchema(
     endpoints.tasks,
     taskCreateSchema,
     taskSchema
@@ -29,7 +28,7 @@ export default function TaskList({ requirement }: TaskListProps) {
   return (
     <div className="w-full max-w-2xl mx-auto p-4">
       <ScrollArea className="h-[600px] pr-4">
-        {requirement?.tasks.slice(0, 10).map((task) => (
+        {tasks.slice(0, 10).map((task) => (
           <Card
             key={task.id}
             className="mb-4 cursor-pointer hover:bg-gray-100 transition-colors"

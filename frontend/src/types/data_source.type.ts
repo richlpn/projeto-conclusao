@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { DataSourceColumnSchema } from "./data_source_column.type";
 import { DataSourceTypeSchema } from "./data_source_type.type";
+import { taskSchema } from "./task.type";
 
 export const dataSourceCreateSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -12,6 +13,7 @@ export const dataSourceSchema = dataSourceCreateSchema.extend({
   id: z.string().uuid(),
   columns: z.array(DataSourceColumnSchema).default([]),
   type: DataSourceTypeSchema,
+  tasks: z.array(taskSchema),
 });
 
 export type DataSourceCreate = z.infer<typeof dataSourceCreateSchema>;
