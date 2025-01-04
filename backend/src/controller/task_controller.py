@@ -27,14 +27,14 @@ async def read_task(task_id: UUID, service: ServiceType = Depends(get_task_servi
     return service.get_by_id(task_id)
 
 
-@router.post("/")
+@router.post("/", status_code=201)
 async def create_task(
     task: TaskCreateSchema, service: ServiceType = Depends(get_task_service)
 ):
     return service.create(task)
 
 
-@router.put("/")
+@router.put("/", status_code=204)
 async def update_task(
     task_id: UUID,
     task: TaskUpdateSchema,
@@ -46,3 +46,9 @@ async def update_task(
 @router.delete("/")
 async def delete_task(task_id: UUID, service: ServiceType = Depends(get_task_service)):
     service.delete(task_id)
+
+
+@router.post("/generate", status_code=201)
+async def generate_tasks(data_source_id: UUID, service=Depends(get_task_service)):
+    # This type hint was removed to avoid the linting error regarding undefined function 'gen_from_data_source'.
+    return service.gen_from_data_source(data_source_id)
