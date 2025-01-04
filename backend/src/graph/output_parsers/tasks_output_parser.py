@@ -21,7 +21,7 @@ class RequirementOutputParser(SchemaParser[RequirementCreateFromLLMSchema]):
         schema = super().parse_result(result, partial=partial)
         tasks = [
             TaskCreateSchema.model_validate(
-                {**task, "requirement_id": self.data_source_id}
+                {**task, "data_source_id": self.data_source_id}
             )
             for task in schema["tasks"]
         ]

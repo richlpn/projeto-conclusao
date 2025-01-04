@@ -19,7 +19,7 @@ P = TypeVar("P")
 class Agent(Runnable, Generic[P]):
     __prompt_dir__: str = settings.prompts
 
-    llm_name: str 
+    llm_name: str
     model: Runnable[list, BaseMessage]
     prompt: ChatPromptTemplate
     parser: BaseOutputParser[P] | None = None
