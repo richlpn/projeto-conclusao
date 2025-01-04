@@ -1,6 +1,7 @@
 from uuid import uuid4
 from src.config.database import Base
-from sqlalchemy import UUID, Column, ForeignKey, String, Integer
+from sqlalchemy import UUID, Column, ForeignKey, String
+from sqlalchemy.orm import relationship
 
 
 class Task(Base):
@@ -11,6 +12,6 @@ class Task(Base):
     description = Column(String, nullable=False)
     signature_function = Column(String, nullable=False)
 
-    requirement_id = Column(
-        UUID(as_uuid=True), ForeignKey("requirements.id", ondelete="CASCADE")
+    data_source_id = Column(
+        UUID(as_uuid=True), ForeignKey("data_sources.id", ondelete="CASCADE")
     )

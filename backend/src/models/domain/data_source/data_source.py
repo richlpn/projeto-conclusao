@@ -32,7 +32,7 @@ class DataSource(Base):
     separator = Column(String, nullable=True)
 
     columns = relationship("DataSourceColumn", lazy="joined")
-    requirement = relationship("Requirement", lazy="joined", uselist=False)
+    tasks = relationship("Task", lazy="joined", uselist=True)
     type = relationship("DataSourceType", lazy="joined")
     type_id = Column(
         UUID(as_uuid=True), ForeignKey("data_source_type.id", ondelete="CASCADE")

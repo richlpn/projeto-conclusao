@@ -5,6 +5,7 @@ from pydantic import Field
 from src.schema.base_schema import BaseSchema
 from src.schema.data_source_column_schema import DataSourceColumnSchema
 from src.schema.data_source_type_schema import DataSourceTypeSchema
+from src.schema.task_schema import TaskSchema
 
 
 class DataSourceCreateSchema(BaseSchema):
@@ -28,6 +29,10 @@ class DataSourceSchema(DataSourceCreateSchema):
     type: DataSourceTypeSchema = Field(description="File type.")  # type: ignore
     columns: list[DataSourceColumnSchema] = Field(
         default_factory=list, description="List of columns of this data source."
+    )
+    tasks: list[TaskSchema] = Field(
+        default_factory=list,
+        description="List of tasks and code created for this data source",
     )
 
     class Config(BaseSchema.Config):

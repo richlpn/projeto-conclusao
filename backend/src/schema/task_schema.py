@@ -8,11 +8,9 @@ from src.schema.base_schema import BaseSchema
 class TaskUpdateSchema(BaseSchema):
     title: Optional[str]
     description: Optional[str] = Field(
-        max_length=200,
+        max_length=400,
     )
-    signature_function: Optional[str] = Field(
-        max_length=20,
-    )
+    signature_function: Optional[str] = Field()
 
 
 class TaskCreateSchema(BaseSchema):
@@ -24,8 +22,8 @@ class TaskCreateSchema(BaseSchema):
     signature_function: str = Field(
         description="Name of the python signature function that must be implemented by the task.",
     )
-    requirement_id: UUID = Field(
-        description="Requeriment that this task must be implemented",
+    data_source_id: UUID = Field(
+        description="Data Source Schema that this task belongs to",
     )
 
 

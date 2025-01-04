@@ -23,6 +23,7 @@ services:
   frontend:
     build:
       context: ./frontend
+      target: development
     depends_on:
       - backend
     environment:

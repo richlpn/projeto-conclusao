@@ -98,7 +98,7 @@ class RequirementService(
         self.repository.create(self.model(**schema.model_dump()))
 
         for task in tasks_schema.tasks:
-            task.requirement_id = requirement_id
+            task.data_source_id = requirement_id
             schema.tasks.append(self.task_service.create(task))
 
         return schema
