@@ -11,7 +11,7 @@ export function useCreateSchema<
   operationalSchema: TSchema,
   definiteSchema: TResponse
 ) {
-  const key = ["create", endpoint.create, definiteSchema];
+  const key = [endpoint];
 
   return useMutation({
     mutationKey: key,
