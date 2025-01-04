@@ -1,41 +1,46 @@
-import React, { useState } from "react";
+import { ColumnForm } from "@/components/forms/column_form";
 import {
   Card,
-  CardHeader,
   CardContent,
   CardDescription,
+  CardHeader,
 } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   CreateDataSourceColumn,
   CreateDataSourceColumnSchema,
   DataSourceColumn,
+  DataSourceColumnSchema,
 } from "@/types/data_source_column.type";
-import { Button } from "../ui/button";
 import { Trash2 } from "lucide-react";
-import { FormSubmitResponse, GenericForm } from "./form_element";
-import { FormFieldInterface } from "./generic_form_item_element";
+import React, { useState } from "react";
+import { Button } from "../ui/button";
+import { Description } from "@radix-ui/react-dialog";
+import { endpoints } from "@/utils/endpoints";
+import { FormSubmitResponse } from "./form_element";
+import { useUpdateSchema } from "@/hooks/useUpdateSchema";
 
-interface ColumnListElementProps {
+export interface ColumnListElementProps {
   columns: DataSourceColumn[];
-  isColumnCreationPending: boolean;
-  data_source_id: string;
-  createColumnFields: FormFieldInterface<CreateDataSourceColumn>[];
-  onCreateColumn: (
-    submit_form: FormSubmitResponse<CreateDataSourceColumn>
-  ) => Promise<void>;
+  dataSourceId: string;
   onDeleteColumn: (id: string) => void;
+  afterSubmit: () => void;
 }
 export function ColumnListElement({
   columns,
-  onCreateColumn,
-  data_source_id,
-  isColumnCreationPending,
-  createColumnFields,
+  afterSubmit,
   onDeleteColumn,
+  dataSourceId,
 }: ColumnListElementProps) {
   // Track the Selected Column for update or expand
   const [selectedColumn, setSelectedColumn] = useState<DataSourceColumn | null>(
     null
+  );
+
+  const { mutateAsync: updateSchema, isPending } = useUpdateSchema(
+    endpoints.data_source_columns,
+    CreateDataSourceColumnSchema,
+    DataSourceColumnSchema
   );
 
   // Used to change the style of the hover effect and background color of the selected column
@@ -51,60 +56,65 @@ export function ColumnListElement({
     onDeleteColumn(col_id);
   };
 
+  async function onSubmit(
+    response: FormSubmitResponse<CreateDataSourceColumn>
+  ) {
+    const { schema, form } = response;
+    if (!selectedColumn) throw Error(`No column selected`);
+
+    await updateSchema({ data: schema, id: selectedColumn.id });
+    form.reset();
+    afterSubmit();
+  }
+
   return (
     <div className="space-y-4">
       {columns.map((col) => (
         <Card
           key={col.id}
-          className={`text-white cursor-pointer transition-all duration-300 bg-gray-600 ${selected_style(
-            col
-          )}`}
+          className={`text-white cursor-pointer transition-all duration-300 bg-gray-600 
+            ${selected_style(col)}`}
           onClick={() =>
-            col.id != selectedColumn?.id
-              ? setSelectedColumn(col)
-              : setSelectedColumn(null)
+            setSelectedColumn(col.id != selectedColumn?.id ? col : null)
           }
         >
-          {selectedColumn?.id != col.id ? (
-            <>
-              <CardHeader>
-                <div className="flex items-center justify-between gap-2">
-                  {col.name} ({col.type})
-                  <Button
-                    onClick={(e: React.MouseEvent) => onDelete(e, col.id)}
-                  >
-                    <Trash2 className="text-red-500" />
-                  </Button>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-white">
-                  {col.description}
-                </CardDescription>
-              </CardContent>
-            </>
-          ) : (
-            <div className="mx-10 my-5">
-              <CardContent
-                onClick={(e: React.MouseEvent) => e.stopPropagation()}
-              >
-                <GenericForm
-                  schema={CreateDataSourceColumnSchema}
-                  fields={createColumnFields}
-                  onSubmit={onCreateColumn}
-                  isLoading={isColumnCreationPending}
-                  defaultValues={{
-                    dataSourceId: data_source_id,
-                    description: col.description,
-                    name: col.name,
-                    type: col.type,
-                  }}
-                />
-              </CardContent>
+          <CardHeader>
+            <div className="flex items-center justify-between gap-2">
+              {col.name} ({col.type})
+              <Button onClick={(e: React.MouseEvent) => onDelete(e, col.id)}>
+                <Trash2 className="text-red-500" />
+              </Button>
             </div>
-          )}
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-white">
+              {col.description}
+            </CardDescription>
+          </CardContent>
         </Card>
       ))}
+      {selectedColumn ? (
+        <Dialog
+          open={selectedColumn !== null}
+          onOpenChange={() => setSelectedColumn(null)}
+        >
+          <Description>Edit column</Description>
+          <DialogContent className="max-w-4xl">
+            <DialogTitle>{selectedColumn?.name}</DialogTitle>
+            <ColumnForm
+              dataSourceSchemaId={dataSourceId}
+              onSubmit={onSubmit}
+              isPending={isPending}
+              column={{
+                dataSourceId: dataSourceId,
+                description: selectedColumn.description,
+                name: selectedColumn.name,
+                type: selectedColumn.type,
+              }}
+            />
+          </DialogContent>
+        </Dialog>
+      ) : null}
     </div>
   );
 }

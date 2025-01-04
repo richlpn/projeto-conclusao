@@ -17,6 +17,7 @@ import { endpoints } from "@/utils/endpoints";
 import { CreateDataSourceModal } from "./create_data_source_element";
 import { FormSubmitResponse } from "./form_element";
 import { useMutateDataSourceFromFile } from "@/hooks/useMutateDataSourceFromFile";
+import { Loader2 } from "lucide-react";
 
 interface LeftPanelProps {
   onSelectSchema: (schema: DataSource) => void;
@@ -32,7 +33,6 @@ export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
   const {
     mutateAsync: mutateDataSourceCreate,
     isPending: isCreateDataSourcePending,
-    isSuccess: isCreationSucces,
   } = useCreateSchema(
     endpoints.data_source,
     dataSourceCreateSchema,
@@ -64,8 +64,6 @@ export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
   // Get the list of data sources returned from the query
   const dataSources = sourcesData?.items;
 
-  // When the component is re-rendered and the list of data sources is changed, fetch the new list
-
   // Deletes an data source when called from the DataSourceSchemaList component
   const onDeleteSchema = (schema: string) => {
     deleteSchema(schema);
@@ -95,11 +93,18 @@ export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
     }
     refetchDataSources();
   }
-  if (isLoading || !dataSources) return <div>Loading...</div>;
-  if (error && !dataSources)
+  if (isLoading) {
+    return (
+      <div className="h-full flex justify-center items-center">
+        <Loader2 className="animate-spin" />
+      </div>
+    );
+  }
+  if (error || !dataSources)
     return (
       <div>
-        Error When loading Data Sources Try again latter: {error.message}
+        Error When loading Data Sources Try again later
+        {error?.message}
       </div>
     );
 
@@ -111,7 +116,7 @@ export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
         onChange={(e) => setSearch(e.target.value)}
       />
       <Button onClick={openModal}>Create Schema</Button>
-      <ScrollArea className="flex-grow">
+      <ScrollArea className="h-[600px]">
         <DataSourceSchemaList
           searchQuery={search}
           schemas={dataSources}

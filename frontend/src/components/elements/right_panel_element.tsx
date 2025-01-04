@@ -26,7 +26,7 @@ if __name__ == "__main__":
 interface RightPanelProps {
   schema: DataSource;
 }
-export function RightPanelElement({ schema }: RightPanelProps) {
+export function RightPanelElement({}: RightPanelProps) {
   const { isCopied, copyToClipboard } = useCopyToClipboard();
   return (
     <div className="h-full flex flex-col bg-black">

@@ -15,7 +15,7 @@ export function App() {
   const [selectedSchema, setSelectedSchema] = useState<DataSource | null>(null);
 
   const handleSelectSchema = (schema: DataSource) => {
-    selectedSchema != null && schema == selectedSchema
+    schema == selectedSchema
       ? setSelectedSchema(null)
       : setSelectedSchema(schema);
   };
@@ -23,7 +23,10 @@ export function App() {
   return (
     <div className="bg-slate-400 min-h-screen">
       <HeaderElement />
-      <ResizablePanelGroup direction="horizontal" className="min-h-screen">
+      <ResizablePanelGroup
+        direction="horizontal"
+        className="min-h-screen max-h-screen"
+      >
         <ResizablePanel id="left_bar" defaultSize={25} minSize={10}>
           <LeftPanelElement
             selectedSchema={selectedSchema}
