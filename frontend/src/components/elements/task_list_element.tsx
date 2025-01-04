@@ -1,54 +1,74 @@
 import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
+import { Requirement } from "@/types/requirement.type";
+import { Task, taskCreateSchema, taskSchema } from "@/types/task.type";
+import { Description, DialogTitle } from "@radix-ui/react-dialog";
+import { Label } from "@radix-ui/react-label";
+import { Button } from "../ui/button";
+import { useCreateSchema } from "@/hooks/useMutateSchema";
+import { endpoints } from "@/utils/endpoints";
 
-interface Task {
-  id: string;
-  name: string;
-  description: string;
+interface TaskListProps {
+  dataSourceId: string;
+  requirement: Requirement | null;
+  isPanelOpen: boolean;
+  closePanel: () => void;
 }
 
-export function TaskList() {
-  const [selectedTask, setSelectedTask] = useState<string | null>(null);
-  const tasks: Task[] = [
-    { id: "1", name: "Task 1", description: "Description for Task 1" },
-    { id: "2", name: "Task 2", description: "Description for Task 2" },
-    // Add more mock data as needed
-  ];
+export default function TaskList({ requirement }: TaskListProps) {
+  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 
-  const [taskDescriptions, setTaskDescriptions] = useState<{
-    [key: string]: string;
-  }>(Object.fromEntries(tasks.map((task) => [task.id, task.description])));
-
-  const handleDescriptionChange = (taskId: string, newDescription: string) => {
-    setTaskDescriptions((prev) => ({ ...prev, [taskId]: newDescription }));
-    // Here you would typically update the backend
-  };
+  const { mutateAsync: createColumn } = useCreateSchema(
+    endpoints.tasks,
+    taskCreateSchema,
+    taskSchema
+  );
 
   return (
-    <div className="space-y-4">
-      {tasks.map((task) => (
-        <Card
-          key={task.id}
-          className="cursor-pointer"
-          onClick={() => setSelectedTask(task.id)}
-        >
-          <CardHeader>
-            <CardTitle>{task.name}</CardTitle>
-          </CardHeader>
-          {selectedTask === task.id && (
+    <div className="w-full max-w-2xl mx-auto p-4">
+      <ScrollArea className="h-[600px] pr-4">
+        {requirement?.tasks.slice(0, 10).map((task) => (
+          <Card
+            key={task.id}
+            className="mb-4 cursor-pointer hover:bg-gray-100 transition-colors"
+            onClick={() => setSelectedTask(task)}
+          >
+            <CardHeader>
+              <CardTitle>{task.title}</CardTitle>
+            </CardHeader>
             <CardContent>
-              <Textarea
-                value={taskDescriptions[task.id]}
-                onChange={(e) =>
-                  handleDescriptionChange(task.id, e.target.value)
-                }
-                className="mt-2"
-              />
+              <p className="text-sm text-gray-500">
+                Function: {task.signatureFunction}
+              </p>
             </CardContent>
-          )}
-        </Card>
-      ))}
+          </Card>
+        ))}
+      </ScrollArea>
+      {selectedTask ? (
+        <Dialog
+          open={selectedTask !== null}
+          onOpenChange={() => setSelectedTask(null)}
+        >
+          <DialogContent className="flex flex-col gap-6 max-w-xl">
+            <DialogHeader className="text-2xl ">
+              <DialogTitle>{selectedTask.title}</DialogTitle>
+            </DialogHeader>
+            <div>
+              <Label className="font-bold ">Description</Label>
+              <p className="mb-4">{selectedTask.description}</p>
+              <Label className="font-bold ">Function name</Label>
+              <p className="mb-2">{selectedTask.signatureFunction}</p>
+            </div>
+            <div className="flex space-x-2">
+              <Button variant="outline">Edit</Button>
+              <Button variant="destructive">Delete</Button>
+            </div>
+          </DialogContent>
+          <Description>Edit task</Description>
+        </Dialog>
+      ) : null}
     </div>
   );
 }
