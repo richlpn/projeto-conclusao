@@ -8,7 +8,7 @@ from src.schema.data_source_column_schema import (
     DataSourceColumnUpdateSchema,
 )
 from src.schema.data_source_schema import (
-    DataSourceSchema,
+    DataSourceExtractionSchema,
     DataSourceUpdateSchema,
 )
 from src.schema.data_source_type_schema import DataSourceTypeSchema
@@ -43,7 +43,10 @@ class DataSourceSchemaParser(SchemaParser):
         # Insert the definition of the attribute 'columns' at DataSourceSchema
         # The defition from DataSourceSchema references the type 'DataSourceColumnSchema'
         # So it must be replaced by the 'create schema'
-        columns_schema = DataSourceSchema.model_json_schema()["properties"]["columns"]
+        columns_schema = DataSourceExtractionSchema.model_json_schema()["properties"][
+            "columns"
+        ]
+        print(columns_schema)
         columns_schema["items"]["$ref"] = "#/$defs/DataSourceColumnUpdateSchema"
 
         schema["properties"]["columns"] = columns_schema

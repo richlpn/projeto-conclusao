@@ -3,6 +3,7 @@ from typing import Optional
 
 from pydantic import Field
 from src.schema.base_schema import BaseSchema
+from src.schema.data_source_column_schema import DataSourceColumnSchema
 from src.schema.data_source_type_schema import DataSourceTypeSchema
 
 
@@ -28,3 +29,7 @@ class DataSourceSchema(DataSourceCreateSchema):
 
     class Config(BaseSchema.Config):
         from_attributes = True
+
+
+class DataSourceExtractionSchema(DataSourceSchema):
+    columns: list[DataSourceColumnSchema] = Field(default_factory=list)
