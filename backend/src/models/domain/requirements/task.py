@@ -15,3 +15,4 @@ class Task(Base):
     data_source_id = Column(
         UUID(as_uuid=True), ForeignKey("data_sources.id", ondelete="CASCADE")
     )
+    data_source = relationship("DataSource", back_populates='tasks')

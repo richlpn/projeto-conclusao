@@ -10,7 +10,7 @@ import {
   CreateDataSourceColumnSchema,
   DataSourceColumnSchema,
 } from "@/types/data_source_column.type";
-import { useCreateSchema } from "@/hooks/useMutateSchema";
+import { useCreateSchema } from "@/hooks/useCreateSchema";
 
 interface ColumnPanelProps {
   onCloseColumnForm: () => void;

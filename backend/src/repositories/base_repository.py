@@ -12,6 +12,13 @@ IDType = TypeVar("IDType")
 
 
 def query(func):
+    """Takes an function name starting with 'filter_by_' and built a query that returns applying the described filters.
+    
+    logic:
+        (_and_): Uses the end gate to check if values are equal
+        (_or_): Uses the or gate
+    """
+
     @wraps(func)
     def wrapper(self, *args, **kwargs):
         # Parse the function name

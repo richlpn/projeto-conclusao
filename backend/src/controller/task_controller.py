@@ -34,7 +34,7 @@ async def create_task(
     return service.create(task)
 
 
-@router.put("/", status_code=204)
+@router.patch("/", status_code=202)
 async def update_task(
     task_id: UUID,
     task: TaskUpdateSchema,
@@ -52,3 +52,9 @@ async def delete_task(task_id: UUID, service: ServiceType = Depends(get_task_ser
 async def generate_tasks(data_source_id: UUID, service=Depends(get_task_service)):
     # This type hint was removed to avoid the linting error regarding undefined function 'gen_from_data_source'.
     return service.gen_from_data_source(data_source_id)
+
+
+@router.get("/from-data-source", status_code=200)
+async def from_data_source(id: UUID, service=Depends(get_task_service)):
+    # This type hint was removed to avoid the linting error regarding undefined function 'get_from_data_source'.
+    return service.get_from_data_source(id)

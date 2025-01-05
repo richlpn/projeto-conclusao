@@ -6,11 +6,12 @@ from src.schema.base_schema import BaseSchema
 
 
 class TaskUpdateSchema(BaseSchema):
-    title: Optional[str]
+    title: Optional[str] = Field(default=None)
     description: Optional[str] = Field(
+        default=None,
         max_length=400,
     )
-    signature_function: Optional[str] = Field()
+    signature_function: Optional[str] = Field(default=None)
 
 
 class TaskCreateSchema(BaseSchema):

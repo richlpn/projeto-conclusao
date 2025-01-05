@@ -66,7 +66,7 @@ async def update(
     return obj
 
 
-@router.get("/data-source/{data_source_id}", status_code=status.HTTP_200_OK)
+@router.get("/data-source/", status_code=status.HTTP_200_OK)
 async def get_by_data_source_id(
     data_source_id: UUID,
     service: DataSourceColumnService = Depends(get_data_source_column_service),
