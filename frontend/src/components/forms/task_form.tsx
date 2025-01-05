@@ -24,22 +24,22 @@ export const createColumnFields: FormFieldInterface<TaskCreate>[] = [
 export interface TaskFormProps {
   onSubmit: (response: FormSubmitResponse<TaskCreate>) => Promise<void>;
   isPending: boolean;
-  requirementId: string;
-  column?: TaskCreate;
+  dataSourceId: string;
+  task?: TaskCreate;
 }
-export const CreateTaskForm = ({
+export const TaskForm = ({
   onSubmit,
-  requirementId,
-  column,
+  dataSourceId,
+  task,
   isPending,
 }: TaskFormProps) => {
   const defaultValues: {
     [key: string]: any;
-    requirementId: string;
-  } = { requirementId: requirementId };
+    dataSourceId: string;
+  } = { dataSourceId: dataSourceId };
 
-  if (column) {
-    Object.entries(column).forEach(([key, value]) => {
+  if (task) {
+    Object.entries(task).forEach(([key, value]) => {
       defaultValues[key] = value;
     });
   }

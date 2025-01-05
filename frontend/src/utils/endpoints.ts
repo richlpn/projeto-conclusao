@@ -20,15 +20,18 @@ interface EndpointsType {
   requirements: EndpointType;
 }
 
-const createEndpointType = (url: string): EndpointType => {
+const createEndpointType = (
+  url: string,
+  id_field: string = "id"
+): EndpointType => {
   const full_url = `${BASE_URL}/${url}`;
   return {
     getAll: (skip: number, limit: number) =>
       `${full_url}/all/?skip=${skip}&limit=${limit}`,
-    getById: (id: string) => `${full_url}/?id=${id}`,
+    getById: (id: string) => `${full_url}/?${id_field}=${id}`,
     create: full_url,
-    update: (id: string) => `${full_url}/?id=${id}`,
-    delete: (id: string) => `${full_url}/?id=${id}`,
+    update: (id: string) => `${full_url}/?${id_field}=${id}`,
+    delete: (id: string) => `${full_url}/?${id_field}=${id}`,
   };
 };
 export const endpoints: EndpointsType = {
@@ -39,5 +42,5 @@ export const endpoints: EndpointsType = {
   data_source_type: createEndpointType("data-source-type"),
   data_source_columns: createEndpointType("data-source-columns"),
   requirements: createEndpointType("requirement"),
-  tasks: createEndpointType("task"),
+  tasks: createEndpointType("tasks", "task_id"),
 };

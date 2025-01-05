@@ -4,6 +4,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
@@ -36,6 +37,9 @@ export function ColumnListElement({
   const [selectedColumn, setSelectedColumn] = useState<DataSourceColumn | null>(
     null
   );
+  const [hoverColumn, setHoverColumn] = useState<
+    DataSourceColumn | undefined
+  >();
 
   const { mutateAsync: updateSchema, isPending } = useUpdateSchema(
     endpoints.data_source_columns,
@@ -43,14 +47,6 @@ export function ColumnListElement({
     DataSourceColumnSchema
   );
 
-  // Used to change the style of the hover effect and background color of the selected column
-  const selected_style = (col: DataSourceColumn) => {
-    if (!(selectedColumn && col.id == selectedColumn.id))
-      return "hover:bg-slate-700 dark:hover:bg-slate-500";
-    return "bg-slate-700 ";
-  };
-
-  //
   const onDelete = (e: React.MouseEvent, col_id: string) => {
     e.stopPropagation();
     onDeleteColumn(col_id);
@@ -72,24 +68,27 @@ export function ColumnListElement({
       {columns.map((col) => (
         <Card
           key={col.id}
-          className={`text-white cursor-pointer transition-all duration-300 bg-gray-600 
-            ${selected_style(col)}`}
+          className={`cursor-pointer transition-all duration-300 hover:bg-gray-100 `}
           onClick={() =>
             setSelectedColumn(col.id != selectedColumn?.id ? col : null)
           }
+          onMouseOver={() => setHoverColumn(col)}
+          onMouseOut={() => setHoverColumn(undefined)}
         >
           <CardHeader>
-            <div className="flex items-center justify-between gap-2">
+            <CardTitle className="flex items-center justify-between gap-2">
               {col.name} ({col.type})
-              <Button onClick={(e: React.MouseEvent) => onDelete(e, col.id)}>
+              <Button
+                variant={"outline"}
+                onClick={(e: React.MouseEvent) => onDelete(e, col.id)}
+                className={hoverColumn?.id == col.id ? "" : "opacity-0"}
+              >
                 <Trash2 className="text-red-500" />
               </Button>
-            </div>
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <CardDescription className="text-white">
-              {col.description}
-            </CardDescription>
+            <CardDescription>{col.description}</CardDescription>
           </CardContent>
         </Card>
       ))}

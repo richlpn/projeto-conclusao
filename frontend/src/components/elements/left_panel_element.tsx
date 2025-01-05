@@ -12,7 +12,7 @@ import { DataSourceSchemaList } from "./data_source_schema_list";
 
 import { useDeleteSchema } from "@/hooks/useDeleteSchema";
 import { useListSchema } from "@/hooks/useFetchAllData";
-import { useCreateSchema } from "@/hooks/useMutateSchema";
+import { useCreateSchema } from "@/hooks/useCreateSchema";
 import { endpoints } from "@/utils/endpoints";
 import { CreateDataSourceModal } from "./create_data_source_element";
 import { FormSubmitResponse } from "./form_element";
@@ -27,7 +27,6 @@ interface LeftPanelProps {
 export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
   // Hook to get the mutation of deleting an data source
   const { mutate: deleteSchema } = useDeleteSchema(endpoints.data_source);
-
   // Hook to get the query used to create a new data sources
   // Used on handleSubit and called at CreateDataSourceModal
   const {

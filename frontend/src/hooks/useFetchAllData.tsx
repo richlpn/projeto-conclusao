@@ -10,7 +10,7 @@ interface PaginationParams {
 
 export function useListSchema<TResponse extends z.ZodType>(
   endpoint: EndpointType,
-  definiteSchema: TResponse,
+  finalSchema: TResponse,
   params: PaginationParams
 ) {
   const endpoint_str = endpoint.getAll(params.skip, params.limit);
@@ -20,7 +20,7 @@ export function useListSchema<TResponse extends z.ZodType>(
     queryKey,
     queryFn: async () => {
       const response = await axios.get(endpoint_str);
-      const parsed = definiteSchema.array().parse(response.data);
+      const parsed = finalSchema.array().parse(response.data);
       return parsed;
     },
     select: (data) => ({

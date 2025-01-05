@@ -54,7 +54,7 @@ async def generate_tasks(data_source_id: UUID, service=Depends(get_task_service)
     return service.gen_from_data_source(data_source_id)
 
 
-@router.get("/from-data-source", status_code=200)
+@router.get("/data-source", status_code=200)
 async def from_data_source(id: UUID, service=Depends(get_task_service)):
     # This type hint was removed to avoid the linting error regarding undefined function 'get_from_data_source'.
     return service.get_from_data_source(id)

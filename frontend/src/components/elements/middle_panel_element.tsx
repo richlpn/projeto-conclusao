@@ -20,7 +20,6 @@ export function MiddlePanel({ selectedSchema }: MiddlePanelProps) {
   const panel = showTasks ? (
     <TaskList
       dataSourceId={selectedSchema.id}
-      tasks={selectedSchema.tasks}
       isPanelOpen={openCreateForm}
       closePanel={closePanel}
     />

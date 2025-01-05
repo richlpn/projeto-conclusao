@@ -1,23 +1,24 @@
 import { EndpointType } from "@/utils/endpoints";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "./use-toast";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import { Label } from "@/components/ui/label";
 import { CheckCircleIcon } from "lucide-react";
+import invalidateQueries from "@/utils/invalidateQueries";
 
 export function useDeleteSchema(endpoint: EndpointType) {
   const queryClient = useQueryClient();
 
   const deleteSchema = async (id: string) => {
-    const response = await axios.delete(endpoint.delete(id));
-    return response.status;
+    await axios.delete(endpoint.delete(id));
+    return id;
   };
   const { toast } = useToast();
 
   return useMutation({
     mutationFn: deleteSchema,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [endpoint] });
+      invalidateQueries(queryClient, endpoint);
       toast({
         description: <Label> Removed successfully</Label>,
         title: "Success",
@@ -25,12 +26,17 @@ export function useDeleteSchema(endpoint: EndpointType) {
       });
     },
 
-    onError: (error: AxiosError) => {
+    onError: (error) => {
       toast({
         description: (
           <div>
             Falied to remove object
-            <div>Status Code: {error.response?.status}</div>
+            <div>
+              Status Code:{" "}
+              {error instanceof Error
+                ? error.message
+                : "Failed to delete schema"}
+            </div>
           </div>
         ),
         title: "Error",
