@@ -15,7 +15,7 @@ class TaskUpdateSchema(BaseSchema):
 
 
 class TaskCreateSchema(BaseSchema):
-    title: Optional[str] = Field(description="A short descriptive title about the task")
+    title: str = Field(description="A short descriptive title about the task")
     description: str = Field(
         max_length=400,
         description="An explanation of what must be executed on this task, containing inputs, outputs and previous dependencies.",

@@ -17,7 +17,7 @@ Agent:
             All technical specifics, such as column names and data types, must be clearly defined.
             It is also crucial to include validation rules with exact limits and data checks, as well as detailed error-handling steps with custom error messages.
             Furthermore, each task should have measurable success criteria to verify its successful execution.
-            You must create a final task that describe how to combine all the previous tasks into a pipeline.
+            You must create a final with title "Feature Integrations" task that describe how to combine all the previous tasks into a pipeline.
             Each task description must have a minimum 25 words.
             {PARSER}"
         user:

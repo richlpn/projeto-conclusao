@@ -1,6 +1,5 @@
 import uuid
-import enum
-from sqlalchemy import Column, ForeignKey, String
+from sqlalchemy import TEXT, Column, ForeignKey, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 
@@ -37,7 +36,8 @@ class DataSource(Base):
     tasks = relationship(
         "Task", lazy="select", uselist=True, back_populates="data_source"
     )
-    type = relationship("DataSourceType", lazy="joined")
+    type = relationship("DataSourceType", lazy="joined", back_populates="data_source")
     type_id = Column(
         UUID(as_uuid=True), ForeignKey("data_source_type.id", ondelete="CASCADE")
     )
+    script = Column(TEXT, nullable=True, default=None)

@@ -21,11 +21,19 @@ class DataSourceUpdateSchema(BaseSchema):
     name: Optional[str] = Field(default=None)
     type: Optional[uuid.UUID] = Field(default=None)
     separator: Optional[str] = Field(default=None)
+    script: Optional[str] = Field(
+        default=None,
+        description="Script generated from the tasks created for this data source.",
+    )
 
 
 class DataSourceSchema(DataSourceCreateSchema):
     id: uuid.UUID = Field(default_factory=uuid.uuid4)
     type: DataSourceTypeSchema = Field(description="File type.")  # type: ignore
+    script: Optional[str] = Field(
+        default=None,
+        description="Script generated from the tasks created for this data source.",
+    )
 
     class Config(BaseSchema.Config):
         from_attributes = True
