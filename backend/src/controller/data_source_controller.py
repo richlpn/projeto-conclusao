@@ -1,7 +1,7 @@
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, UploadFile, status
-from src.models.domain.data_source.data_source import DataSource
+from src.models.data_source.data_source import DataSource
 from src.schema.data_source_schema import (
     DataSourceCreateSchema,
     DataSourceSchema,

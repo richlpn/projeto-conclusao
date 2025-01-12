@@ -1,7 +1,7 @@
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, status
-from src.models.domain.data_source.data_source_type import DataSourceType
+from src.models.data_source.data_source_type import DataSourceType
 from src.schema.data_source_type_schema import (
     DataSourceTypeCreateSchema,
     DataSourceTypeSchema,

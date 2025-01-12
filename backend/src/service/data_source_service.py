@@ -3,9 +3,9 @@ from uuid import UUID
 from fastapi import Depends, UploadFile
 from pydantic import ValidationError
 from src.graph.tools.extract_docs_schema_tool import extract_schema_columns
-from src.models.domain.data_source.data_source import DataSource
-from src.models.domain.data_source.data_source_column import DataSourceColumn
-from src.models.domain.data_source.data_source_type import DataSourceType
+from src.models.data_source.data_source import DataSource
+from src.models.data_source.data_source_column import DataSourceColumn
+from src.models.data_source.data_source_type import DataSourceType
 from src.repositories.data_source_repository import get_data_source_repository
 from src.schema.data_source_column_schema import (
     DataSourceColumnCreateSchema,

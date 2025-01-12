@@ -1,5 +1,5 @@
 from uuid import UUID
-from src.models.domain.requirements.task import Task
+from src.models.task import Task
 from src.repositories.base_repository import BaseRepository, query
 
 

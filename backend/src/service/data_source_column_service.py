@@ -1,7 +1,7 @@
 from uuid import UUID
 
 from fastapi import Depends
-from src.models.domain.data_source import DataSourceColumn
+from src.models.data_source import DataSourceColumn
 from src.repositories.data_source_columns_repository import DataSourceColumnRepository
 from src.schema.data_source_column_schema import (
     DataSourceColumnCreateSchema,

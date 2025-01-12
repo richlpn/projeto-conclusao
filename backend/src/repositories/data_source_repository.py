@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from src.models.domain.data_source import DataSource
+from src.models.data_source import DataSource
 from src.repositories.base_repository import BaseRepository
 
 

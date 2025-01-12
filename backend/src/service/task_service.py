@@ -1,9 +1,9 @@
-from uuid import UUID, uuid4
+from uuid import UUID
 
 from fastapi import Depends
 from src.graph.agents.task_creation_agent import TaskCreationAgent
-from src.models.domain.data_source.data_source import DataSource
-from src.models.domain.requirements.task import Task
+from src.models.data_source.data_source import DataSource
+from src.models.task import Task
 from src.repositories.base_repository import BaseRepository
 from src.repositories.task_repository import TaskRepository, get_task_repository
 from src.schema.data_source_schema import (

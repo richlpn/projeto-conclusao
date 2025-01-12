@@ -1,7 +1,7 @@
 from typing import List
 from uuid import UUID
 from fastapi import Depends
-from src.models.domain.data_source.data_source_type import DataSourceType
+from src.models.data_source.data_source_type import DataSourceType
 from src.repositories.base_repository import BaseRepository
 from src.repositories.data_source_type_repository import (
     get_data_source_type_repository,
