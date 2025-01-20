@@ -1,21 +1,21 @@
 import axios from "axios";
-import { EndpointWithFile } from "@/utils/endpoints";
+import { EndpointWithGenerate } from "@/utils/endpoints";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { dataSourceSchema } from "@/types/data_source.type";
 import { useToast } from "./use-toast";
-import { Loader2 } from "lucide-react";
+import { CheckCircleIcon, Loader2 } from "lucide-react";
 
-export function useMutateDataSourceFromFile(endpoint: EndpointWithFile) {
+export function useMutateDataSourceFromFile(endpoint: EndpointWithGenerate) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
-  const key = ["list", dataSourceSchema];
+  const key = [dataSourceSchema];
 
   return useMutation({
     mutationKey: key,
     mutationFn: async (file: File) => {
       const formData = new FormData();
       formData.append("file", file);
-      const response = await axios.post(endpoint.file, formData, {
+      const response = await axios.post(endpoint.generate(), formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -38,6 +38,7 @@ export function useMutateDataSourceFromFile(endpoint: EndpointWithFile) {
         title: "Success",
         description: "Operation completed successfully",
         duration: 3000,
+        action: <CheckCircleIcon className="text-green-600" />,
       });
       queryClient.invalidateQueries({ queryKey: [endpoint] });
     },

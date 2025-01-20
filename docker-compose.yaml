@@ -2,7 +2,7 @@ services:
   backend:
     build: ./backend
     environment:
-      - DEBUG=${DEBUG:-false}
+      - DEBUG=${DEBUG:-true}
       - DATABASE_URL=${DATABASE_URL:-postgresql://user:password@db:5432/database}
       - PROMPTS=${PROMPTS:-static/prompts/}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-true}

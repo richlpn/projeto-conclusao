@@ -1,30 +1,21 @@
 import axios from "axios";
-import { EndpointType } from "@/utils/endpoints";
+import { EndpointWithGenerate } from "@/utils/endpoints";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { z } from "zod";
-import invalidateQueries from "@/utils/invalidateQueries";
 import { useToast } from "./use-toast";
-import { CheckCircleIcon, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
+import { taskSchema } from "@/types/task.type";
 
-export function useCreateSchema<
-  TSchema extends z.ZodType,
-  TResponse extends z.ZodType
->(
-  endpoint: EndpointType,
-  operationalSchema: TSchema,
-  definiteSchema: TResponse
-) {
-  const key = [endpoint];
-  const queryClient = useQueryClient();
+export function useMutateGenerateTasks(endpoint: EndpointWithGenerate) {
   const { toast } = useToast();
+  const queryClient = useQueryClient();
+  const key = [taskSchema];
+
   return useMutation({
     mutationKey: key,
-    mutationFn: async (data: z.infer<TSchema>) => {
-      const validated = operationalSchema.parse(data);
-      const response = await axios.post(endpoint.create, validated);
-      return definiteSchema.parse(response.data);
+    mutationFn: async (dataSourceId: string) => {
+      const response = await axios.post(endpoint.generate(dataSourceId));
+      return taskSchema.array().parse(response.data);
     },
-
     onMutate: () => {
       // Show initial loading toast
       return toast({
@@ -41,9 +32,8 @@ export function useCreateSchema<
         title: "Success",
         description: "Operation completed successfully",
         duration: 3000,
-        action: <CheckCircleIcon className="text-green-600" />,
       });
-      invalidateQueries(queryClient, endpoint);
+      queryClient.invalidateQueries({ queryKey: [endpoint] });
     },
     onError: (__, _, context) => {
       // Dismiss loading toast and show error

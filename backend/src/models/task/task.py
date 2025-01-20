@@ -1,6 +1,6 @@
 from uuid import uuid4
 from src.config.database import Base
-from sqlalchemy import UUID, Column, ForeignKey, String
+from sqlalchemy import UUID, Column, ForeignKey, String, Boolean
 from sqlalchemy.orm import relationship
 
 
@@ -15,4 +15,4 @@ class Task(Base):
     data_source_id = Column(
         UUID(as_uuid=True), ForeignKey("data_sources.id", ondelete="CASCADE")
     )
-    data_source = relationship("DataSource", back_populates='tasks')
+    data_source = relationship("DataSource", back_populates="tasks")

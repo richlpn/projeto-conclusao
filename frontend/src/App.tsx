@@ -21,7 +21,7 @@ export function App() {
   };
 
   return (
-    <div className="bg-slate-400 min-h-screen">
+    <div className="min-h-screen bg-[#e8f2fc] text-[#2D3748]">
       <HeaderElement />
       <ResizablePanelGroup
         direction="horizontal"

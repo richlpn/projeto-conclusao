@@ -58,7 +58,6 @@ export function ColumnPanel({
         <ColumnListElement
           onDeleteColumn={deleteColumn}
           dataSourceId={selectedSchemaID}
-          afterSubmit={onCloseColumnForm}
           columns={columns}
         />
       </ScrollArea>

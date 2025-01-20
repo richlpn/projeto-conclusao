@@ -12,6 +12,7 @@ class TaskUpdateSchema(BaseSchema):
         max_length=400,
     )
     signature_function: Optional[str] = Field(default=None)
+    data_source_id: Optional[UUID] = Field()
 
 
 class TaskCreateSchema(BaseSchema):

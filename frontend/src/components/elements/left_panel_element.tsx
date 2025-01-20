@@ -113,6 +113,7 @@ export default function ({ onSelectSchema, selectedSchema }: LeftPanelProps) {
         placeholder="Search schemas..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
+        className="bg=[#718096]"
       />
       <Button onClick={openModal}>Create Schema</Button>
       <ScrollArea className="h-[600px]">

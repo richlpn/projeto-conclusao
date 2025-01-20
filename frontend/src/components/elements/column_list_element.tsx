@@ -13,23 +13,22 @@ import {
   DataSourceColumn,
   DataSourceColumnSchema,
 } from "@/types/data_source_column.type";
-import { Trash2 } from "lucide-react";
-import React, { useState } from "react";
+import { Loader2, Trash2 } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { Description } from "@radix-ui/react-dialog";
 import { endpoints } from "@/utils/endpoints";
 import { FormSubmitResponse } from "./form_element";
 import { useUpdateSchema } from "@/hooks/useUpdateSchema";
+import { useToast } from "@/hooks/use-toast";
 
 export interface ColumnListElementProps {
   columns: DataSourceColumn[];
   dataSourceId: string;
   onDeleteColumn: (id: string) => void;
-  afterSubmit: () => void;
 }
 export function ColumnListElement({
   columns,
-  afterSubmit,
   onDeleteColumn,
   dataSourceId,
 }: ColumnListElementProps) {
@@ -37,15 +36,21 @@ export function ColumnListElement({
   const [selectedColumn, setSelectedColumn] = useState<DataSourceColumn | null>(
     null
   );
+  // Used to render an shade/depth on the hoverd column
   const [hoverColumn, setHoverColumn] = useState<
     DataSourceColumn | undefined
   >();
-
-  const { mutateAsync: updateSchema, isPending } = useUpdateSchema(
+  // Create a mutation to update the selected column schema
+  const {
+    mutateAsync: updateSchema,
+    isPending,
+    isSuccess,
+  } = useUpdateSchema(
     endpoints.data_source_columns,
     CreateDataSourceColumnSchema,
     DataSourceColumnSchema
   );
+  const { toast } = useToast();
 
   const onDelete = (e: React.MouseEvent, col_id: string) => {
     e.stopPropagation();
@@ -60,9 +65,9 @@ export function ColumnListElement({
 
     await updateSchema({ data: schema, id: selectedColumn.id });
     form.reset();
-    afterSubmit();
+    // Close the modal and resed the editing/selected state
+    setSelectedColumn(null);
   }
-
   return (
     <div className="space-y-4">
       {columns.map((col) => (

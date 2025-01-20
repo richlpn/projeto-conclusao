@@ -8,14 +8,13 @@ export interface EndpointType {
   delete: (id: string) => string;
 }
 
-export interface EndpointWithFile extends EndpointType {
-  file: string;
+export interface EndpointWithGenerate extends EndpointType {
+  generate: (...params: string[]) => string;
 }
-
 interface EndpointsType {
-  data_source: EndpointWithFile;
+  data_source: EndpointWithGenerate;
   data_source_columns: EndpointType;
-  tasks: EndpointType;
+  tasks: EndpointWithGenerate;
   data_source_type: EndpointType;
   requirements: EndpointType;
 }
@@ -37,10 +36,14 @@ const createEndpointType = (
 export const endpoints: EndpointsType = {
   data_source: {
     ...createEndpointType("data-sources"),
-    file: `${BASE_URL}/data-sources/from-file`,
+    generate: () => `${BASE_URL}/data-sources/from-file`,
   },
   data_source_type: createEndpointType("data-source-type"),
   data_source_columns: createEndpointType("data-source-columns"),
   requirements: createEndpointType("requirement"),
-  tasks: createEndpointType("tasks", "task_id"),
+  tasks: {
+    ...createEndpointType("tasks", "task_id"),
+    generate: (id: string) =>
+      `${BASE_URL}/tasks/generate/?data_source_id=${id}`,
+  },
 };

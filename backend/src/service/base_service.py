@@ -45,9 +45,10 @@ class BaseService(
         if db_obj is None:
             raise HTTPException(status_code=404, detail="Not Found")
 
-        for column, value in obj.model_dump(exclude_unset=True).items():
-            setattr(db_obj, column, value)
-        schema = self.schema.model_validate(obj.model_dump())
+        orinal_schema = self.schema.model_validate(db_obj)
+        schema = orinal_schema.model_copy(update=obj.model_dump(exclude_unset=True))
+        db_obj = self.model(**schema.model_dump())
+
         self.repository.update(db_obj)
         return schema
 

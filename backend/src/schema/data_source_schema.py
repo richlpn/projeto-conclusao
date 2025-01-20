@@ -39,5 +39,10 @@ class DataSourceSchema(DataSourceCreateSchema):
         from_attributes = True
 
 
-class DataSourceExtractionSchema(DataSourceSchema):
-    columns: list[DataSourceColumnSchema] = Field(default_factory=list)
+class DataSourceExtractionSchema(DataSourceCreateSchema):
+    type: DataSourceTypeSchema = Field(description="File type.")
+    columns: list[DataSourceColumnSchema] = Field(
+        default_factory=list,
+        max_length=5,
+        description="List of columns that define this data source.",
+    )

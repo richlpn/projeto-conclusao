@@ -1,6 +1,6 @@
 from functools import wraps
 from inspect import signature
-from typing import Generic, List, Optional, Type, TypeVar
+from typing import Callable, Generic, List, Optional, Type, TypeVar
 
 from sqlalchemy import and_, or_
 from sqlalchemy.exc import NoInspectionAvailable, SQLAlchemyError
@@ -18,7 +18,7 @@ def handle_sqlalchemy_exceptions(func):
     """
 
     @wraps(func)
-    def wrapper(self, *args, **kwargs):
+    def wrapper(self: "BaseRepository", *args, **kwargs):
         try:
             # Execute the decorated function
             result = func(self, *args, **kwargs)
@@ -33,43 +33,59 @@ def handle_sqlalchemy_exceptions(func):
     return wrapper
 
 
-def query(func):
-    """Takes an function name starting with 'filter_by_' and built a query that returns applying the described filters.
-
-    logic:
-        (_and_): Uses the end gate to check if values are equal
-        (_or_): Uses the or gate
+def query(func: Callable) -> Callable:
+    """
+    Decorator that generates SQLAlchemy queries based on function names.
+    Supports operations: eq, gt, lt, not_eq
+    Format: filter_by_[field]_[operation]_[field]_[operation]_[logic]
+    Example: filter_by_age_gt_and_salary_lt
     """
 
     @wraps(func)
     def wrapper(self, *args, **kwargs):
-        # Parse the function name
         func_name = func.__name__
         if not func_name.startswith("filter_by_"):
             raise ValueError(
-                f"Function name '{func_name}' must start with 'filter_by_'."
+                f"Function name '{func_name}' must start with 'filter_by_'"
             )
 
-        # Extract attributes and logical operator from the function name
-        query_parts = (
-            func_name[10:].split("_and_")
-            if "_and_" in func_name
-            else func_name[10:].split("_or_")
-        )
-        operator = and_ if "_and_" in func_name else or_
+        # Determine logical operator
+        is_and = "_and_" in func_name
+        operator = and_ if is_and else or_
 
-        # Map arguments to their corresponding model attributes
+        # Split into operation parts
+        parts = func_name[10:].split("_and_" if is_and else "_or_")
+
+        # Bind arguments
         sig = signature(func)
         bound_args = sig.bind(self, *args, **kwargs)
-        bound_args.apply_defaults()  # Apply default values if any
+        bound_args.apply_defaults()
 
-        filters = [
-            getattr(self.model, attr) == bound_args.arguments[attr]
-            for attr in query_parts
-            if attr in bound_args.arguments
-        ]
+        filters = []
+        for part in parts:
+            # Parse operation type (gt, lt, eq, not_eq)
+            segments = part.split("_")
+            if len(segments) == 1:  # Default to eq
+                field, op = segments[0], "eq"
+            else:
+                field, op = segments[0], segments[1]
 
-        # Execute the query using SQLAlchemy
+            if field not in bound_args.arguments:
+                continue
+
+            value = bound_args.arguments[field]
+            model_attr = getattr(self.model, field)
+
+            # Apply operation
+            if op == "gt":
+                filters.append(model_attr > value)
+            elif op == "lt":
+                filters.append(model_attr < value)
+            elif op == "not_eq":
+                filters.append(model_attr != value)
+            else:  # eq is default
+                filters.append(model_attr == value)
+
         return self.db.query(self.model).filter(operator(*filters)).all()
 
     return wrapper
@@ -96,7 +112,8 @@ class BaseRepository(Generic[T, IDType]):
 
     @handle_sqlalchemy_exceptions
     def update(self, new_obj: T) -> Optional[T]:
-        self.db.add(new_obj)
+        merged = self.db.merge(new_obj)
+        self.db.flush()
         return new_obj
 
     @handle_sqlalchemy_exceptions
