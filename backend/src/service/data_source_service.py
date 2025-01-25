@@ -6,6 +6,7 @@ from src.graph.tools.extract_docs_schema_tool import extract_schema_columns
 from src.models.data_source.data_source import DataSource
 from src.models.data_source.data_source_column import DataSourceColumn
 from src.models.data_source.data_source_type import DataSourceType
+from src.repositories.base_repository import BaseRepository
 from src.repositories.data_source_repository import get_data_source_repository
 from src.schema.data_source_column_schema import (
     DataSourceColumnCreateSchema,
@@ -17,16 +18,14 @@ from src.schema.data_source_schema import (
     DataSourceSchema,
     DataSourceUpdateSchema,
 )
-
-from src.repositories.base_repository import BaseRepository
 from src.schema.data_source_type_schema import (
     DataSourceTypeCreateSchema,
     DataSourceTypeSchema,
     DataSourceTypeUpdateSchema,
 )
 from src.service.base_service import BaseService
-from src.service.data_source_type_service import get_data_source_type_service
 from src.service.data_source_column_service import get_data_source_column_service
+from src.service.data_source_type_service import get_data_source_type_service
 
 
 class DataSourceService(

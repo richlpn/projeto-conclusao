@@ -12,7 +12,9 @@ Base = declarative_base()
 @lru_cache
 def create_session():
     SessionLocal = scoped_session(
-        sessionmaker(autocommit=False, autoflush=False, bind=engine)
+        sessionmaker(
+            autocommit=False, autoflush=False, bind=engine
+        )
     )
 
     return SessionLocal

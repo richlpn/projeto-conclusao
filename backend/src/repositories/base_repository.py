@@ -5,13 +5,13 @@ from typing import Callable, Generic, List, Optional, Type, TypeVar
 from sqlalchemy import and_, or_
 from sqlalchemy.exc import NoInspectionAvailable, SQLAlchemyError
 from sqlalchemy.inspection import inspect
-from src.config.database import create_session
+from src.config.database import create_session, scoped_session
 
 T = TypeVar("T")
 IDType = TypeVar("IDType")
 
 
-def handle_sqlalchemy_exceptions(func):
+def handle_sqlalchemy_session(func):
     """
     A decorator to handle SQLAlchemy exceptions for class methods.
     Rolls back the transaction in case of an error.
@@ -21,6 +21,7 @@ def handle_sqlalchemy_exceptions(func):
     def wrapper(self: "BaseRepository", *args, **kwargs):
         try:
             # Execute the decorated function
+            self.db = create_session()
             result = func(self, *args, **kwargs)
             # Commit the transaction if successful
             self.db.commit()
@@ -88,35 +89,34 @@ def query(func: Callable) -> Callable:
 
         return self.db.query(self.model).filter(operator(*filters)).all()
 
-    return wrapper
+    return handle_sqlalchemy_session(wrapper)
 
 
 class BaseRepository(Generic[T, IDType]):
 
     model: Type[T]
+    db: scoped_session
 
     def __init__(self, model: Type[T]):
         self.model = model
-        self.db = create_session()
         self.primary_key = self._get_primary_key()
 
-    @handle_sqlalchemy_exceptions
+    @handle_sqlalchemy_session
     def create(self, obj_in: T) -> T:
         self.db.add(obj_in)
         return obj_in
 
-    @handle_sqlalchemy_exceptions
+    @handle_sqlalchemy_session
     def get_by_id(self, id: IDType) -> Optional[T]:
         id_col = self.primary_key
         return self.db.query(self.model).filter(id_col == id).first()
 
-    @handle_sqlalchemy_exceptions
+    @handle_sqlalchemy_session
     def update(self, new_obj: T) -> Optional[T]:
-        merged = self.db.merge(new_obj)
-        self.db.flush()
+        self.db.commit()
         return new_obj
 
-    @handle_sqlalchemy_exceptions
+    @handle_sqlalchemy_session
     def delete(self, id: IDType) -> bool:
         db_obj = self.get_by_id(id)
         if db_obj:
@@ -124,14 +124,16 @@ class BaseRepository(Generic[T, IDType]):
             return True
         return False
 
-    @handle_sqlalchemy_exceptions
+    @handle_sqlalchemy_session
     def get_all(self, skip: int = 0, limit: int = 100) -> List[T]:
         return self.db.query(self.model).offset(skip).limit(limit).all()
 
-    def _get_primary_key(self):
-        inspection = inspect(self.model)
+    def _get_primary_key(self, obj=None):
+        if not obj:
+            obj = self.model
+        inspection = inspect(obj)
         if not inspection:
             raise NoInspectionAvailable(
-                f"Unable to determine primary key for model {self.model.__name__}"
+                f"Unable to determine primary key for model {obj.__name__}"
             )
         return inspection.primary_key[0]

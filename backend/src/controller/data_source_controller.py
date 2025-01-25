@@ -67,3 +67,4 @@ async def update(
 ) -> DataSourceSchema:
     obj = service.update(id, input)
     return obj
+

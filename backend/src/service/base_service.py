@@ -46,8 +46,10 @@ class BaseService(
             raise HTTPException(status_code=404, detail="Not Found")
 
         orinal_schema = self.schema.model_validate(db_obj)
-        schema = orinal_schema.model_copy(update=obj.model_dump(exclude_unset=True))
-        db_obj = self.model(**schema.model_dump())
+        update_model = obj.model_dump(exclude_unset=True)
+        schema = orinal_schema.model_copy(update=update_model)
+        for field, value in update_model.items():
+            setattr(db_obj, field, value)
 
         self.repository.update(db_obj)
         return schema

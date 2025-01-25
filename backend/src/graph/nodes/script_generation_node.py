@@ -14,15 +14,8 @@ def generate_python_script(
     Retuns:
         Script: The generated
     """
-    codes = []
-    for task in tasks:
-        if "feature integrations" in task.title.lower():
-            res = agent.invoke(TASK=task, CODE="\n".join(codes), agent_scratchpad="")
-            return res.code
-        res = agent.invoke(TASK=task, CODE="", agent_scratchpad="")
-        codes.append(res.code)
-
-    return "\n".join(codes)
+    tasks_dicts = [task.model_dump(exclude={"id", "data_source_id"}) for task in tasks]
+    return agent.invoke(TASK=tasks_dicts, agent_scratchpad="")
 
 
 __all__ = ["generate_python_script"]

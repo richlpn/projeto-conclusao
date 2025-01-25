@@ -7,6 +7,7 @@ from src.controller.data_source_column_controller import (
 from src.controller.data_source_controller import router as data_source_router
 from src.controller.data_source_type_controller import router as data_source_type_router
 from src.controller.task_controller import router as task_router
+from src.controller.script_generation_controller import router as script_router
 
 settings = get_settings()
 
@@ -28,3 +29,4 @@ app.include_router(data_source_router)
 app.include_router(task_router)
 app.include_router(data_source_column_router)
 app.include_router(data_source_type_router)
+app.include_router(script_router)

@@ -1,5 +1,6 @@
 from uuid import UUID
 from fastapi import Depends
+from src.exceptions.rule_exception import RuleException
 from src.graph.agents.script_generator_agent import ScriptGeneratorAgent
 from src.graph.nodes.script_generation_node import generate_python_script
 
@@ -20,6 +21,12 @@ class ScriptGenerationService(CrudService[str]):
 
     def create(self, data_source_id: UUID) -> str:
         tasks = self.task_service.get_from_data_source(data_source_id)
+
+        if len(tasks) == 0:
+            raise RuleException(
+                "Missing Tasks", "The script generation requires at least one task!"
+            )
+
         tasks = [TaskCreateSchema.model_validate(task) for task in tasks]
         script = generate_python_script(ScriptGeneratorAgent(), tasks)
         self.data_source_service.update(
@@ -33,8 +40,7 @@ class ScriptGenerationService(CrudService[str]):
 
     def get_by_id(self, *args, **kwargs) -> str: ...
 
-    def get_all(self, *args, **kwargs) -> list[str]:
-        raise NotImplementedError()
+    def get_all(self, *args, **kwargs) -> list[str]: ...
 
 
 def get_script_generation_service(

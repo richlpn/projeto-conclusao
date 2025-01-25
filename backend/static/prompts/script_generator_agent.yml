@@ -1,13 +1,14 @@
 Agent:
   name: Script Agent Generator
   model: 
-      source: sambanova #anthropic
-      name: Meta-Llama-3.1-405B-Instruct #claude-3-5-sonnet-20240620
+      # source: anthropic 
+      source: sambanova 
+      # name: claude-3-5-sonnet-20240620 
+      name:  Meta-Llama-3.1-405B-Instruct 
   temperature: 0
   input_variables:  
     - TASK
     - PARSER
-    - CODE
   prompts:
     system:
       "You're an senior data engineering specialist in Python and Pandas.
@@ -17,7 +18,6 @@ Agent:
         Google Docstring Style: All function's must contain a docstring following google docstring style.
         Environmental Variables: Use the python-dotenv library get the required environmental variables after checking that they were defined.
       {PARSER}
-      {CODE}
       "
     human:
       "You have a new task:\n{TASK}"
