@@ -1,17 +1,9 @@
-from abc import ABC
-from typing import Generic, TypeVar
+from typing import TypeVar
 
 from pydantic import BaseModel
+from src.utils import to_camel
 
 T = TypeVar("T")
-
-
-def to_camel(string: str) -> str:
-    if "_" not in string:
-        return string
-    words = string.split("_")
-    words = [words[0]] + [word.capitalize() for word in words[1:]]
-    return "".join(words)
 
 
 class BaseSchema(BaseModel):

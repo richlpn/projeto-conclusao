@@ -46,7 +46,6 @@ class DataSourceSchemaParser(SchemaParser):
         columns_schema = DataSourceExtractionSchema.model_json_schema()["properties"][
             "columns"
         ]
-        print(columns_schema)
         columns_schema["items"]["$ref"] = "#/$defs/DataSourceColumnUpdateSchema"
 
         schema["properties"]["columns"] = columns_schema

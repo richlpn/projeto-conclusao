@@ -1,7 +1,7 @@
 import argparse
 
 import uvicorn
-from src.config.database import create_tables
+from src.config.database.database import create_tables
 
 
 def main():

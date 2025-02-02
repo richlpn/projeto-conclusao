@@ -1,7 +1,7 @@
 from typing import Generic, List, Optional, Type, TypeVar
 
 from fastapi import HTTPException
-from src.config.database import Base
+from src.config.database.database import Base
 from src.repositories.base_repository import BaseRepository
 from src.schema.base_schema import BaseSchema
 from src.service.crud_service import CrudService

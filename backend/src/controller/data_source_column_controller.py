@@ -80,4 +80,4 @@ async def get_by_data_source_id(
     Returns:
     - list[DataSourceColumnSchema]: A list of DataSourceColumnSchema objects.
     """
-    return service.find_all_by_data_source_id(data_source_id)
+    return service.filter_by_dataSourceId(data_source_id)

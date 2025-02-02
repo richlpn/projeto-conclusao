@@ -23,7 +23,7 @@ import uuid
 from sqlalchemy import Column, ForeignKey, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
-from src.config.database import Base
+from src.config.database.database import Base
 
 
 class DataSourceColumn(Base):

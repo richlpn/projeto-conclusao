@@ -1,7 +1,8 @@
 from typing import Type
 from uuid import UUID
+from src.config.database import query
 from src.models.data_source.data_source_type import DataSourceType
-from src.repositories.base_repository import BaseRepository, query
+from src.repositories.base_repository import BaseRepository
 
 
 class DataSourceTypeRepository(BaseRepository[DataSourceType, UUID]):

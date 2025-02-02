@@ -46,7 +46,7 @@ class TaskService(
         return tasks
 
     def get_from_data_source(self, data_source_id: UUID) -> list[TaskSchema]:
-        tasks = self.repository.filter_by_data_source_id(data_source_id)
+        tasks = self.repository.filter_by_dataSourceId(data_source_id)
         return [self.schema.model_validate(task) for task in tasks]
 
 

@@ -1,95 +1,12 @@
-from functools import wraps
-from inspect import signature
-from typing import Callable, Generic, List, Optional, Type, TypeVar
+from typing import Generic, List, Optional, Type, TypeVar
 
-from sqlalchemy import and_, or_
-from sqlalchemy.exc import NoInspectionAvailable, SQLAlchemyError
+from sqlalchemy.exc import NoInspectionAvailable
 from sqlalchemy.inspection import inspect
-from src.config.database import create_session, scoped_session
+from src.config.database.database import scoped_session
+from src.config.database.handle_query_exception import handle_sqlalchemy_session
 
 T = TypeVar("T")
 IDType = TypeVar("IDType")
-
-
-def handle_sqlalchemy_session(func):
-    """
-    A decorator to handle SQLAlchemy exceptions for class methods.
-    Rolls back the transaction in case of an error.
-    """
-
-    @wraps(func)
-    def wrapper(self: "BaseRepository", *args, **kwargs):
-        try:
-            # Execute the decorated function
-            self.db = create_session()
-            result = func(self, *args, **kwargs)
-            # Commit the transaction if successful
-            self.db.commit()
-            return result
-        except SQLAlchemyError as e:
-            # Rollback the transaction on error
-            self.db.rollback()
-            raise e  # Re-raise the exception for external handling
-
-    return wrapper
-
-
-def query(func: Callable) -> Callable:
-    """
-    Decorator that generates SQLAlchemy queries based on function names.
-    Supports operations: eq, gt, lt, not_eq
-    Format: filter_by_[field]_[operation]_[field]_[operation]_[logic]
-    Example: filter_by_age_gt_and_salary_lt
-    """
-
-    @wraps(func)
-    def wrapper(self, *args, **kwargs):
-        func_name = func.__name__
-        if not func_name.startswith("filter_by_"):
-            raise ValueError(
-                f"Function name '{func_name}' must start with 'filter_by_'"
-            )
-
-        # Determine logical operator
-        is_and = "_and_" in func_name
-        operator = and_ if is_and else or_
-
-        # Split into operation parts
-        parts = func_name[10:].split("_and_" if is_and else "_or_")
-
-        # Bind arguments
-        sig = signature(func)
-        bound_args = sig.bind(self, *args, **kwargs)
-        bound_args.apply_defaults()
-
-        filters = []
-        for part in parts:
-            # Parse operation type (gt, lt, eq, not_eq)
-            segments = part.split("_")
-            if len(segments) == 1:  # Default to eq
-                field, op = segments[0], "eq"
-            else:
-                field, op = segments[0], segments[1]
-
-            if field not in bound_args.arguments:
-                continue
-
-            value = bound_args.arguments[field]
-            model_attr = getattr(self.model, field)
-
-            # Apply operation
-            if op == "gt":
-                filters.append(model_attr > value)
-            elif op == "lt":
-                filters.append(model_attr < value)
-            elif op == "not_eq":
-                filters.append(model_attr != value)
-            else:  # eq is default
-                filters.append(model_attr == value)
-
-        return self.db.query(self.model).filter(operator(*filters)).all()
-
-    return handle_sqlalchemy_session(wrapper)
 
 
 class BaseRepository(Generic[T, IDType]):

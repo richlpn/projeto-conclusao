@@ -3,7 +3,7 @@ from sqlalchemy import Column, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 
-from src.config.database import Base
+from src.config.database.database import Base
 
 
 class DataSourceType(Base):

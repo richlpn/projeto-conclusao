@@ -1,6 +1,7 @@
 from uuid import UUID
 
 from fastapi import Depends
+from src.config.database import query
 from src.models.data_source import DataSourceColumn
 from src.repositories.data_source_columns_repository import DataSourceColumnRepository
 from src.schema.data_source_column_schema import (
@@ -29,7 +30,8 @@ class DataSourceColumnService(
     ):
         super().__init__(DataSourceColumn, DataSourceColumnSchema, repository)
 
-    def find_all_by_data_source_id(
+    @query
+    def filter_by_dataSourceId(
         self, data_source_id: UUID
     ) -> list[DataSourceColumnSchema]:
         """
@@ -41,8 +43,7 @@ class DataSourceColumnService(
         Returns:
         - list[DataSourceColumnSchema]: A list of DataSourceColumnSchema objects.
         """
-        data_source_columns = self.repository.filter_by_data_source_id(data_source_id)
-        return [self.schema(**column.__dict__) for column in data_source_columns]
+        ...
 
 
 def get_data_source_column_service(
