@@ -9,6 +9,7 @@ export const dataSourceCreateSchema = z.object({
 
 export const dataSourceSchema = dataSourceCreateSchema.extend({
   id: z.string().uuid(),
+  script: z.string().nullable(),
   type: DataSourceTypeSchema,
 });
 

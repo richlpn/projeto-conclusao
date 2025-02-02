@@ -18,10 +18,11 @@ export function App() {
     schema == selectedSchema
       ? setSelectedSchema(null)
       : setSelectedSchema(schema);
+    console.log(schema);
   };
 
   return (
-    <div className="min-h-screen bg-[#e8f2fc] text-[#2D3748]">
+    <div className="min-h-screen bg-gray-50">
       <HeaderElement />
       <ResizablePanelGroup
         direction="horizontal"
@@ -41,7 +42,10 @@ export function App() {
             </ResizablePanel>
             <ResizableHandle id="handle" />
             <ResizablePanel id="code" defaultSize={40} minSize={30}>
-              <RightPanelElement schema={selectedSchema} />
+              <RightPanelElement
+                schema={selectedSchema}
+                setSchema={setSelectedSchema}
+              />
             </ResizablePanel>
           </>
         ) : (

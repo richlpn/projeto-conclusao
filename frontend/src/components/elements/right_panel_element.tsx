@@ -1,4 +1,4 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -6,27 +6,11 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { DataSource } from "@/types/data_source.type";
 
-const pythonScript = `
-def example_function():
-    print("This is a long Python script")
-    for i in range(10):
-        print(f"Line {i + 1}")
-    
-    # Add more Python code here
-    def nested_function():
-        return "Hello from nested function"
-    
-    result = nested_function()
-    print(result)
-
-if __name__ == "__main__":
-    example_function()
-  `;
-
 interface RightPanelProps {
   schema: DataSource;
+  setSchema: (schema: DataSource) => void;
 }
-export function RightPanelElement({}: RightPanelProps) {
+export function RightPanelElement({ schema, setSchema }: RightPanelProps) {
   const { isCopied, copyToClipboard } = useCopyToClipboard();
   return (
     <div className="h-full flex flex-col bg-black">
@@ -34,7 +18,7 @@ export function RightPanelElement({}: RightPanelProps) {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => copyToClipboard(pythonScript)}
+          onClick={() => copyToClipboard(schema.script || "")}
           className="text-xs"
         >
           {isCopied ? (
@@ -56,9 +40,12 @@ export function RightPanelElement({}: RightPanelProps) {
             fontSize: "0.875rem",
             backgroundColor: "transparent",
           }}
+          editable={true}
         >
-          {pythonScript}
+          {schema.script || ""}
         </SyntaxHighlighter>
+        <ScrollBar orientation="vertical" />
+        <ScrollBar orientation="horizontal" />
       </ScrollArea>
     </div>
   );
