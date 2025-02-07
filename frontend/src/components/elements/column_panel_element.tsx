@@ -11,6 +11,7 @@ import {
 } from "@/types/data_source_column.type";
 import { useCreateSchema } from "@/hooks/useCreateSchema";
 import { useListSchemaFromFields } from "@/hooks/useListSchemaFromField";
+import { useEffect } from "react";
 
 interface ColumnPanelProps {
   onCloseColumnForm: () => void;
@@ -26,7 +27,7 @@ export function ColumnPanel({
     endpoints.data_source_columns
   );
 
-  const { data: columns } = useListSchemaFromFields(
+  const { data: columns, refetch } = useListSchemaFromFields(
     endpoints.data_source_columns,
     "data-source",
     { data_source_id: selectedSchemaID },
@@ -45,6 +46,10 @@ export function ColumnPanel({
     response.form.reset();
     onCloseColumnForm();
   }
+
+  useEffect(() => {
+    refetch();
+  }, [selectedSchemaID]);
 
   if (!columns)
     return (

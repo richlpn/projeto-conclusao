@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Task, taskSchema } from "@/types/task.type";
@@ -22,7 +22,7 @@ export default function TaskList({
   const [selectedTask, setSelectedTask] = useState<Task | undefined>();
   const [hoverTask, setHoverTask] = useState<Task | undefined>();
 
-  const { data: tasks, isFetching } = useListSchemaFromFields(
+  const { data: tasks, refetch } = useListSchemaFromFields(
     endpoints.tasks,
     "data-source",
     {
@@ -40,6 +40,10 @@ export default function TaskList({
     e.stopPropagation();
     deleteTask(task.id);
   };
+
+  useEffect(() => {
+    refetch();
+  }, [dataSourceId]);
   return (
     <div className="w-full max-w-2xl mx-auto p-4">
       <ScrollArea className="h-[600px] pr-4">

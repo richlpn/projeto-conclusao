@@ -18,7 +18,6 @@ export function App() {
     schema == selectedSchema
       ? setSelectedSchema(null)
       : setSelectedSchema(schema);
-    console.log(schema);
   };
 
   return (

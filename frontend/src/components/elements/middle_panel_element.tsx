@@ -1,5 +1,5 @@
 import { DataSource } from "@/types/data_source.type";
-import { PlayIcon, PlusIcon } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { ColumnPanel } from "./column_panel_element";
@@ -51,9 +51,6 @@ export function MiddlePanel({ selectedSchema }: MiddlePanelProps) {
 
         <Button className="col-start-7" onClick={() => setOpenCreateForm(true)}>
           <PlusIcon />
-        </Button>
-        <Button variant="outline" className="col-start-8">
-          <PlayIcon className="text-green-600" />
         </Button>
       </div>
       <div className="mx-4">{panel}</div>

@@ -11,12 +11,14 @@ export interface EndpointType {
 export interface EndpointWithGenerate extends EndpointType {
   generate: (...params: string[]) => string;
 }
+
 interface EndpointsType {
   data_source: EndpointWithGenerate;
   data_source_columns: EndpointType;
   tasks: EndpointWithGenerate;
   data_source_type: EndpointType;
   requirements: EndpointType;
+  script: EndpointType;
 }
 
 const createEndpointType = (
@@ -46,4 +48,5 @@ export const endpoints: EndpointsType = {
     generate: (id: string) =>
       `${BASE_URL}/tasks/generate/?data_source_id=${id}`,
   },
+  script: createEndpointType("script", "data_source_id"),
 };

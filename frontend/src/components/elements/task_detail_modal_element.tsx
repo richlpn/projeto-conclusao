@@ -86,7 +86,6 @@ export const TaskDetailModal = ({
           />
         </div>
       </DialogContent>
-      <Description>TaskDetail</Description>
     </Dialog>
   );
 };
